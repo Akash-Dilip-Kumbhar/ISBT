@@ -282,7 +282,8 @@ body {
 .hero-bg-image {
   background-image:
     linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.6)),
-    url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKk6YwAI2qmqpXlXEAWVUIXjW10tsbQnB1HGoXuCSZZSZlxhvbHSX-G4qOL3_XB4XhaJLtiTtrcYgPbmw-E-qEmzgQbjo7Q5fgprIGiU2GO0hCZyzD7A_J-RH1RQpzbMRuwEbWd3hh7hjWTKCKugBzJPZy9iB7Y77NpO0sCy8oj9jrIwz-Apyjjreuranv2tSAdHA9FoY0G0ZhLR9wWEy8a7XV3k5AVjCVC0n5_uvGPUBkY9xg0SmN7w");
+    url("img/mainCover.jpeg");
+    /* url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKk6YwAI2qmqpXlXEAWVUIXjW10tsbQnB1HGoXuCSZZSZlxhvbHSX-G4qOL3_XB4XhaJLtiTtrcYgPbmw-E-qEmzgQbjo7Q5fgprIGiU2GO0hCZyzD7A_J-RH1RQpzbMRuwEbWd3hh7hjWTKCKugBzJPZy9iB7Y77NpO0sCy8oj9jrIwz-Apyjjreuranv2tSAdHA9FoY0G0ZhLR9wWEy8a7XV3k5AVjCVC0n5_uvGPUBkY9xg0SmN7w"); */
   background-size: cover;
   background-position: center;
   display: flex;
