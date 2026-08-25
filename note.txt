@@ -1,0 +1,85 @@
+export type TabType = 'Home' | 'About' | 'Facilities' | 'Transport' | 'Shops & Offices' | 'Auctions';
+
+export interface BusRoute {
+  id: string;
+  busNumber: string;
+  operator: string;
+  operatorType: 'AICTSL' | 'MP Tourism' | 'Intercity Express' | 'Chartered Speed' | 'Royal Travels';
+  source: string;
+  destination: string;
+  departureTime: string;
+  arrivalTime: string;
+  bayNumber: string;
+  busType: 'AC Volvo Sleeper' | 'Electric AC Seater' | 'Super Deluxe 2x2' | 'Intercity Express' | 'Bharat Benz AC';
+  fare: number;
+  availableSeats: number;
+  totalSeats: number;
+  status: 'On Time' | 'Boarding' | 'Scheduled' | 'Delayed' | 'Departed';
+  viaCities: string[];
+  platformLevel: 'Ground Bay' | 'Lower Bay';
+}
+
+export interface CommercialUnit {
+  id: string;
+  unitNumber: string;
+  floor: 'Ground Floor' | '1st Floor' | '2nd Floor' | 'Rooftop Terrace';
+  category: 'Retail Shop' | 'Corporate Office' | 'Food Court / Cafe' | 'ATM Kiosk' | 'Anchor Store' | 'Travel Agency';
+  carpetAreaSqFt: number;
+  superBuiltUpSqFt: number;
+  baseReservePrice: number; // in INR
+  monthlyRentEstimate: number;
+  frontageFt: number;
+  suitableFor: string[];
+  status: 'Open for E-Auction' | 'Under Bidding' | 'Allotted' | 'Upcoming';
+  auctionId?: string;
+  description: string;
+  features: string[];
+}
+
+export interface AuctionItem {
+  id: string;
+  nitNumber: string;
+  title: string;
+  unitNumber: string;
+  category: string;
+  floor: string;
+  areaSqFt: number;
+  reservePrice: number;
+  currentHighBid: number;
+  totalBidsPlaced: number;
+  minIncrement: number;
+  emdAmount: number;
+  tenderFee: number;
+  startDate: string;
+  endDate: string;
+  endTimestamp: number;
+  status: 'LIVE' | 'UPCOMING' | 'CLOSED';
+  winnerBidderId?: string;
+  bidHistory: {
+    id: string;
+    bidderAlias: string;
+    amount: number;
+    timestamp: string;
+  }[];
+}
+
+export interface FacilityItem {
+  id: string;
+  name: string;
+  category: 'Passenger Care' | 'Transit & Ticketing' | 'Security & Health' | 'Commercial & Food' | 'Mobility & Parking';
+  icon: string;
+  location: string;
+  operatingHours: string;
+  description: string;
+  features: string[];
+  status: 'Operational 24/7' | 'Operational 05:00 - 23:00' | 'Active';
+}
+
+export interface Announcement {
+  id: string;
+  date: string;
+  title: string;
+  category: 'Auction Notice' | 'Bus Operations' | 'IDA Update' | 'Passenger Alert';
+  downloadUrl?: string;
+  isImportant?: boolean;
+}

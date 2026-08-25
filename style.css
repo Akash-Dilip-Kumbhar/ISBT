@@ -1,0 +1,314 @@
+/*
+ * ISBT Kumedi Indore - Professional Theme
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cabinet+Grotesk:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+  --primary-navy: #1e3a8a;
+  --primary-hover: #172554;
+  --accent-gold: #fbbf24;
+  --accent-gold-hover: #f59e0b;
+  --theme-orange: #ff6b35;
+  --theme-orange-hover: #e65c2b;
+
+  --font-sans:
+    "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", Arial, sans-serif;
+  --font-serif:
+    "Gelasio", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: #f8fafc;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-sans {
+  font-family: var(--font-sans) !important;
+}
+
+.font-serif,
+.font-playfair {
+  font-family: var(--font-serif) !important;
+}
+
+.font-mono {
+  font-family: var(--font-mono) !important;
+}
+
+/* Custom Theme Utilities */
+.text-orange {
+  color: var(--theme-orange) !important;
+}
+.bg-orange {
+  background-color: var(--theme-orange) !important;
+}
+.btn-orange {
+  background-color: var(--theme-orange);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+.btn-orange:hover {
+  background-color: var(--theme-orange-hover);
+  color: white;
+}
+
+/* Navigation Overrides */
+.nav-link {
+  font-family: var(--font-sans);
+  transition: all 0.15s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Modal and Toast Layers */
+.modal-backdrop {
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(6px);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Pulsing effect for live badges */
+@keyframes live-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.2);
+  }
+}
+
+.live-pulse-dot {
+  animation: live-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ----------------------------------------------------- */
+/* Extracted Utility Classes from Inline Styles */
+/* ----------------------------------------------------- */
+
+/* Typography */
+.font-size-xs {
+  font-size: 0.5rem;
+}
+.font-size-sm {
+  font-size: 0.55rem;
+}
+.font-size-base {
+  font-size: 0.6rem;
+}
+.font-size-md {
+  font-size: 0.65rem;
+}
+.font-size-lg {
+  font-size: 0.7rem;
+}
+.font-size-xl {
+  font-size: 0.75rem;
+}
+.font-size-2xl {
+  font-size: 0.8rem;
+}
+.font-size-3xl {
+  font-size: 0.85rem;
+}
+.font-size-4xl {
+  font-size: 0.9rem;
+}
+.font-size-5xl {
+  font-size: 1rem;
+}
+.font-size-6xl {
+  font-size: 1.1rem;
+}
+.font-size-7xl {
+  font-size: 1.35rem;
+}
+
+.letter-spacing-sm {
+  letter-spacing: 0.5px;
+}
+.letter-spacing-md {
+  letter-spacing: 1px;
+}
+.letter-spacing-lg {
+  letter-spacing: 1.5px;
+}
+
+.line-height-xs {
+  line-height: 1.1;
+}
+.line-height-sm {
+  line-height: 1.3;
+}
+.line-height-md {
+  line-height: 1.4;
+}
+.line-height-lg {
+  line-height: 1.6;
+}
+.line-height-xl {
+  line-height: 1.7;
+}
+
+.font-weight-800 {
+  font-weight: 800;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+.opacity-70 {
+  opacity: 0.7;
+}
+.opacity-85 {
+  opacity: 0.85;
+}
+
+.icon-stroke-1 {
+  stroke-width: 1px;
+}
+.rotate-n15 {
+  transform: rotate(-15deg);
+}
+.max-w-600 {
+  max-width: 600px;
+}
+.max-w-800 {
+  max-width: 800px;
+}
+
+/* Dimensions */
+.size-5 {
+  width: 5px;
+  height: 5px;
+}
+.size-8 {
+  width: 8px;
+  height: 8px;
+}
+.size-line {
+  width: 20px;
+  height: 3px;
+}
+.size-32 {
+  width: 32px;
+  height: 32px;
+}
+.size-40 {
+  width: 40px;
+  height: 40px;
+}
+.size-42 {
+  width: 42px;
+  height: 42px;
+}
+
+/* Backgrounds & Colors */
+.bg-dark-accent {
+  background-color: #1a1a1a !important;
+}
+.bg-warm-light {
+  background-color: #f4f3ec;
+}
+.bg-warm-lighter {
+  background-color: #f1ebd8;
+  background-image: linear-gradient(
+    rgba(240, 237, 227, 0.5),
+    rgba(240, 237, 227, 0.5)
+  );
+}
+.bg-warm-lightest {
+  background-color: #f7f6f2 !important;
+}
+.bg-white-warm {
+  background-color: #faf9f6 !important;
+}
+.bg-orange-light {
+  background-color: #fff3ed;
+}
+.bg-orange-dark {
+  background-color: #8c3614;
+}
+
+/* Borders */
+.border-bottom-soft {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.border-bottom-orange {
+  border-bottom: 2px solid var(--theme-orange);
+}
+.border-orange-light {
+  border: 1px solid #ffdcd0;
+}
+.border-white-transparent {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.border-dark-transparent {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Components */
+.hero-bg-image {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.6)),
+    url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKk6YwAI2qmqpXlXEAWVUIXjW10tsbQnB1HGoXuCSZZSZlxhvbHSX-G4qOL3_XB4XhaJLtiTtrcYgPbmw-E-qEmzgQbjo7Q5fgprIGiU2GO0hCZyzD7A_J-RH1RQpzbMRuwEbWd3hh7hjWTKCKugBzJPZy9iB7Y77NpO0sCy8oj9jrIwz-Apyjjreuranv2tSAdHA9FoY0G0ZhLR9wWEy8a7XV3k5AVjCVC0n5_uvGPUBkY9xg0SmN7w");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+.hero-stats-container {
+  margin-top: -60px;
+  z-index: 10;
+}
+.glass-btn {
+  background: rgba(0, 0, 0, 0.4);
+}
+.glass-panel {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+.img-aspect-4-3 {
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .border-end-md {
+    border-right: 1px solid rgba(0, 0, 0, 0.15) !important;
+  }
+}
