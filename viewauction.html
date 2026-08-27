@@ -20,6 +20,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   </head>
   <body class="bg-light">
     <!-- Top Bulletin Bar -->
@@ -194,18 +196,27 @@
           <div class="d-flex flex-wrap gap-2">
             <button
               id="tabAll"
+              onclick="renderAuctions('all')"
               class="btn btn-dark fw-bold rounded-0 px-4 py-2 font-size-sm letter-spacing-md">
-              ALL AUCTIONS [00]
+              ALL [00]
             </button>
             <button
-              id="tabLive"
+              id="tabShops"
+              onclick="renderAuctions('shops')"
               class="btn btn-outline-dark fw-bold rounded-0 px-4 py-2 bg-transparent font-size-sm letter-spacing-md border-dark-transparent text-muted">
-              LIVE BIDDING [00]
+              SHOPS [00]
             </button>
             <button
-              id="tabUpcoming"
+              id="tabOffices"
+              onclick="renderAuctions('offices')"
               class="btn btn-outline-dark fw-bold rounded-0 px-4 py-2 bg-transparent font-size-sm letter-spacing-md border-dark-transparent text-muted">
-              UPCOMING TENDERS [00]
+              OFFICES [00]
+            </button>
+            <button
+              id="tabRestaurants"
+              onclick="renderAuctions('restaurants')"
+              class="btn btn-outline-dark fw-bold rounded-0 px-4 py-2 bg-transparent font-size-sm letter-spacing-md border-dark-transparent text-muted">
+              RESTAURANTS [00]
             </button>
           </div>
           <a
@@ -542,52 +553,101 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Map Modal -->
+    <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content rounded-0 border-0 bg-warm-lightest">
+          <div class="modal-body p-4 position-relative" style="height: 80vh;">
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-4 shadow-none" data-bs-dismiss="modal" aria-label="Close" style="z-index: 1000;"></button>
+            <h5 class="mb-3 font-playfair fw-bold" id="mapModalTitle">Shop Location</h5>
+            <div id="modal-map" style="width: 100%; height: calc(100% - 40px); background: #eee;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
     <!-- Render Data -->
     <script>
       window.auctionData = []; // Store globally for the modal
       let currentModalAuction = null;
       let bidModalInstance = null;
 
-      function renderAuctions() {
+      function renderAuctions(filterCategory = 'all') {
         fetch("./auction.json")
           .then((response) => response.json())
-          .then((AUCTION_ITEMS) => {
+          .then((data) => {
+            let AUCTION_ITEMS = [];
+            if (Array.isArray(data)) {
+               AUCTION_ITEMS = data; // Fallback for old format
+            } else {
+               // Extract all arrays from object
+               if (data.shops) AUCTION_ITEMS = AUCTION_ITEMS.concat(data.shops.map(i => ({...i, jsonCategory: 'shops'})));
+               if (data.offices) AUCTION_ITEMS = AUCTION_ITEMS.concat(data.offices.map(i => ({...i, jsonCategory: 'offices'})));
+               if (data.Restaurants) AUCTION_ITEMS = AUCTION_ITEMS.concat(data.Restaurants.map(i => ({...i, jsonCategory: 'restaurants'})));
+            }
+
             window.auctionData = AUCTION_ITEMS;
 
             // Update tab counts
             const totalAuctions = AUCTION_ITEMS.length;
-            const liveAuctions = AUCTION_ITEMS.filter(
-              (a) => a.status === "LIVE",
-            ).length;
-            const upcomingAuctions = AUCTION_ITEMS.filter(
-              (a) => a.status === "UPCOMING",
-            ).length;
+            const shopAuctions = AUCTION_ITEMS.filter((a) => a.jsonCategory === "shops").length;
+            const officeAuctions = AUCTION_ITEMS.filter((a) => a.jsonCategory === "offices").length;
+            const restaurantAuctions = AUCTION_ITEMS.filter((a) => a.jsonCategory === "restaurants").length;
 
             const tabAll = document.getElementById("tabAll");
-            const tabLive = document.getElementById("tabLive");
-            const tabUpcoming = document.getElementById("tabUpcoming");
+            const tabShops = document.getElementById("tabShops");
+            const tabOffices = document.getElementById("tabOffices");
+            const tabRestaurants = document.getElementById("tabRestaurants");
 
-            if (tabAll)
-              tabAll.innerText = `ALL AUCTIONS [${totalAuctions.toString().padStart(2, "0")}]`;
-            if (tabLive)
-              tabLive.innerText = `LIVE BIDDING [${liveAuctions.toString().padStart(2, "0")}]`;
-            if (tabUpcoming)
-              tabUpcoming.innerText = `UPCOMING TENDERS [${upcomingAuctions.toString().padStart(2, "0")}]`;
+            if (tabAll) tabAll.innerText = `ALL [${totalAuctions.toString().padStart(2, "0")}]`;
+            if (tabShops) tabShops.innerText = `SHOPS [${shopAuctions.toString().padStart(2, "0")}]`;
+            if (tabOffices) tabOffices.innerText = `OFFICES [${officeAuctions.toString().padStart(2, "0")}]`;
+            if (tabRestaurants) tabRestaurants.innerText = `RESTAURANTS [${restaurantAuctions.toString().padStart(2, "0")}]`;
+
+            // Update Tab Styling
+            [tabAll, tabShops, tabOffices, tabRestaurants].forEach(tab => {
+                if(tab) {
+                    tab.classList.remove('btn-dark', 'text-white');
+                    tab.classList.add('btn-outline-dark', 'bg-transparent', 'text-muted');
+                }
+            });
+            
+            const activeTab = document.getElementById(filterCategory === 'all' ? 'tabAll' : 
+                               filterCategory === 'shops' ? 'tabShops' : 
+                               filterCategory === 'offices' ? 'tabOffices' : 'tabRestaurants');
+                               
+            if(activeTab) {
+                activeTab.classList.remove('btn-outline-dark', 'bg-transparent', 'text-muted');
+                activeTab.classList.add('btn-dark', 'text-white');
+            }
 
             const grid = document.getElementById("auctionsGrid");
             if (!grid) return;
 
+            const filteredItems = filterCategory === 'all' 
+                ? AUCTION_ITEMS 
+                : AUCTION_ITEMS.filter(a => a.jsonCategory === filterCategory);
+
             let html = "";
 
-            AUCTION_ITEMS.forEach((item) => {
-              const isLive = item.status === "LIVE";
+            filteredItems.forEach((item) => {
+              const isLive = item.Bidstatus === "Open";
               const statusBadge = isLive
-                ? `<span class="badge bg-orange rounded-0 px-2 py-1 font-size-xs letter-spacing-md">LIVE</span>`
-                : `<span class="badge bg-secondary rounded-0 px-2 py-1 font-size-xs letter-spacing-md">${item.status}</span>`;
+                ? `<span class="badge bg-orange rounded-0 px-2 py-1 font-size-xs letter-spacing-md">OPEN</span>`
+                : `<span class="badge bg-secondary rounded-0 px-2 py-1 font-size-xs letter-spacing-md">${item.Bidstatus.toUpperCase()}</span>`;
 
-              const reservePriceLakhs = (item.reservePrice / 100000).toFixed(1);
-              const currentBidLakhs = (item.currentHighBid / 100000).toFixed(2);
-              const emdFeeStr = item.emdAmount.toLocaleString("en-IN");
+              const computedSqM = item.dimensions.widthM * item.dimensions.lengthM;
+              const computedSqFt = computedSqM * 10.7639;
+
+              const minRateStr = item.minratesqftmonthinRS ? item.minratesqftmonthinRS.toLocaleString("en-IN") : "0";
+              const maxRateStr = item.maxratesqftmonthinRS ? item.maxratesqftmonthinRS.toLocaleString("en-IN") : "0";
+
+              const avgRateSqft = ((item.minratesqftmonthinRS || 0) + (item.maxratesqftmonthinRS || 0)) / 2;
+              const avgYearlyLease = avgRateSqft * computedSqFt * 12;
+              const avgYearlyLeaseStr = avgYearlyLease.toLocaleString("en-IN", { maximumFractionDigits: 0 });
 
               html += `
                 <div class="col-md-6">
@@ -605,46 +665,52 @@
                             <div class="bg-warm-lightest p-3 d-flex justify-content-between mb-4 border border-dark-transparent">
                                 <div class="text-center px-1 flex-fill">
                                     <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">CARPET AREA</div>
-                                    <div class="fw-bold text-dark font-size-xl">${item.areaSqFt} sqft</div>
+                                    <div class="fw-bold text-dark font-size-xl">${computedSqM.toFixed(2)} sq.m</div>
                                 </div>
                                 <div class="text-center px-1 flex-fill border-start border-dark-transparent">
                                     <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">FLOOR</div>
                                     <div class="fw-bold text-dark font-size-xl">${item.floor}</div>
                                 </div>
                                 <div class="text-center px-1 flex-fill border-start border-dark-transparent">
-                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">BASE RESERVE</div>
-                                    <div class="fw-bold text-orange font-size-xl">₹${reservePriceLakhs}L</div>
+                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">MIN RATE/SQFT</div>
+                                    <div class="fw-bold text-orange font-size-xl">₹${minRateStr}</div>
                                 </div>
                                 <div class="text-center px-1 flex-fill border-start border-dark-transparent">
-                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">EMD FEE</div>
-                                    <div class="fw-bold text-dark font-size-xl">₹${emdFeeStr}</div>
+                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">MAX RATE/SQFT</div>
+                                    <div class="fw-bold text-dark font-size-xl">₹${maxRateStr}</div>
                                 </div>
                             </div>
                             
-                            <!-- Bidding Box -->
+                            <!-- Location & Category -->
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-light text-dark border border-dark-transparent font-size-xs letter-spacing-md px-2 py-1"><i class="bi bi-geo-alt"></i> ${item.location}</span>
+                                <span class="badge bg-light text-dark border border-dark-transparent font-size-xs letter-spacing-md px-2 py-1"><i class="bi bi-tag"></i> ${item.category} - ${item.categorytype}</span>
+                            </div>
+                            
+                            <!-- Average Lease Box -->
                             <div class="bg-dark-accent p-4 d-flex justify-content-between align-items-center mb-4 text-white">
                                 <div>
-                                    <div class="text-uppercase font-size-sm letter-spacing-md mb-1">CURRENT HIGH BID</div>
+                                    <div class="text-uppercase font-size-sm letter-spacing-md mb-1">AVG. ANNUAL LEASE</div>
                                     <div class="fw-bold fs-3 d-flex align-items-baseline gap-1">
-                                        ₹${currentBidLakhs} <span class="font-size-md fw-normal opacity-70">Lakhs</span>
+                                        ₹${avgYearlyLeaseStr}
                                     </div>
-                                    <div class=" font-size-xs mt-1">Reserve Price + Minimum bid 10%</div>
+                                    <div class=" font-size-xs mt-1 text-white opacity-70">Estimated 1-Year Lease (Avg Rate)</div>
                                 </div>
                                 <div class="bg-dark px-4 py-3 border border-secondary border-opacity-25 d-flex flex-column align-items-center text-center">
-                                    <div class="text-uppercase font-size-xs letter-spacing-md mb-1">TOTAL BIDS</div>
-                                    <div class="fw-bold text-orange font-size-2xl">${item.totalBidsPlaced} bids placed</div>
+                                    <div class="text-uppercase font-size-xs letter-spacing-md mb-1">UNIT</div>
+                                    <div class="fw-bold text-orange font-size-2xl">${item.unitNumber}</div>
                                 </div>
                             </div>
                             
-                            <!-- Ending Time -->
+                            <!-- Dimensions Info -->
                             <div class="d-flex align-items-center gap-2 mb-4 font-size-md fw-semibold text-dark">
-                                <i class="bi bi-clock text-orange"></i> Ending Time: ${item.endDate}
+                                <i class="bi bi-arrows-fullscreen text-orange"></i> Dimensions: ${item.dimensions.widthM}m x ${item.dimensions.lengthM}m (${computedSqM.toFixed(2)} sq.m)
                             </div>
                             
                             <!-- Buttons -->
                             <div class="mt-auto d-flex flex-column flex-xl-row gap-2">
                                 <button class="btn btn-dark fw-bold rounded-0 py-3 flex-grow-1 font-size-sm letter-spacing-md d-flex align-items-center justify-content-center gap-2" onclick="openBidModal('${item.id}')"><i class="bi bi-hammer fs-6"></i> ENTER LIVE AUCTION & BID</button>
-                                <button class="btn btn-outline-dark fw-bold rounded-0 py-3 px-4 font-size-sm letter-spacing-md d-flex align-items-center justify-content-center gap-2 border-dark-transparent"><i class="bi bi-download fs-6"></i> DOWNLOAD NIT</button>
+                                <button class="btn btn-outline-dark fw-bold rounded-0 py-3 px-4 font-size-sm letter-spacing-md d-flex align-items-center justify-content-center gap-2 border-dark-transparent" onclick="viewOnMap('${item.id}')"><i class="bi bi-geo-alt fs-6"></i> VIEW ON MAP</button>
                             </div>
                         </div>
                     </div>
@@ -662,24 +728,32 @@
         if (!auction) return;
         currentModalAuction = auction;
 
-        const isLive = auction.status === "LIVE";
+        const isLive = auction.Bidstatus === "Open";
         const statusColor = isLive ? "text-orange" : "text-secondary";
 
-        // Format numbers
-        const currentBidFmt = auction.currentHighBid.toLocaleString("en-IN");
-        const reserveFmt = auction.reservePrice.toLocaleString("en-IN");
-        const incrementFmt = auction.minIncrement.toLocaleString("en-IN");
-        const emdFmt = auction.emdAmount.toLocaleString("en-IN");
-        const minValidBid = auction.currentHighBid + auction.minIncrement;
+        const computedSqM = (auction.dimensions.widthM * auction.dimensions.lengthM) || 0;
+        const computedSqFt = computedSqM * 10.7639;
+
+        // Format numbers using mocked bids but accurate base reserve if possible, based on rates
+        const reserveValue = (auction.minratesqftmonthinRS || 0) * computedSqFt * 12; // Annualized
+        const reserveFmt = reserveValue.toLocaleString("en-IN", { maximumFractionDigits: 0 });
+        const currentBidFmt = reserveFmt; // dummy
+        const minIncrementVal = 50000;
+        const incrementFmt = minIncrementVal.toLocaleString("en-IN");
+        const emdVal = 100000;
+        const emdFmt = emdVal.toLocaleString("en-IN");
+        const minValidBid = reserveValue + minIncrementVal;
+        currentModalAuction.currentHighBid = reserveValue;
+        currentModalAuction.minIncrement = minIncrementVal;
 
         // Populate Header
         document.getElementById("modalHeaderContent").innerHTML = `
                 <div class="text-uppercase fw-bold text-muted font-size-xs letter-spacing-md mb-2">
-                    NIT: ${auction.nitNumber} &nbsp;•&nbsp; <span class="${statusColor}">${auction.status}</span>
+                    NIT: ${auction.nitNumber} &nbsp;•&nbsp; <span class="${statusColor}">${auction.Bidstatus.toUpperCase()}</span>
                 </div>
                 <h2 class="font-playfair fw-bold mb-3 text-dark">${auction.title}</h2>
                 <div class="text-muted font-size-sm mb-4">
-                    ${auction.category} • ${auction.floor} • Carpet Area: <span class="fw-bold text-dark">${auction.areaSqFt} Sq.Ft</span>
+                    ${auction.category} • ${auction.floor} • Carpet Area: <span class="fw-bold text-dark">${computedSqM.toFixed(2)} Sq.m</span>
                 </div>
                 <hr class="border-dark-transparent mb-4">
                 
@@ -688,7 +762,7 @@
                         <div class="col-md-6 border-end border-secondary border-opacity-25 mb-3 mb-md-0">
                             <div class="text-uppercase text-muted opacity-85 font-size-xs letter-spacing-md mb-2">CURRENT HIGHEST BID (H1)</div>
                             <div class="fw-bold display-5 mb-2 font-playfair">₹${currentBidFmt}</div>
-                            <div class="text-white opacity-70 font-size-xs">Base Reserve Price: ₹${reserveFmt}</div>
+                            <div class="text-white opacity-70 font-size-xs">Base Reserve Price (Annual): ₹${reserveFmt}</div>
                         </div>
                         <div class="col-md-6 ps-md-4">
                             <div class="d-flex justify-content-between mb-2">
@@ -701,7 +775,7 @@
                             </div>
                             <div class="d-flex justify-content-between">
                                 <span class="text-muted opacity-85 font-size-sm">Bids Logged:</span>
-                                <span class="fw-bold font-size-sm text-orange">${auction.totalBidsPlaced} bids</span>
+                                <span class="fw-bold font-size-sm text-orange">3 bids</span>
                             </div>
                         </div>
                     </div>
@@ -809,6 +883,64 @@
           btn.innerHTML = originalBtnText;
           btn.disabled = false;
         }
+      };
+
+      // Map Modal logic
+      let mapModalInstance = null;
+      let modalMap = null;
+      let modalImageOverlay = null;
+      let modalMarker = null;
+
+      window.viewOnMap = function (auctionId) {
+        const auction = window.auctionData.find((a) => a.id === auctionId);
+        if (!auction) return;
+
+        document.getElementById("mapModalTitle").innerText = auction.title + " Location";
+
+        if (!mapModalInstance) {
+          mapModalInstance = new bootstrap.Modal(document.getElementById("mapModal"));
+        }
+        mapModalInstance.show();
+
+        const mapModalEl = document.getElementById("mapModal");
+        
+        if (window._mapModalShownListener) {
+            mapModalEl.removeEventListener('shown.bs.modal', window._mapModalShownListener);
+        }
+
+        window._mapModalShownListener = function () {
+          if (!modalMap) {
+            modalMap = L.map('modal-map', {
+              crs: L.CRS.Simple,
+              minZoom: -3,
+              maxZoom: 5,
+              center: [0, 0],
+              zoom: 3,
+              attributionControl: false
+            });
+          }
+          
+          modalMap.invalidateSize();
+          
+          if (modalImageOverlay) {
+            modalMap.removeLayer(modalImageOverlay);
+          }
+          if (modalMarker) {
+            modalMap.removeLayer(modalMarker);
+          }
+          
+          // Using typical architectural plan bounds for simple CRS [y, x] mapping
+          var imageBounds = [[0, 0],[4963,3509]]; 
+          modalImageOverlay = L.imageOverlay(auction.imgsrc, imageBounds).addTo(modalMap);
+          modalMap.fitBounds(imageBounds);
+
+          if (auction.mapX !== undefined && auction.mapY !== undefined) {
+             modalMarker = L.marker([auction.mapY , auction.mapX]).addTo(modalMap);
+             modalMarker.bindPopup("<b>" + auction.unitNumber + "</b><br>" + auction.category).openPopup();
+          }
+        };
+
+        mapModalEl.addEventListener('shown.bs.modal', window._mapModalShownListener, { once: true });
       };
 
       // Render on load
