@@ -10,7 +10,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 3.45,
       "lengthM": 4.27,
@@ -31,7 +31,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 3.45,
       "lengthM": 4.27,
@@ -52,7 +52,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 3.45,
       "lengthM": 4.27,
@@ -73,7 +73,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 4.40,
       "lengthM": 4.27,
@@ -94,7 +94,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 3.80,
       "lengthM": 4.27,
@@ -115,7 +115,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 3.80,
       "lengthM": 4.27,
@@ -136,7 +136,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 3.80,
       "lengthM": 4.27,
@@ -157,7 +157,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 3.80,
       "lengthM": 4.27,
@@ -178,7 +178,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 6.10,
       "lengthM": 4.10,
@@ -199,7 +199,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 6.10,
       "lengthM": 4.0,
@@ -220,7 +220,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 6.10,
       "lengthM": 4.0,
@@ -241,7 +241,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 6.10,
       "lengthM": 4.0,
@@ -262,7 +262,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 6.10,
       "lengthM": 4.25,
@@ -283,7 +283,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 5.05,
       "lengthM": 4.00,
@@ -304,7 +304,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 5.05,
       "lengthM": 4.00,
@@ -325,7 +325,7 @@
     "categorytype": "External",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 5.05,
       "lengthM": 4.00,
@@ -346,7 +346,7 @@
     "categorytype": "Internal",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 4.05,
       "lengthM": 4.25,
@@ -367,7 +367,7 @@
     "categorytype": "Internal",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 4.05,
       "lengthM": 4.25,
@@ -388,7 +388,7 @@
     "categorytype": "Internal",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 4.05,
       "lengthM": 4.25,
@@ -409,7 +409,7 @@
     "categorytype": "Internal",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 4.05,
       "lengthM": 4.25,
@@ -430,7 +430,7 @@
     "categorytype": "Internal",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 4.05,
       "lengthM": 4.25,
@@ -451,7 +451,7 @@
     "categorytype": "Internal",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 4.05,
       "lengthM": 4.25,
@@ -473,7 +473,7 @@
     "categorytype": "Internal",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 4.05,
       "lengthM": 4.25,
@@ -494,7 +494,7 @@
     "categorytype": "Internal",
     "floor": "Ground Floor",
     "location": "Departure Area",
-    "imgsrc":"img/maps/GroundFloor.jpg",
+    "imgsrc":"img/Maps/GroundFloor.jpg",
     "dimensions": {
       "widthM": 4.05,
       "lengthM": 4.25,
@@ -517,7 +517,7 @@
         "categorytype": "External",
         "floor": "First Floor",
         "location": "Departure Area",
-        "imgsrc":"img/maps/FirstFloor.jpg",
+        "imgsrc":"img/Maps/FirstFloor.jpg",
         "dimensions": {
         "widthM": 7.80,
         "lengthM": 3.45,
@@ -540,7 +540,7 @@
         "categorytype": "External",
         "floor": "Ground Floor",
         "location": "Departure Area",
-        "imgsrc":"img/maps/GroundFloor.jpg",
+        "imgsrc":"img/Maps/GroundFloor.jpg",
         "dimensions": {
         "widthM": 3.45,
         "lengthM": 4.27,
