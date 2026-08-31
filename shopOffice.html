@@ -1,377 +1,1174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ISBT Kumedi Indore - Commercial Real Estate</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
-        rel="stylesheet">
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet" />
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body class="bg-light">
-
+  <body class="bg-light">
     <!-- Top Bulletin Bar -->
     <div
-        class="bg-dark-accent text-white py-2 px-3 px-lg-3 d-flex justify-content-between align-items-center font-size-xl">
-        <div class="d-flex align-items-center gap-3">
-            <span
-                class="badge bg-orange text-uppercase rounded-0 px-2 py-1 d-flex align-items-center gap-2 letter-spacing-md"><span
-                    class="rounded-circle bg-white d-inline-block size-5"></span> BULLETIN / GAZETTE</span>
-            <span class="text-light d-none d-md-inline opacity-85">IDA E-Auction Notice NIT-2026/094 for Commercial
-                Office Spaces on 1st Floor is now LIVE</span>
-        </div>
-        <div class="d-flex align-items-center gap-4">
-            <a href="#"
-                class="text-orange text-decoration-none fw-bold text-uppercase d-flex align-items-center gap-1 letter-spacing-md">READ
-                DISPATCH <i class="bi bi-chevron-right font-size-base icon-stroke-1"></i></a>
-            <button class="btn btn-link text-white p-0 border-0 text-decoration-none"><i
-                    class="bi bi-x-lg font-size-lg"></i></button>
-        </div>
+      class="bg-dark-accent text-white py-2 px-3 px-lg-3 d-flex justify-content-between align-items-center font-size-xl">
+      <div class="d-flex align-items-center gap-3">
+        <span
+          class="badge bg-orange text-uppercase rounded-0 px-2 py-1 d-flex align-items-center gap-2 letter-spacing-md"
+          ><span class="rounded-circle bg-white d-inline-block size-5"></span>
+          BULLETIN / GAZETTE</span
+        >
+        <span class="text-light d-none d-md-inline opacity-85"
+          >IDA E-Auction Notice NIT-2026/094 for Commercial Office Spaces on 1st
+          Floor is now LIVE</span
+        >
+      </div>
+      <div class="d-flex align-items-center gap-4">
+        <a
+          href="#"
+          class="text-orange text-decoration-none fw-bold text-uppercase d-flex align-items-center gap-1 letter-spacing-md"
+          >READ DISPATCH
+          <i class="bi bi-chevron-right font-size-base icon-stroke-1"></i
+        ></a>
+        <button
+          class="btn btn-link text-white p-0 border-0 text-decoration-none">
+          <i class="bi bi-x-lg font-size-lg"></i>
+        </button>
+      </div>
     </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg py-3 bg-warm-light border-bottom-soft">
-        <div class="container-fluid px-4 px-lg-5">
-            <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
-                <div
-                    class="bg-dark-accent text-white rounded-0 d-flex align-items-center justify-content-center size-42 font-weight-800 font-playfair font-size-6xl">
-                    K
-                </div>
-                <div>
-                    <div class="fw-bold text-dark font-playfair font-size-7xl line-height-xs">ISBT Kumedi<br>Indore
-                    </div>
-                    <div
-                        class="text-muted mt-1 font-size-sm font-weight-800 text-uppercase letter-spacing-lg opacity-70">
-                        INDORE DEVELOPMENT<br>AUTHORITY</div>
-                </div>
-            </a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul
-                    class="navbar-nav gap-3 gap-xl-4 text-uppercase fw-bold align-items-center font-size-lg letter-spacing-md">
-                    <li class="nav-item">
-                        <a class="nav-link text-muted d-flex gap-2 pb-1" href="index.html">
-                            <span class="opacity-40 fw-normal font-size-base mt-1">01</span> HOME
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-muted d-flex gap-2 pb-1" href="aboutus.html">
-                            <span class="opacity-40 fw-normal font-size-base mt-1">02</span> ABOUT
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-muted d-flex gap-2 pb-1" href="facilities.html">
-                            <span class="opacity-40 fw-normal font-size-base mt-1">03</span> FACILITIES
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-muted d-flex gap-2 pb-1" href="transport.html">
-                            <span class="opacity-40 fw-normal font-size-base mt-1">04</span> TRANSPORT
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark active d-flex gap-2 position-relative pb-1 border-bottom-orange text-center line-height-sm"
-                            href="shopOffice.html">
-                            <span class="text-muted opacity-40 fw-normal font-size-base mt-1">05</span> <span
-                                class="text-start">SHOPS &<br>OFFICES</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
-                            href="viewauction.html">
-                            <span class="opacity-40 fw-normal font-size-base mt-1">06</span>
-                            <span class="text-start">
-                                AUCTIONS<br>
-                                <span
-                                    class="badge bg-orange rounded-0 px-2 py-0 text-white font-size-xs line-height-md">LIVE</span>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+          <div
+            class="bg-dark-accent text-white rounded-0 d-flex align-items-center justify-content-center size-60 font-weight-800 font-playfair px-2">
+            ISBT
+          </div>
+          <div>
+            <div
+              class="fw-bold text-dark font-playfair font-size-7xl line-height-xs">
+              ISBT Kumedi Indore
             </div>
-
-            <div class="d-none d-lg-flex gap-3 align-items-center">
-                <a href="viewauction.html"
-                    class="btn bg-dark-accent text-white fw-bold rounded-0 px-2 py-2 d-flex align-items-center gap-3 text-uppercase font-size-lg letter-spacing-md">
-                    <i class="bi bi-hammer"></i> <span class="text-start line-height-sm">VIEW<br>AUCTIONS</span>
-                </a>
-                <a href="#"
-                    class="btn btn-outline-dark fw-bold rounded-0 px-2 py-2 d-flex align-items-center gap-2 text-uppercase font-size-xl letter-spacing-md border-dark-transparent bg-transparent">
-                    <i class="bi bi-person fs-6"></i> LOGIN
-                </a>
+            <div
+              class="text-muted mt-1 font-size-sm font-weight-800 text-uppercase letter-spacing-lg opacity-70">
+              INDORE DEVELOPMENT AUTHORITY
             </div>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav">
+          <ul
+            class="navbar-nav gap-3 gap-xl-4 text-uppercase fw-bold align-items-center font-size-lg letter-spacing-md">
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="index.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">01</span>
+                HOME
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="aboutus.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">02</span>
+                ABOUT
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="facilities.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">03</span>
+                FACILITIES
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark active d-flex gap-2 position-relative pb-1 border-bottom-orange"
+                href="shopOffice.html">
+                <span
+                  class="text-muted opacity-40 fw-normal font-size-base mt-1"
+                  >04</span
+                >
+                <span class="text-start">SHOPS & OFFICES</span>
+              </a>
+            </li>
+          </ul>
         </div>
+
+        <div class="d-none d-lg-flex gap-3 align-items-center">
+          <a
+            href="viewauction.html"
+            class="btn bg-dark-accent text-white fw-bold rounded-0 px-2 py-2 d-flex align-items-center gap-3 text-uppercase font-size-lg letter-spacing-md">
+            <i class="bi bi-hammer"></i>
+            <span class="text-start line-height-sm">VIEW AUCTIONS</span>
+            <span
+              class="badge bg-orange rounded-0 px-2 py-1 text-white font-size-xs line-height-md"
+              >LIVE</span
+            >
+          </a>
+        </div>
+      </div>
     </nav>
 
     <!-- Main Content -->
     <main class="bg-warm-lightest pb-5">
-        <div class="container py-5">
-            <!-- Breadcrumbs & Header -->
-            <div class="text-uppercase fw-bold text-orange mb-2 font-size-sm letter-spacing-md">REAL ESTATE CATALOG >
-                CHAPTER 05: COMMERCIAL LOTS & CORPORATE SPACES</div>
-            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-start mb-5 pb-2">
-                <div class="pe-lg-5">
-                    <h1 class="display-3 font-playfair fw-bold mb-3 text-dark">Commercial Real Estate & Retail Spaces
-                    </h1>
-                    <p class="text-muted font-size-5xl max-w-800 line-height-lg mb-0 opacity-85">Prime commercial real
-                        estate inventory for lease and e-auction. Capitalize on 50,000+ daily commuter footfall across 3
-                        distinct concourse levels.</p>
-                </div>
-                <div class="mt-4 mt-lg-0 flex-shrink-0">
-                    <a href="viewauction.html"
-                        class="btn btn-dark fw-bold rounded-0 px-4 py-3 font-size-sm letter-spacing-md d-flex align-items-center justify-content-between gap-3 text-decoration-none"><i
-                            class="bi bi-search fs-6"></i> VIEW LIVE E-AUCTIONS</a>
-                </div>
-            </div>
-
-            <!-- Filters -->
-            <div class="bg-white p-3 p-md-4 mb-5 border border-dark-transparent rounded-0 shadow-sm">
-                <div class="d-flex flex-column flex-md-row gap-3 align-items-md-center mb-3">
-                    <div
-                        class="text-uppercase fw-bold text-muted font-size-xs letter-spacing-md opacity-70 flex-shrink-0">
-                        FLOOR LEVEL:</div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <button
-                            class="btn btn-dark fw-bold rounded-0 px-3 py-1 font-size-xs letter-spacing-md">ALL</button>
-                        <button
-                            class="btn btn-outline-dark bg-light fw-bold rounded-0 px-3 py-1 font-size-xs letter-spacing-md border-dark-transparent text-muted">GROUND
-                            FLOOR</button>
-                        <button
-                            class="btn btn-outline-dark bg-light fw-bold rounded-0 px-3 py-1 font-size-xs letter-spacing-md border-dark-transparent text-muted">1ST
-                            FLOOR</button>
-                        <button
-                            class="btn btn-outline-dark bg-light fw-bold rounded-0 px-3 py-1 font-size-xs letter-spacing-md border-dark-transparent text-muted">2ND
-                            FLOOR</button>
-                        <button
-                            class="btn btn-outline-dark bg-light fw-bold rounded-0 px-3 py-1 font-size-xs letter-spacing-md border-dark-transparent text-muted">ROOFTOP
-                            TERRACE</button>
-                    </div>
-                </div>
-                <hr class="border-dark-transparent my-3">
-                <div class="row g-3 align-items-center">
-                    <div class="col-md-7">
-                        <div class="input-group">
-                            <span
-                                class="input-group-text bg-white border-dark-transparent rounded-0 text-muted border-end-0"><i
-                                    class="bi bi-search"></i></span>
-                            <input type="text"
-                                class="form-control border-dark-transparent border-start-0 rounded-0 bg-white font-size-sm py-2 shadow-none"
-                                placeholder="Search by business suitability (e.g. pharmacy, cafe, banking)...">
-                        </div>
-                    </div>
-                    <div class="col-md-5 d-flex align-items-center gap-3">
-                        <div
-                            class="text-uppercase fw-bold text-muted font-size-xs letter-spacing-md opacity-70 text-nowrap">
-                            CATEGORY:</div>
-                        <select
-                            class="form-select border-dark-transparent rounded-0 bg-white font-size-sm text-dark fw-medium py-2 shadow-none">
-                            <option>All</option>
-                            <option>Retail Shop</option>
-                            <option>Food Court / Cafe</option>
-                            <option>Corporate Office</option>
-                            <option>ATM Kiosk</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cards Grid dynamically generated by JS -->
-            <div class="row g-4" id="commercialGrid">
-                <!-- Cards will be injected here by fetch -->
-            </div>
-
-            <!-- Regulatory Framework -->
-            <div class="bg-dark-accent p-4 p-md-5 mt-5">
-                <div class="text-uppercase fw-bold text-orange mb-3 font-size-xs letter-spacing-md">REGULATORY FRAMEWORK
-                </div>
-                <h3 class="font-playfair fw-bold mb-5 text-white display-6">Allotment Process & Commercial Guidelines
-                </h3>
-
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="bg-dark p-4 p-lg-5 h-100 border border-secondary border-opacity-25">
-                            <div class="text-uppercase fw-bold text-orange mb-3 font-size-xs letter-spacing-md">01 /
-                                TRANSPARENT E-AUCTION</div>
-                            <p class="text-muted opacity-85 mb-0 font-size-sm line-height-lg text-white">All commercial
-                                units are allotted exclusively via the official IDA E-Auction portal to ensure fair,
-                                open public bidding under state procurement norms.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="bg-dark p-4 p-lg-5 h-100 border border-secondary border-opacity-25">
-                            <div class="text-uppercase fw-bold text-orange mb-3 font-size-xs letter-spacing-md">02 /
-                                30-YEAR RENEWABLE LEASE</div>
-                            <p class="text-muted opacity-85 mb-0 font-size-sm line-height-lg text-white">Allotted on
-                                long term commercial lease with fixed predictable escalation clauses, mortgage rights,
-                                and renewal provisions.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="bg-dark p-4 p-lg-5 h-100 border border-secondary border-opacity-25">
-                            <div class="text-uppercase fw-bold text-orange mb-3 font-size-xs letter-spacing-md">03 /
-                                READY FIT-OUT & HANDOVER</div>
-                            <p class="text-muted opacity-85 mb-0 font-size-sm line-height-lg text-white">Terminal
-                                concourse is fully ready with complete power load sanction, fire NOC, water connections,
-                                and centralized air conditioning.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container py-5">
+        <!-- Breadcrumbs & Header -->
+        <div
+          class="text-uppercase fw-bold text-orange mb-2 font-size-sm letter-spacing-md">
+          REAL ESTATE CATALOG > CHAPTER 05: COMMERCIAL LOTS & CORPORATE SPACES
         </div>
+        <div class="mb-5">
+          <div class="">
+            <h2 class="display-5 font-playfair fw-bold mb-3 text-dark">
+              Commercial Real Estate & Retail Spaces
+            </h2>
+            <p class="font-size-2xl mb-0 opacity-100">
+              Prime commercial real estate inventory for lease and e-auction.
+              Capitalize on 50,000+ daily commuter footfall across 3 distinct
+              concourse levels.
+            </p>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div
+          class="bg-white p-3 p-md-4 mb-5 border border-dark-transparent rounded-0 shadow-sm">
+          <div
+            class="d-flex flex-column flex-md-row gap-3 align-items-md-center mb-3">
+            <div
+              class="text-uppercase fw-bold text-muted font-size-xs letter-spacing-md opacity-70 flex-shrink-0">
+              FLOOR LEVEL:
+            </div>
+            <div class="d-flex flex-wrap gap-2" id="floorFilterBtns">
+              <!-- Dynamically generated by JS -->
+            </div>
+          </div>
+          <hr class="border-dark-transparent my-3" />
+          <div class="row g-3 align-items-center">
+            <div class="col-md-7">
+              <div class="input-group">
+                <span
+                  class="input-group-text bg-white border-dark-transparent rounded-0 text-muted border-end-0"
+                  ><i class="bi bi-search"></i
+                ></span>
+                <input
+                  type="text"
+                  id="searchBox"
+                  class="form-control border-dark-transparent border-start-0 rounded-0 bg-white font-size-sm py-2 shadow-none"
+                  placeholder="Search by business suitability..." />
+              </div>
+            </div>
+            <div class="col-md-5 d-flex align-items-center gap-3">
+              <div
+                class="text-uppercase fw-bold text-muted font-size-xs letter-spacing-md opacity-70 text-nowrap">
+                CATEGORY:
+              </div>
+              <select
+                id="categorySelect"
+                class="form-select border-dark-transparent rounded-0 bg-white font-size-sm text-dark fw-medium py-2 shadow-none">
+                <option value="All">All</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="row g-4" id="commercialGrid"></div>
+
+        <!-- Regulatory Framework -->
+        <div class="bg-dark-accent p-4 p-md-5 mt-5">
+          <div
+            class="text-uppercase fw-bold text-orange mb-3 font-size-xs letter-spacing-md">
+            REGULATORY FRAMEWORK
+          </div>
+          <h3 class="font-playfair fw-bold mb-5 text-white display-6">
+            Allotment Process & Commercial Guidelines
+          </h3>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div
+                class="bg-dark p-4 p-lg-5 h-100 border border-secondary border-opacity-25">
+                <div class="text-uppercase fw-bold text-orange mb-3">
+                  01 / TRANSPARENT E-AUCTION
+                </div>
+                <p class="text-white">
+                  All commercial units are allotted exclusively via the official
+                  IDA E-Auction portal to ensure fair, open public bidding under
+                  state procurement norms.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div
+                class="bg-dark p-4 p-lg-5 h-100 border border-secondary border-opacity-25">
+                <div class="text-uppercase fw-bold text-orange mb-3">
+                  02 / 30-YEAR RENEWABLE LEASE
+                </div>
+                <p class="text-white">
+                  Allotted on long term commercial lease with fixed predictable
+                  escalation clauses, mortgage rights, and renewal provisions.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div
+                class="bg-dark p-4 p-lg-5 h-100 border border-secondary border-opacity-25">
+                <div class="text-uppercase fw-bold text-orange mb-3">
+                  03 / READY FIT-OUT & HANDOVER
+                </div>
+                <p class="text-white">
+                  Terminal concourse is fully ready with complete power load
+                  sanction, fire NOC, water connections, and centralized air
+                  conditioning.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer class="bg-white border-top pt-5 pb-4 bg-warm-lightest">
-        <div class="container">
-            <div class="row align-items-center mb-4">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <a class="text-decoration-none text-dark d-flex align-items-center gap-2 mb-3" href="#">
-                        <div
-                            class="bg-dark text-white p-2 rounded d-flex align-items-center justify-content-center size-32 font-weight-800 font-size-2xl">
-                            ISBT
-                        </div>
-                        <div class="fw-bold fs-6 line-height-xs">ISBT Kumedi Indore</div>
-                    </a>
-                    <p class="text-muted mb-0 pe-md-4 font-size-xl line-height-lg">
-                        The Inter State Bus Terminal at Kumedi is a flagship civic infrastructure project developed and
-                        managed by the Indore Development Authority.
-                    </p>
-                    <a href="#"
-                        class="d-inline-flex align-items-center gap-2 mt-3 fw-bold text-orange text-decoration-none text-uppercase font-size-lg letter-spacing-sm">
-                        <i class="bi bi-geo-alt"></i> VIEW ON GOOGLE MAPS
-                    </a>
-                </div>
-                <div class="col-md-8">
-                    <div
-                        class="d-flex flex-wrap gap-4 justify-content-md-end text-uppercase fw-semibold font-size-md letter-spacing-sm">
-                        <a href="#" class="text-dark text-decoration-none">ISBT Master Plan</a>
-                        <a href="#" class="text-dark text-decoration-none">IDA Commercial Spaces</a>
-                        <a href="#" class="text-dark text-decoration-none">Multi-Modal Operations</a>
-                        <a href="#" class="text-dark text-decoration-none">Smart Fleet Management</a>
-                        <a href="#" class="text-dark text-decoration-none">Help / Support</a>
-                        <a href="#" class="text-dark text-decoration-none">Bus Operators <i
-                                class="bi bi-box-arrow-up-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="text-muted opacity-40 my-4">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
-                <div class="mb-3 mb-md-0">
-                    <div class="text-uppercase fw-bold text-muted mb-1 font-size-base letter-spacing-md">EXECUTIVE
-                        AUTHORITY</div>
-                    <div class="text-dark fw-semibold font-size-xl">MR-10 Super Corridor Hub, Indore (M.P.) 452010</div>
-                </div>
-                <div class="mb-3 mb-md-0 text-md-center">
-                    <div class="text-uppercase fw-bold text-muted mb-1 font-size-base letter-spacing-md">PROJECT OWNER
-                    </div>
-                    <div class="text-dark fw-semibold font-size-xl">Indore Development Authority</div>
-                </div>
-                <div class="text-md-end">
-                    <div class="text-uppercase fw-bold text-muted mb-1 font-size-base letter-spacing-md">CONTACT HUB
-                    </div>
-                    <div class="text-dark fw-semibold font-size-xl">Contact Us at +91 731 243 0000</div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row align-items-center mb-4">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <a
+              class="text-decoration-none text-dark d-flex align-items-center gap-2 mb-3"
+              href="#">
+              <div
+                class="bg-dark text-white p-2 rounded d-flex align-items-center justify-content-center size-32 font-weight-800 font-size-2xl">
+                ISBT
+              </div>
+              <div class="fw-bold fs-6 line-height-xs">ISBT Kumedi Indore</div>
+            </a>
+            <p class="text-muted mb-0 pe-md-4 font-size-xl line-height-lg">
+              The Inter State Bus Terminal at Kumedi is a flagship civic
+              infrastructure project developed and managed by the Indore
+              Development Authority.
+            </p>
+            <a
+              href="#"
+              class="d-inline-flex align-items-center gap-2 mt-3 fw-bold text-orange text-decoration-none text-uppercase font-size-lg letter-spacing-sm">
+              <i class="bi bi-geo-alt"></i> VIEW ON GOOGLE MAPS
+            </a>
+          </div>
+          <div class="col-md-8">
             <div
-                class="mt-4 pt-3 border-top d-flex flex-column flex-md-row justify-content-between text-muted font-size-lg">
-                <div class="mb-2 mb-md-0">© 2026 Indore Development Authority. All Rights Reserved.</div>
-                <div>Terms & Conditions | Privacy Policy | Refund Policy</div>
+              class="d-flex flex-wrap gap-4 justify-content-md-end text-uppercase fw-semibold font-size-md letter-spacing-sm">
+              <a href="#" class="text-dark text-decoration-none"
+                >ISBT Master Plan</a
+              >
+              <a href="#" class="text-dark text-decoration-none"
+                >IDA Commercial Spaces</a
+              >
+              <a href="#" class="text-dark text-decoration-none"
+                >Multi-Modal Operations</a
+              >
+              <a href="#" class="text-dark text-decoration-none"
+                >Smart Fleet Management</a
+              >
+              <a href="#" class="text-dark text-decoration-none"
+                >Help / Support</a
+              >
+              <a href="#" class="text-dark text-decoration-none"
+                >Bus Operators <i class="bi bi-box-arrow-up-right ms-1"></i
+              ></a>
             </div>
+          </div>
         </div>
+        <hr class="text-muted opacity-40 my-4" />
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+          <div class="mb-3 mb-md-0">
+            <div
+              class="text-uppercase fw-bold text-muted mb-1 font-size-base letter-spacing-md">
+              EXECUTIVE AUTHORITY
+            </div>
+            <div class="text-dark fw-semibold font-size-xl">
+              MR-10 Super Corridor Hub, Indore (M.P.) 452010
+            </div>
+          </div>
+          <div class="mb-3 mb-md-0 text-md-center">
+            <div
+              class="text-uppercase fw-bold text-muted mb-1 font-size-base letter-spacing-md">
+              PROJECT OWNER
+            </div>
+            <div class="text-dark fw-semibold font-size-xl">
+              Indore Development Authority
+            </div>
+          </div>
+          <div class="text-md-end">
+            <div
+              class="text-uppercase fw-bold text-muted mb-1 font-size-base letter-spacing-md">
+              CONTACT HUB
+            </div>
+            <div class="text-dark fw-semibold font-size-xl">
+              Contact Us at +91 731 243 0000
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-4 pt-3 border-top d-flex flex-column flex-md-row justify-content-between text-muted font-size-lg">
+          <div class="mb-2 mb-md-0">
+            © 2026 Indore Development Authority. All Rights Reserved.
+          </div>
+          <div>Terms & Conditions | Privacy Policy | Refund Policy</div>
+        </div>
+      </div>
     </footer>
+
+     <!-- Bid Modal -->
+  <div class="modal fade" id="bidModal" tabindex="-1" aria-labelledby="bidModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content rounded-0 border-0 bg-warm-lightest">
+        <div class="modal-body p-4 p-md-5 position-relative">
+          <button type="button" class="btn-close position-absolute top-0 end-0 m-4 shadow-none" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+
+          <div id="modalHeaderContent">
+            <!-- Populated dynamically -->
+          </div>
+
+          <form id="bidForm" onsubmit="submitBid(event)">
+            <!-- Bid Amount Section -->
+            <div class="bg-white p-4 border border-dark-transparent mb-4">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-uppercase fw-bold text-dark font-size-xs letter-spacing-md">ENTER YOUR BID AMOUNT (INR
+                  ₹)</span>
+                <span class="text-uppercase fw-bold text-orange font-size-xs letter-spacing-md"
+                  id="modalMinBidLabel">MIN VALID BID: ₹0</span>
+              </div>
+              <div class="input-group mb-3">
+                <span
+                  class="input-group-text bg-warm-lightest border-dark-transparent rounded-0 text-dark fw-bold fs-4 border-end-0 px-4">₹</span>
+                <input type="number"
+                  class="form-control form-control-lg border-dark-transparent border-start-0 rounded-0 bg-warm-lightest font-playfair fw-bold fs-4 shadow-none"
+                  id="bidAmountInput" required />
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="text-uppercase fw-bold text-muted font-size-xs letter-spacing-md me-2">QUICK
+                  INCREMENT:</span>
+                <button type="button"
+                  class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-xs letter-spacing-md border-dark-transparent"
+                  onclick="incrementBid(50000)">
+                  +₹50,000
+                </button>
+                <button type="button"
+                  class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-xs letter-spacing-md border-dark-transparent"
+                  onclick="incrementBid(100000)">
+                  +₹1,00,000
+                </button>
+                <button type="button"
+                  class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-xs letter-spacing-md border-dark-transparent"
+                  onclick="incrementBid(200000)">
+                  +₹2,00,000
+                </button>
+              </div>
+            </div>
+
+            <!-- Bidder Details Section -->
+            <div class="bg-white p-4 border border-dark-transparent mb-4">
+              <div class="text-uppercase fw-bold text-dark font-size-xs letter-spacing-md mb-3">
+                BIDDER AUTHENTICATION & DETAILS
+              </div>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label font-size-sm fw-bold text-muted mb-1">Trade Name</label>
+                  <input type="text" class="form-control rounded-0 border-dark-transparent bg-warm-lightest shadow-none"
+                    id="bidderTradeName" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label font-size-sm fw-bold text-muted mb-1">Full Name</label>
+                  <input type="text" class="form-control rounded-0 border-dark-transparent bg-warm-lightest shadow-none"
+                    id="bidderName" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label font-size-sm fw-bold text-muted mb-1">Contact Number</label>
+                  <input type="tel" class="form-control rounded-0 border-dark-transparent bg-warm-lightest shadow-none"
+                    id="bidderPhone" required />
+                </div>
+                <div class="col-12">
+                  <label class="form-label font-size-sm fw-bold text-muted mb-1">Email Address (Gmail)</label>
+                  <input type="email"
+                    class="form-control rounded-0 border-dark-transparent bg-warm-lightest shadow-none" id="bidderEmail"
+                    required />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-check mb-4 d-flex align-items-center gap-2">
+              <input class="form-check-input rounded-0 border-dark shadow-none mt-1" type="checkbox" id="tncCheck"
+                required />
+              <label class="form-check-label font-size-sm text-dark opacity-85 line-height-lg" for="tncCheck"
+                id="modalTncLabel">
+                I certify that I have read the IDA tender conditions, have
+                deposited the requisite EMD, and authorize this digital bid.
+              </label>
+            </div>
+
+            <button type="submit"
+              class="btn btn-dark w-100 fw-bold rounded-0 py-3 font-size-md letter-spacing-lg d-flex align-items-center justify-content-center gap-2"
+              id="submitBidBtn">
+              <i class="bi bi-hammer fs-5"></i> SUBMIT BID
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Render Data -->
+    <!-- Render Data from auction.json -->
     <script>
-        function renderCommercialUnits() {
-            fetch('./commercial.json')
-                .then(response => response.json())
-                .then(COMMERCIAL_UNITS => {
-                    const grid = document.getElementById('commercialGrid');
-                    if (!grid) return;
+      let ALL_ITEMS = [];
+      let activeFloor = "all";
 
-                    let html = '';
+      function initPage() {
+        fetch("./auction.json")
+          .then((r) => r.json())
+          .then((data) => {
+            ALL_ITEMS = [];
+            for (const key in data) {
+              if (
+                (key === "Shops" || key === "Offices") &&
+                Array.isArray(data[key])
+              ) {
+                ALL_ITEMS = ALL_ITEMS.concat(data[key]);
+              }
+            }
+            window.auctionData = ALL_ITEMS;
+            buildFloorFilters();
+            buildCategoryDropdown();
+            renderCards();
 
-                    COMMERCIAL_UNITS.forEach(item => {
-                        const isOrange = item.status.toUpperCase() === 'UNDER BIDDING';
-                        const statusBadge = isOrange
-                            ? `<span class="badge bg-orange rounded-0 px-2 py-1 font-size-xs letter-spacing-md text-uppercase">${item.status}</span>`
-                            : `<span class="badge bg-light text-dark border border-dark-transparent rounded-0 px-2 py-1 font-size-xs letter-spacing-md text-uppercase">${item.status}</span>`;
+            document
+              .getElementById("searchBox")
+              .addEventListener("input", renderCards);
+            document
+              .getElementById("categorySelect")
+              .addEventListener("change", renderCards);
+          })
+          .catch((err) => console.error("Error loading auction.json:", err));
+      }
 
-                        const baseReservePriceLakhs = (item.baseReservePrice / 100000).toFixed(2);
+      function buildFloorFilters() {
+        const floors = [
+          "all",
+          ...new Set(ALL_ITEMS.map((i) => i.floor).filter(Boolean)),
+        ];
+        const container = document.getElementById("floorFilterBtns");
+        container.innerHTML = floors
+          .map((f) => {
+            const label = f === "all" ? "ALL" : f.toUpperCase();
+            const isActive = f === "all";
+            return `<button onclick="setFloor('${f.replace(/'/g, "\\'")}')" data-floor="${f}"
+                    class="floor-btn btn ${isActive ? "btn-dark" : "btn-outline-dark bg-light text-muted border-dark-transparent"} fw-bold rounded-0 px-3 py-1 font-size-xs letter-spacing-md">
+                    ${label}
+                </button>`;
+          })
+          .join("");
+      }
 
-                        const badgesHtml = item.suitableFor.map(s => `<span class="badge bg-light text-dark border border-dark-transparent rounded-0 px-2 py-1 font-size-xs fw-normal opacity-85">${s}</span>`).join('');
+      function buildCategoryDropdown() {
+        const cats = [
+          ...new Set(ALL_ITEMS.map((i) => i.categorytype).filter(Boolean)),
+        ].sort();
+        const sel = document.getElementById("categorySelect");
+        cats.forEach((c) => {
+          const opt = document.createElement("option");
+          opt.value = c;
+          opt.textContent = c;
+          sel.appendChild(opt);
+        });
+      }
 
-                        html += `
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card border-0 rounded-0 shadow-sm bg-white h-100 border border-dark-transparent">
-                                <div class="p-4 d-flex flex-column h-100">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <span class="badge bg-light text-dark border border-dark-transparent rounded-0 px-2 py-1 font-size-xs letter-spacing-md text-uppercase">${item.floor}</span>
-                                        ${statusBadge}
-                                    </div>
-                                    <h4 class="font-playfair fw-bold mb-1 text-dark line-height-sm">${item.unitNumber}</h4>
-                                    <div class="text-muted font-size-sm mb-4">${item.category}</div>
-                                    
-                                    <div class="bg-warm-lightest p-3 border border-dark-transparent mb-4">
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <span class="text-muted font-size-xs letter-spacing-md text-uppercase opacity-85">Carpet Area:</span>
-                                            <span class="fw-bold text-dark font-size-sm">${item.carpetAreaSqFt} Sq.Ft</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between mb-3 pb-3 border-bottom border-dark-transparent">
-                                            <span class="text-muted font-size-xs letter-spacing-md text-uppercase opacity-85">Super Built-up:</span>
-                                            <span class="fw-bold text-dark font-size-sm">${item.superBuiltUpSqFt} Sq.Ft</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="fw-bold text-dark font-size-xs letter-spacing-md text-uppercase">RESERVE BASE PRICE:</span>
-                                            <span class="fw-bold text-orange font-size-lg">₹${baseReservePriceLakhs} Lakhs</span>
-                                        </div>
-                                    </div>
+      function setFloor(floor) {
+        activeFloor = floor;
+        document.querySelectorAll(".floor-btn").forEach((btn) => {
+          const isActive = btn.dataset.floor === floor;
+          btn.className =
+            "floor-btn btn " +
+            (isActive
+              ? "btn-dark"
+              : "btn-outline-dark bg-light text-muted border-dark-transparent") +
+            " fw-bold rounded-0 px-3 py-1 font-size-xs letter-spacing-md";
+        });
+        renderCards();
+      }
 
-                                    <p class="text-muted font-size-sm line-height-lg mb-4 opacity-85 flex-grow-1">${item.description}</p>
+      function renderCards() {
+        const searchVal = (
+          document.getElementById("searchBox").value || ""
+        ).toLowerCase();
+        const catVal = document.getElementById("categorySelect").value;
 
-                                    <div class="mb-4">
-                                        <div class="text-uppercase text-muted font-size-xs letter-spacing-md mb-2 opacity-85 fw-bold">IDEAL PROFILE</div>
-                                        <div class="d-flex flex-wrap gap-2">
-                                            ${badgesHtml}
-                                        </div>
-                                    </div>
+        const filtered = ALL_ITEMS.filter((item) => {
+          const floorMatch =
+            activeFloor === "all" || item.floor === activeFloor;
+          const catMatch =
+            catVal === "All" ||
+            catVal === "all" ||
+            item.categorytype === catVal;
+          const searchMatch =
+            !searchVal ||
+            (item.unitNumber || "").toLowerCase().includes(searchVal) ||
+            (item.title || "").toLowerCase().includes(searchVal) ||
+            (item.categorytype || "").toLowerCase().includes(searchVal) ||
+            (item.category || "").toLowerCase().includes(searchVal) ||
+            (item.floor || "").toLowerCase().includes(searchVal) ||
+            (item.Reservation || "").toLowerCase().includes(searchVal) ||
+            (item.nitNumber || "").toLowerCase().includes(searchVal);
+          return floorMatch && catMatch && searchMatch;
+        });
 
-                                    <div class="mt-auto pt-3 border-top border-dark-transparent d-flex justify-content-between align-items-center cursor-pointer">
-                                        <span class="fw-bold text-dark font-size-xs letter-spacing-md text-uppercase">VIEW SPECIFICATIONS</span>
-                                        <i class="bi bi-arrow-right text-dark fs-6"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        `;
-                    });
+        const grid = document.getElementById("commercialGrid");
 
-                    grid.innerHTML = html;
-                })
-                .catch(error => console.error('Error loading commercial units:', error));
+        if (filtered.length === 0) {
+          grid.innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <i class="bi bi-search fs-1 text-muted opacity-40 mb-3 d-block"></i>
+                        <div class="fw-bold text-dark font-size-xl mb-1">No units found</div>
+                        <div class="text-muted font-size-sm">Try adjusting your search or filters.</div>
+                    </div>`;
+          return;
         }
 
-        // Render on load
-        document.addEventListener('DOMContentLoaded', renderCommercialUnits);
-    </script>
-</body>
+        let html = "";
+        filtered.forEach((item) => {
+          const isOpen = (item.Bidstatus || "").toLowerCase() === "open";
+          const isReserved =
+            (item.Bidstatus || "").toLowerCase() === "reserved";
 
+          const statusBadge = isOpen
+            ? '<span class="badge bg-orange rounded-0 px-2 py-1 font-size-xs letter-spacing-md">OPEN</span>'
+            : isReserved
+              ? '<span class="badge bg-secondary rounded-0 px-2 py-1 font-size-xs letter-spacing-md">RESERVED</span>'
+              : '<span class="badge bg-light text-dark border border-dark-transparent rounded-0 px-2 py-1 font-size-xs letter-spacing-md">' +
+                (item.Bidstatus || "").toUpperCase() +
+                "</span>";
+
+          const areaSqFt = item.AreainSqFt
+            ? Number(item.AreainSqFt).toLocaleString("en-IN", {
+                maximumFractionDigits: 2,
+              })
+            : item.dimensions
+              ? (
+                  item.dimensions.widthM *
+                  item.dimensions.lengthM *
+                  10.7639
+                ).toFixed(2)
+              : "N/A";
+
+          const areaSqM = item.AreainSqMtr
+            ? Number(item.AreainSqMtr).toLocaleString("en-IN", {
+                maximumFractionDigits: 2,
+              })
+            : item.dimensions
+              ? (item.dimensions.widthM * item.dimensions.lengthM).toFixed(2)
+              : "N/A";
+
+          const baseRate = item.BaseRate
+            ? isNaN(Number(item.BaseRate))
+              ? item.BaseRate
+              : "\u20B9" + Number(item.BaseRate).toLocaleString("en-IN")
+            : "N/A";
+
+          const baseRateTxt = item.BaseRateTxt || "Per Sq. Ft per month";
+
+          let monthlyLease = "N/A";
+          if (item.minratesqftmonthinRS && item.AreainSqFt) {
+            const avg =
+              ((Number(item.minratesqftmonthinRS) || 0) +
+                (Number(item.maxratesqftmonthinRS) ||
+                  Number(item.minratesqftmonthinRS) ||
+                  0)) /
+              2;
+            const val = avg * Number(item.AreainSqFt);
+            if (val > 0)
+              monthlyLease =
+                "\u20B9" +
+                val.toLocaleString("en-IN", { maximumFractionDigits: 0 }) +
+                "/mo";
+          }
+
+          const dimStr = item.dimensions
+            ? item.dimensions.widthM +
+              "m \u00D7 " +
+              item.dimensions.lengthM +
+              "m"
+            : "N/A";
+
+          const reservationBadge = item.Reservation
+            ? '<span class="badge bg-light text-dark border border-dark-transparent rounded-0 px-2 py-1 font-size-xs">' +
+              item.Reservation +
+              "</span>"
+            : "";
+
+          const actionBtn = isOpen
+            ? `<button onclick="openBidModal('${item.id}')" class="btn btn-dark fw-bold rounded-0 py-2 flex-grow-1 font-size-xs letter-spacing-md d-flex align-items-center justify-content-center gap-1"><i class="bi bi-hammer"></i> BID NOW</button>`
+            : isReserved
+              ? ""
+              : `<span class="btn btn-secondary fw-bold rounded-0 py-2 flex-grow-1 font-size-xs letter-spacing-md d-flex align-items-center justify-content-center gap-1 disabled">${(item.Bidstatus || "").toUpperCase()}</span>`;
+
+          html +=
+            '<div class="col-md-6 col-lg-4">' +
+            '<div class="card border-0 rounded-0 shadow-sm bg-white h-100" style="transition:box-shadow .2s" onmouseenter="this.style.boxShadow=\'0 6px 24px rgba(0,0,0,.12)\'" onmouseleave="this.style.boxShadow=\'\'">' +
+            '<div class="p-4 d-flex flex-column h-100">' +
+            '<div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-1">' +
+            '<span class="badge bg-light text-dark border border-dark-transparent rounded-0 px-2 py-1 font-size-xs letter-spacing-md text-uppercase">' +
+            (item.floor || "") +
+            "</span>" +
+            statusBadge +
+            "</div>" +
+            '<h4 class="font-playfair fw-bold mb-1 text-dark line-height-sm">' +
+            (item.unitNumber || item.title) +
+            "</h4>" +
+            '<div class="d-flex flex-wrap gap-1 mb-3">' +
+            '<span class="badge bg-light text-dark border border-dark-transparent rounded-0 px-2 py-1 font-size-xs">' +
+            (item.categorytype || item.category) +
+            "</span>" +
+            reservationBadge +
+            "</div>" +
+            '<div class="bg-warm-lightest p-3 border border-dark-transparent mb-3">' +
+            '<div class="row g-2 text-center">' +
+            '<div class="col-6 border-end border-dark-transparent"><div class="text-muted font-size-xs letter-spacing-md text-uppercase opacity-85 mb-1">Area (Sq.Ft)</div><div class="fw-bold text-dark font-size-sm">' +
+            areaSqFt +
+            "</div></div>" +
+            '<div class="col-6"><div class="text-muted font-size-xs letter-spacing-md text-uppercase opacity-85 mb-1">Area (Sq.M)</div><div class="fw-bold text-dark font-size-sm">' +
+            areaSqM +
+            "</div></div>" +
+            '<div class="col-6 border-end border-dark-transparent pt-2 border-top border-dark-transparent"><div class="text-muted font-size-xs letter-spacing-md text-uppercase opacity-85 mb-1">Base Rate</div><div class="fw-bold text-dark font-size-sm">' +
+            baseRate +
+            '</div><div class="text-muted font-size-xs opacity-70">' +
+            baseRateTxt +
+            "</div></div>" +
+            '<div class="col-6 pt-2 border-top border-dark-transparent"><div class="text-muted font-size-xs letter-spacing-md text-uppercase opacity-85 mb-1">Est. Monthly</div><div class="fw-bold text-orange font-size-sm">' +
+            monthlyLease +
+            "</div></div>" +
+            "</div></div>" +
+            '<div class="d-flex flex-column gap-1 mb-3 flex-grow-1">' +
+            '<div class="d-flex justify-content-between font-size-xs"><span class="text-muted opacity-85 text-uppercase letter-spacing-md">Dimensions</span><span class="fw-bold text-dark">' +
+            dimStr +
+            "</span></div>" +
+            '<div class="d-flex justify-content-between font-size-xs"><span class="text-muted opacity-85 text-uppercase letter-spacing-md">NIT No.</span><span class="fw-semibold text-dark">' +
+            (item.nitNumber || "N/A") +
+            "</span></div>" +
+            '<div class="d-flex justify-content-between font-size-xs"><span class="text-muted opacity-85 text-uppercase letter-spacing-md">Type</span><span class="fw-semibold text-dark">' +
+            (item.type || "").trim() +
+            "</span></div>" +
+            "</div>" +
+            '<div class="mt-auto pt-3 border-top border-dark-transparent d-flex gap-2">' +
+            actionBtn +
+            `<button onclick="viewOnMap('${item.id}')" class="btn btn-outline-dark fw-bold rounded-0 py-2 px-3 font-size-xs letter-spacing-md border-dark-transparent d-flex align-items-center gap-1"><i class="bi bi-eye"></i></button>` +
+            "</div>" +
+            "</div></div></div>";
+        });
+
+        grid.innerHTML = html;
+      }
+
+      document.addEventListener("DOMContentLoaded", initPage);
+    </script>
+
+    <!-- Map Modal -->
+    <div
+      class="modal fade"
+      id="mapModal"
+      tabindex="-1"
+      aria-labelledby="mapModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content rounded-0 border-0 bg-warm-lightest">
+          <div class="modal-body p-4 position-relative" style="height: 80vh">
+            <button
+              type="button"
+              class="btn-close position-absolute top-0 end-0 m-4 shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="z-index: 1000"></button>
+            <h5 class="mb-3 font-playfair fw-bold" id="mapModalTitle">
+              Shop Location
+            </h5>
+            <div
+              id="modal-map"
+              style="
+                width: 100%;
+                height: calc(100% - 40px);
+                background: #eee;
+              "></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Render Data -->
+    <script>
+      window.auctionData = []; // Store globally for the modal
+      let currentModalAuction = null;
+      let bidModalInstance = null;
+
+      function renderAuctions(filterCategory = "all") {
+        if (typeof filterCategory !== "string") filterCategory = "all"; // Handle DOMContentLoaded event object
+        fetch("./auction.json")
+          .then((response) => response.json())
+          .then((data) => {
+            let AUCTION_ITEMS = [];
+            if (Array.isArray(data)) {
+              AUCTION_ITEMS = data; // Fallback for old format
+            } else {
+              // Extract all arrays from object dynamically
+              for (const key in data) {
+                if (Array.isArray(data[key])) {
+                  AUCTION_ITEMS = AUCTION_ITEMS.concat(data[key]);
+                }
+              }
+            }
+
+            window.auctionData = AUCTION_ITEMS;
+
+            // Generate filter categories based on 'categorytype'
+            const categoryCounts = { all: AUCTION_ITEMS.length };
+            AUCTION_ITEMS.forEach((item) => {
+              let ct = item.categorytype || "Other";
+              categoryCounts[ct] = (categoryCounts[ct] || 0) + 1;
+            });
+
+            const filterContainer = document.getElementById(
+              "filterButtonsContainer",
+            );
+            if (filterContainer) {
+              let buttonsHtml = `<button onclick="renderAuctions('all')" class="btn ${filterCategory === "all" ? "btn-dark text-white" : "btn-outline-dark bg-transparent text-muted"} fw-bold rounded-0 px-4 py-2 font-size-sm letter-spacing-md border-dark-transparent">ALL [${categoryCounts["all"].toString().padStart(2, "0")}]</button>`;
+
+              Object.keys(categoryCounts).forEach((ct) => {
+                if (ct === "all") return;
+                const isActive = filterCategory === ct;
+                const btnClass = isActive
+                  ? "btn-dark text-white"
+                  : "btn-outline-dark bg-transparent text-muted";
+                buttonsHtml += `<button onclick="renderAuctions('${ct}')" class="btn ${btnClass} fw-bold rounded-0 px-4 py-2 font-size-sm letter-spacing-md border-dark-transparent">${ct.toUpperCase()} [${categoryCounts[ct].toString().padStart(2, "0")}]</button>`;
+              });
+              filterContainer.innerHTML = buttonsHtml;
+            }
+
+            const grid = document.getElementById("auctionsGrid");
+            if (!grid) return;
+
+            const filteredItems =
+              filterCategory === "all"
+                ? AUCTION_ITEMS
+                : AUCTION_ITEMS.filter(
+                    (a) => a.categorytype === filterCategory,
+                  );
+
+            let html = "";
+
+            filteredItems.forEach((item) => {
+              const isLive = item.Bidstatus === "Open";
+              const statusBadge = isLive
+                ? `<span class="badge bg-orange rounded-0 px-2 py-1 font-size-xs letter-spacing-md">OPEN</span>`
+                : `<span class="badge bg-secondary rounded-0 px-2 py-1 font-size-xs letter-spacing-md">${item.Bidstatus.toUpperCase()}</span>`;
+
+              const computedSqM = item.dimensions
+                ? item.dimensions.widthM * item.dimensions.lengthM
+                : 0;
+              const computedSqFt = computedSqM * 10.7639;
+
+              const minRateStr = item.minratesqftmonthinRS
+                ? item.minratesqftmonthinRS.toLocaleString("en-IN")
+                : item.BaseRate || "0";
+              const maxRateStr = item.maxratesqftmonthinRS
+                ? item.maxratesqftmonthinRS.toLocaleString("en-IN")
+                : item.BaseRate || "0";
+
+              const avgRateSqft =
+                ((item.minratesqftmonthinRS || 0) +
+                  (item.maxratesqftmonthinRS || 0)) /
+                2;
+              const avgMonthlyLease = avgRateSqft * computedSqFt;
+              const avgMonthlyLeaseStr = avgMonthlyLease
+                ? avgMonthlyLease.toLocaleString("en-IN", {
+                    maximumFractionDigits: 0,
+                  })
+                : "N/A";
+
+              const avgYearlyLease = avgRateSqft * computedSqFt * 12;
+              const avgYearlyLeaseStr = avgYearlyLease
+                ? avgYearlyLease.toLocaleString("en-IN", {
+                    maximumFractionDigits: 0,
+                  })
+                : "N/A";
+
+              const areaSqMStr = item.AreainSqMtr
+                ? item.AreainSqMtr.toLocaleString("en-IN", {
+                    maximumFractionDigits: 2,
+                  })
+                : computedSqM.toFixed(2);
+              const areaSqFtStr = item.AreainSqFt
+                ? item.AreainSqFt.toLocaleString("en-IN", {
+                    maximumFractionDigits: 2,
+                  })
+                : computedSqFt.toFixed(2);
+              const rateSqFtMoStr = item.RateperSqFtPerMonth
+                ? "₹" +
+                  item.RateperSqFtPerMonth.toLocaleString("en-IN", {
+                    maximumFractionDigits: 2,
+                  })
+                : "N/A";
+
+              const baseRateText = item.BaseRateTxt
+                ? item.BaseRateTxt
+                : "Per Sq. Ft per month";
+
+              html += `
+                <div class="col-md-6">
+                    <div class="card border-0 rounded-0 shadow-sm bg-white h-100 border border-dark-transparent">
+                        <div class="p-4 p-md-5 d-flex flex-column h-100">
+                            <!-- Top bar -->
+                            <div class="d-flex justify-content-between align-items-center mb-3 pb-2">
+                                <span class="text-muted font-size-sm letter-spacing-md text-uppercase opacity-70">${item.nitNumber}</span>
+                                ${statusBadge}
+                            </div>
+                            <!-- Title -->
+                            <h3 class="font-playfair fw-bold mb-4 pb-2 text-dark line-height-sm">${item.title}</h3>
+                            
+                            <!-- Property Details -->
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-light text-dark border border-dark-transparent font-size-xs letter-spacing-md px-2 py-1"><i class="bi bi-tag"></i> CATEGORY: ${item.category}</span>
+                                <span class="badge bg-light text-dark border border-dark-transparent font-size-xs letter-spacing-md px-2 py-1"><i class="bi bi-tags"></i> TYPE: ${item.categorytype}</span>
+                                <span class="badge bg-light text-dark border border-dark-transparent font-size-xs letter-spacing-md px-2 py-1"><i class="bi bi-building"></i> FLOOR: ${item.floor}</span>
+                                ${item.location ? `<span class="badge bg-light text-dark border border-dark-transparent font-size-xs letter-spacing-md px-2 py-1"><i class="bi bi-geo-alt"></i> LOCATION: ${item.location}</span>` : ""}
+                            </div>
+                            
+                            <!-- Stats Row -->
+                            <div class="bg-warm-lightest p-3 d-flex flex-wrap justify-content-between mb-4 border border-dark-transparent" style="row-gap: 15px;">
+                                <div class="text-center px-1 flex-fill">
+                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">AREA (SQ.M)</div>
+                                    <div class="fw-bold text-dark font-size-xl">${areaSqMStr}</div>
+                                </div>
+                                <div class="text-center px-1 flex-fill border-start border-dark-transparent">
+                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">AREA (SQ.FT)</div>
+                                    <div class="fw-bold text-orange font-size-xl">${areaSqFtStr}</div>
+                                </div>
+                                
+                                <div class="text-center px-1 flex-fill border-start border-dark-transparent">
+                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">BASE RATE</div>
+                                    <div class="fw-bold text-dark font-size-xl">${item.BaseRate ? (isNaN(item.BaseRate) ? item.BaseRate : "₹" + item.BaseRate) : "N/A"}</div>
+                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">${item.BaseRateTxt}</div>
+                                </div>
+                                
+                                <div class="text-center px-1 flex-fill border-start border-dark-transparent">
+                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">AVG. MONTHLY LEASE</div>
+                                    <div class="fw-bold text-orange font-size-xl">₹${avgMonthlyLeaseStr}</div>
+                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85"></div>
+                                </div>
+
+                            </div>
+                            
+                            <!-- Average Lease Box -->
+                            <div class="bg-dark-accent p-4 d-flex justify-content-between align-items-center mb-4 text-white">
+                                <div>
+                                    <div class="text-uppercase font-size-sm letter-spacing-md mb-1">AVG. ANNUAL LEASE</div>
+                                    <div class="fw-bold fs-3 d-flex align-items-baseline gap-1">
+                                        ₹${avgYearlyLeaseStr}
+                                    </div>
+                                    <div class=" font-size-xs mt-1 text-white opacity-70">Estimated 1-Year Lease (Avg Rate)</div>
+                                </div>
+                                <div class="bg-dark px-4 py-3 border border-secondary border-opacity-25 d-flex flex-column align-items-center text-center">
+                                    <div class="text-uppercase font-size-xs letter-spacing-md mb-1">UNIT</div>
+                                    <div class="fw-bold text-orange font-size-2xl">${item.unitNumber}</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Dimensions Info -->
+                            <div class="d-flex align-items-center gap-2 mb-4 font-size-md fw-semibold text-dark">
+                                <i class="bi bi-arrows-fullscreen text-orange"></i> Dimensions: ${item.dimensions.widthM}m x ${item.dimensions.lengthM}m (${computedSqM.toFixed(2)} sq.m)
+                            </div>
+                            
+                            <!-- Buttons -->
+                            <div class="mt-auto d-flex flex-column flex-xl-row gap-2">
+                                ${item.Bidstatus.toLowerCase() !== "reserved" ? `<button class="btn btn-dark fw-bold rounded-0 py-3 flex-grow-1 font-size-sm letter-spacing-md d-flex align-items-center justify-content-center gap-2" onclick="openBidModal('${item.id}')"><i class="bi bi-hammer fs-6"></i> ENTER LIVE AUCTION & BID</button>` : ""}
+                                <button class="btn btn-outline-dark fw-bold rounded-0 py-3 px-4 font-size-sm letter-spacing-md d-flex align-items-center justify-content-center gap-2 border-dark-transparent" onclick="viewOnMap('${item.id}')"><i class="bi bi-geo-alt fs-6"></i> VIEW ON MAP</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+
+            grid.innerHTML = html;
+          })
+          .catch((error) => console.error("Error loading auctions:", error));
+      }
+
+      window.openBidModal = function (auctionId) {
+        const auction = window.auctionData.find((a) => a.id === auctionId);
+        if (!auction) return;
+        currentModalAuction = auction;
+
+        const isLive = auction.Bidstatus === "Open";
+        const statusColor = isLive ? "text-orange" : "text-secondary";
+
+        const computedSqM =
+          auction.dimensions.widthM * auction.dimensions.lengthM || 0;
+        const computedSqFt = computedSqM * 10.7639;
+
+        // Format numbers using mocked bids but accurate base reserve if possible, based on rates
+        const reserveValue =
+          (auction.minratesqftmonthinRS || 0) * computedSqFt * 12; // Annualized
+        const reserveFmt = reserveValue.toLocaleString("en-IN", {
+          maximumFractionDigits: 0,
+        });
+        const currentBidFmt = reserveFmt; // dummy
+        const minIncrementVal = 50000;
+        const incrementFmt = minIncrementVal.toLocaleString("en-IN");
+        const emdVal = 100000;
+        const emdFmt = emdVal.toLocaleString("en-IN");
+        const minValidBid = Math.round(reserveValue);
+        currentModalAuction.currentHighBid = reserveValue;
+        currentModalAuction.minIncrement = 0;
+
+        // Populate Header
+        document.getElementById("modalHeaderContent").innerHTML = `
+                <div class="text-uppercase fw-bold text-muted font-size-xs letter-spacing-md mb-2">
+                    NIT: ${auction.nitNumber} &nbsp;•&nbsp; <span class="${statusColor}">${auction.Bidstatus.toUpperCase()}</span>
+                </div>
+                <h3 class="font-playfair fw-bold mb-3 text-dark">${auction.title}</h3>
+                <div class="text-muted font-size-sm mb-4">
+                    ${auction.category} • ${auction.floor} • Carpet Area: <span class="fw-bold text-dark">${computedSqM.toFixed(2)} Sq.m</span>
+                </div>
+                <hr class="border-dark-transparent mb-4">
+                
+                <div class="bg-dark-accent p-4 text-white mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <div class="text-uppercase text-white opacity-85 font-size-xs letter-spacing-md mb-2">CURRENT HIGHEST BID (H1)</div>
+                            <div class="fw-bold display-5 mb-2 font-playfair">₹${currentBidFmt}</div>
+                            <div class="text-white opacity-70 font-size-xs">Base Reserve Price (Annual): ₹${reserveFmt}</div>
+                        </div>
+                       
+                    </div>
+                </div>
+            `;
+
+        // Setup Form Inputs
+        document.getElementById("modalMinBidLabel").innerText =
+          "MIN VALID BID: ₹" + minValidBid.toLocaleString("en-IN");
+        document.getElementById("bidAmountInput").value =
+          Math.round(reserveValue);
+        document.getElementById("bidAmountInput").min =
+          Math.round(reserveValue);
+        document.getElementById("modalTncLabel").innerText =
+          `I certify that I have read the IDA tender conditions, have deposited the requisite EMD of ₹${emdFmt}, and authorize this digital bid.`;
+
+        updateSubmitButton();
+
+        // Show Modal
+        if (!bidModalInstance) {
+          bidModalInstance = new bootstrap.Modal(
+            document.getElementById("bidModal"),
+          );
+        }
+        bidModalInstance.show();
+      };
+
+      window.incrementBid = function (amount) {
+        const input = document.getElementById("bidAmountInput");
+        input.value = parseInt(input.value || 0) + amount;
+        updateSubmitButton();
+      };
+
+      // Listen for manual input changes to update submit button
+      document.addEventListener("DOMContentLoaded", () => {
+        const input = document.getElementById("bidAmountInput");
+        if (input) {
+          input.addEventListener("input", updateSubmitButton);
+        }
+      });
+
+      function updateSubmitButton() {
+        const input = document.getElementById("bidAmountInput");
+        const btn = document.getElementById("submitBidBtn");
+        if (input && btn) {
+          const val = parseInt(input.value || 0);
+          btn.innerHTML = `<i class="bi bi-hammer fs-5"></i> SUBMIT BID OF ₹${val.toLocaleString("en-IN")}`;
+        }
+      }
+
+      window.submitBid = async function (e) {
+        e.preventDefault();
+        const amount = document.getElementById("bidAmountInput").value;
+        const name = document.getElementById("bidderName").value;
+        const phone = document.getElementById("bidderPhone").value;
+        const email = document.getElementById("bidderEmail").value;
+        const btn = document.getElementById("submitBidBtn");
+
+        if (parseInt(amount) < Math.round(currentModalAuction.currentHighBid)) {
+          alert("Bid amount is lower than the minimum valid bid!");
+          return;
+        }
+
+        const originalBtnText = btn.innerHTML;
+        btn.innerHTML = `<i class="bi bi-hourglass-split fs-5"></i> SUBMITTING...`;
+        btn.disabled = true;
+
+        try {
+          const response = await fetch(
+            "http://localhost:3000/AIzaSyA-mthgApZGgolCZUSBSRP6zUB4D0utDxY/submit-bid",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                bidAmount: amount,
+                bidderName: name,
+                bidderPhone: phone,
+                bidderEmail: email,
+              }),
+            },
+          );
+
+          const result = await response.json();
+
+          if (result.success) {
+            alert(
+              `Bid successfully submitted for ₹${parseInt(amount).toLocaleString("en-IN")} by ${name}!\nReceipt sent successfully.`,
+            );
+            bidModalInstance.hide();
+            e.target.reset();
+          } else {
+            alert(
+              "Error submitting bid: " + (result.message || "Unknown error"),
+            );
+          }
+        } catch (error) {
+          console.error("Submission error:", error);
+          alert(
+            "Could not connect to backend server. Make sure the backend is running.",
+          );
+        } finally {
+          btn.innerHTML = originalBtnText;
+          btn.disabled = false;
+        }
+      };
+
+      // Map Modal logic
+      let mapModalInstance = null;
+      let modalMap = null;
+      let modalImageOverlay = null;
+      let modalMarker = null;
+
+      window.viewOnMap = function (auctionId) {
+        const auction = window.auctionData.find((a) => a.id === auctionId);
+        if (!auction) return;
+
+        document.getElementById("mapModalTitle").innerText =
+          auction.title + " Location";
+
+        if (!mapModalInstance) {
+          mapModalInstance = new bootstrap.Modal(
+            document.getElementById("mapModal"),
+          );
+        }
+        mapModalInstance.show();
+
+        const mapModalEl = document.getElementById("mapModal");
+
+        if (window._mapModalShownListener) {
+          mapModalEl.removeEventListener(
+            "shown.bs.modal",
+            window._mapModalShownListener,
+          );
+        }
+
+        window._mapModalShownListener = function () {
+          if (!modalMap) {
+            modalMap = L.map("modal-map", {
+              crs: L.CRS.Simple,
+              minZoom: -2.5,
+              maxZoom: 20,
+              center: [0, 0],
+              zoom: 1,
+              attributionControl: false,
+            });
+          }
+
+          modalMap.invalidateSize();
+
+          if (modalImageOverlay) {
+            modalMap.removeLayer(modalImageOverlay);
+          }
+          if (modalMarker) {
+            modalMap.removeLayer(modalMarker);
+          }
+
+          // Using typical architectural plan bounds for simple CRS [y, x] mapping
+          var imageBounds = [
+            [0, 0],
+            [4963, 3509],
+          ];
+          modalImageOverlay = L.imageOverlay(auction.imgsrc, imageBounds).addTo(
+            modalMap,
+          );
+          modalMap.fitBounds(imageBounds);
+
+          if (auction.mapX !== undefined && auction.mapY !== undefined) {
+            modalMarker = L.marker([auction.mapY, auction.mapX]).addTo(
+              modalMap,
+            );
+            modalMarker
+              .bindPopup(
+                "<b>" + auction.unitNumber + "</b><br>" + auction.category,
+              )
+              .openPopup();
+          }
+        };
+
+        mapModalEl.addEventListener(
+          "shown.bs.modal",
+          window._mapModalShownListener,
+          { once: true },
+        );
+      };
+
+      // Render on load handled by initPage earlier
+    </script>
+  </body>
 </html>
