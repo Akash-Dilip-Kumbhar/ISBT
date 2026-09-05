@@ -63,14 +63,14 @@
         name: 'Shop GF-01',
         category: 'Retail',
         bounds: [[100, 50], [200, 150]], // Pixel coordinates for Shop 1
-        popupContent: '<h2>Shop GF-01</h2><p>Category: Retail</p><a href="viewauction.html?shop=shop-gf-01">View Auction</a>'
+        popupContent: '<h2>Shop GF-01</h2><p>Category: Retail</p><a href="viewproposal.html?shop=shop-gf-01">View Proposal</a>'
       },
       {
         id: 'shop-gf-02',
         name: 'Shop GF-02',
         category: 'Food & Beverage',
         bounds: [[100, 200], [200, 300]], // Pixel coordinates for Shop 2
-        popupContent: '<h2>Shop GF-02</h2><p>Category: Food & Beverage</p><a href="viewauction.html?shop=shop-gf-02">View Auction</a>'
+        popupContent: '<h2>Shop GF-02</h2><p>Category: Food & Beverage</p><a href="viewproposal.html?shop=shop-gf-02">View Proposal</a>'
       }
       // Add all your shops here following the same pattern
     ];
@@ -195,7 +195,7 @@
           <div class="shop-id">${shop.id}</div>
           <div class="shop-name">${shop.name}</div>
           <div class="shop-category">${shop.category}</div>
-          <a href="viewauction.html?shop=${shop.id}" class="btn btn-sm btn-outline-primary">View Auction</a>
+          <a href="viewproposal.html?shop=${shop.id}" class="btn btn-sm btn-outline-primary">View Proposal</a>
         `;
 
         item.addEventListener('click', () => {

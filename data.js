@@ -1,4 +1,4 @@
-
+﻿
 
 export const TERMINAL_IMAGES = {
   hero: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBKk6YwAI2qmqpXlXEAWVUIXjW10tsbQnB1HGoXuCSZZSZlxhvbHSX-G4qOL3_XB4XhaJLtiTtrcYgPbmw-E-qEmzgQbjo7Q5fgprIGiU2GO0hCZyzD7A_J-RH1RQpzbMRuwEbWd3hh7hjWTKCKugBzJPZy9iB7Y77NpO0sCy8oj9jrIwz-Apyjjreuranv2tSAdHA9FoY0G0ZhLR9wWEy8a7XV3k5AVjCVC0n5_uvGPUBkY9xg0SmN7w',
@@ -165,7 +165,7 @@ export const COMMERCIAL_UNITS: CommercialUnit[] = [
     frontageFt: 18,
     suitableFor: ['Pharmacy & Chemist', 'Convenience Store', 'Travel Accessories', 'Packaged Snacks'],
     status: 'Under Bidding',
-    auctionId: 'auc-01',
+    proposalId: 'auc-01',
     description: 'High visibility frontage facing the primary passenger departure concourse with heavy pedestrian throughput.',
     features: ['3-Phase 10KW Power', 'Full Glass Frontage', 'Fire Sprinklers & Smoke Sensor', 'Rolling Shutter + Glass Door']
   },
@@ -180,8 +180,8 @@ export const COMMERCIAL_UNITS: CommercialUnit[] = [
     monthlyRentEstimate: 65000,
     frontageFt: 28,
     suitableFor: ['Branded Apparel', 'Footwear', 'Consumer Electronics', 'Indori Namkeen Flagship'],
-    status: 'Open for E-Auction',
-    auctionId: 'auc-02',
+    status: 'Open for E-Proposal',
+    proposalId: 'auc-02',
     description: 'Premium dual-frontage corner unit adjacent to main escalators leading to the first-floor ticketing hall.',
     features: ['Dual Entry Access', 'Central AC Connection', 'Independent Water Line', 'Dedicated Signage Fascia']
   },
@@ -196,8 +196,8 @@ export const COMMERCIAL_UNITS: CommercialUnit[] = [
     monthlyRentEstimate: 38000,
     frontageFt: 14,
     suitableFor: ['Quick Service Restaurant (QSR)', 'Coffee & Bakery', 'Indori Chaat / Poha Jalebi', 'Juice Bar'],
-    status: 'Open for E-Auction',
-    auctionId: 'auc-03',
+    status: 'Open for E-Proposal',
+    proposalId: 'auc-03',
     description: 'Fully piped culinary kiosk inside the 300-seat central air-conditioned Food Court overlooking the bus bays.',
     features: ['Commercial Exhaust Ducting', 'Heavy Duty Gas Line Provision', '3-Phase Power', 'Grease Trap Plumbing']
   },
@@ -212,8 +212,8 @@ export const COMMERCIAL_UNITS: CommercialUnit[] = [
     monthlyRentEstimate: 85000,
     frontageFt: 35,
     suitableFor: ['Tour & Travel Corporate HQ', 'Logistics Operations Office', 'Banking Regional Office', 'Consultancy'],
-    status: 'Open for E-Auction',
-    auctionId: 'auc-04',
+    status: 'Open for E-Proposal',
+    proposalId: 'auc-04',
     description: 'Spacious modern office space with double glazed soundproof glass windows facing MR-10 Super Corridor arterial road.',
     features: ['100% DG Power Backup', 'Fiber Optic High-Speed LAN Line', 'Private Washroom', 'Access Control Ready']
   },
@@ -249,11 +249,11 @@ export const COMMERCIAL_UNITS: CommercialUnit[] = [
   }
 ];
 
-export const AUCTION_ITEMS: AuctionItem[] = [
+export const PROPOSAL_ITEMS: ProposalItem[] = [
   {
     id: 'auc-01',
     nitNumber: 'IDA/ISBT-KUMEDI/NIT-2026/089',
-    title: 'E-Auction for Retail Shop GF-04 (Passenger Concourse)',
+    title: 'E-Proposal for Retail Shop GF-04 (Passenger Concourse)',
     unitNumber: 'Shop GF-04',
     category: 'Retail Shop',
     floor: 'Ground Floor',
@@ -279,7 +279,7 @@ export const AUCTION_ITEMS: AuctionItem[] = [
   {
     id: 'auc-02',
     nitNumber: 'IDA/ISBT-KUMEDI/NIT-2026/090',
-    title: 'E-Auction for Premium Corner Retail Shop GF-12',
+    title: 'E-Proposal for Premium Corner Retail Shop GF-12',
     unitNumber: 'Shop GF-12 (Corner)',
     category: 'Retail Shop',
     floor: 'Ground Floor',
@@ -303,7 +303,7 @@ export const AUCTION_ITEMS: AuctionItem[] = [
   {
     id: 'auc-03',
     nitNumber: 'IDA/ISBT-KUMEDI/NIT-2026/091',
-    title: 'E-Auction for Food Court QSR Kiosk FC-02',
+    title: 'E-Proposal for Food Court QSR Kiosk FC-02',
     unitNumber: 'Kiosk FC-02',
     category: 'Food Court / Cafe',
     floor: '1st Floor',
@@ -326,7 +326,7 @@ export const AUCTION_ITEMS: AuctionItem[] = [
   {
     id: 'auc-04',
     nitNumber: 'IDA/ISBT-KUMEDI/NIT-2026/094',
-    title: 'E-Auction for Corporate Office Space OF-108',
+    title: 'E-Proposal for Corporate Office Space OF-108',
     unitNumber: 'Office OF-108',
     category: 'Corporate Office',
     floor: '1st Floor',
@@ -349,7 +349,7 @@ export const AUCTION_ITEMS: AuctionItem[] = [
   {
     id: 'auc-05',
     nitNumber: 'IDA/ISBT-KUMEDI/NIT-2026/098',
-    title: 'E-Auction for Rooftop Fine Dine & Banquet Space RT-01',
+    title: 'E-Proposal for Rooftop Fine Dine & Banquet Space RT-01',
     unitNumber: 'Terrace Restaurant RT-01',
     category: 'Food Court / Cafe',
     floor: 'Rooftop Terrace',
@@ -463,8 +463,8 @@ export const FACILITIES: FacilityItem[] = [
 //   {
 //     id: 'ann-1',
 //     date: '18 Aug 2026',
-//     title: 'IDA E-Auction Notice NIT-2026/094 for Commercial Office Spaces on 1st Floor is now LIVE',
-//     category: 'Auction Notice',
+//     title: 'IDA E-Proposal Notice NIT-2026/094 for Commercial Office Spaces on 1st Floor is now LIVE',
+//     category: 'Proposal Notice',
 //     isImportant: true,
 //     downloadUrl: '#'
 //   },
@@ -488,7 +488,7 @@ export const FACILITIES: FacilityItem[] = [
 //     id: 'ann-4',
 //     date: '10 Aug 2026',
 //     title: 'Notice for Pre-Bid Meeting regarding 25 Food Court Kiosks & Retail Spaces (22 Aug 2026)',
-//     category: 'Auction Notice',
+//     category: 'Proposal Notice',
 //     isImportant: false,
 //     downloadUrl: '#'
 //   }

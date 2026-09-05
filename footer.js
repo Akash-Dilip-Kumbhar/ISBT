@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
   const footerHtml = `
     <!-- Footer -->
     <footer class="bg-white border-top pt-5 pb-4 bg-warm-lightest mt-auto">
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="col-md-8">
             <div class="d-flex flex-wrap gap-4 justify-content-md-end text-uppercase fw-semibold font-size-md letter-spacing-sm">
               <a href="isbtmasterplan.html" class="text-dark text-decoration-none">ISBT Master Plan</a>
-              <a href="shopOffice.html" class="text-dark text-decoration-none">IDA Commercial Spaces</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#footerRatecardModal" class="text-dark text-decoration-none" style="cursor: pointer;">IDA Commercial Spaces</a>
               <a href="multiModalOperations.html" class="text-dark text-decoration-none">Multi-Modal Operations</a>
             </div>
           </div>
@@ -56,6 +56,86 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
     </footer>
+
+    <!-- Footer Ratecard Modal -->
+    <div class="modal fade" id="footerRatecardModal" tabindex="-1" aria-labelledby="footerRatecardModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content rounded-0 border-0 bg-warm-lightest">
+          <div class="modal-header border-dark-transparent bg-white">
+            <h5 class="modal-title font-playfair fw-bold" id="footerRatecardModalLabel">IDA Commercial Spaces Rate Card</h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0 position-relative">
+            <div id="footerRatecardMap" style="height: 80vh; width: 100%; background-color: #e9ecef;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   `;
+  
+  // Inject the footer into the DOM
   document.body.insertAdjacentHTML('beforeend', footerHtml);
+
+  // Initialize Leaflet map only when the modal is opened
+  let ratecardMapInitialized = false;
+  let ratecardMap;
+
+  function initRatecardMap() {
+    if (ratecardMapInitialized) {
+      ratecardMap.invalidateSize();
+      return;
+    }
+    
+    if (typeof L === 'undefined') {
+      console.log("Leaflet is still not loaded.");
+      return;
+    }
+
+    ratecardMap = L.map('footerRatecardMap', {
+      crs: L.CRS.Simple,
+      minZoom: -2,
+      maxZoom: 2,
+      zoomControl: true,
+      attributionControl: false
+    });
+
+    const imgUrl = 'img/RateCard/isbt_kumedi_rate_card.png';
+    const img = new Image();
+    img.src = imgUrl;
+    img.onload = function() {
+      // Leaflet uses [y, x] for bounds.
+      const bounds = [[0, 0], [img.height, img.width]];
+      L.imageOverlay(imgUrl, bounds).addTo(ratecardMap);
+      ratecardMap.fitBounds(bounds);
+      ratecardMapInitialized = true;
+    }
+  }
+
+  const ratecardModalEl = document.getElementById('footerRatecardModal');
+  if (ratecardModalEl) {
+    ratecardModalEl.addEventListener('shown.bs.modal', function () {
+      if (typeof L === 'undefined') {
+        // Dynamically load Leaflet CSS
+        if (!document.querySelector('link[href*="leaflet.css"]')) {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+          document.head.appendChild(link);
+        }
+        
+        // Dynamically load Leaflet JS
+        if (!document.querySelector('script[src*="leaflet.js"]')) {
+          const script = document.createElement('script');
+          script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+          script.onload = function() {
+            initRatecardMap();
+          };
+          document.head.appendChild(script);
+        }
+      } else {
+        // Leaflet already exists
+        initRatecardMap();
+      }
+    });
+  }
 });

@@ -159,7 +159,7 @@
 
         <div class="d-flex d-lg-flex gap-3 align-items-center">
           <a
-            href="viewauction.html"
+            href="viewproposal.html"
             class="btn bg-dark-accent text-white fw-bold rounded-0 px-2 py-2 d-flex align-items-center gap-3 text-uppercase font-size-lg letter-spacing-md">
             <i class="bi bi-hammer"></i>
             <span class="text-start line-height-sm">VIEW PROPOSALS</span>
@@ -255,7 +255,7 @@
                 </h6>
                 <p class="text-muted mb-0 font-size-xl line-height-lg">
                   Securely remit Earnest Money Deposit (EMD) via NEFT/RTGS
-                  payment gateway prior to the auction deadline.
+                  payment gateway prior to the proposal deadline.
                 </p>
               </div>
             </div>
@@ -623,21 +623,21 @@
         .catch((error) => console.error("Error loading proposals:", error));
     }
 
-    window.openBidModal = function (auctionId) {
-      const auction = window.auctionData.find((a) => a.id === auctionId);
-      if (!auction) return;
-      currentModalProposal = auction;
+    window.openBidModal = function (proposalId) {
+      const proposal = window.auctionData.find((a) => a.id === proposalId);
+      if (!proposal) return;
+      currentModalProposal = proposal;
 
-      const isLive = auction.Bidstatus === "Open";
+      const isLive = proposal.Bidstatus === "Open";
       const statusColor = isLive ? "text-orange" : "text-secondary";
 
       const computedSqM =
-        auction.dimensions.widthM * auction.dimensions.lengthM || 0;
+        proposal.dimensions.widthM * proposal.dimensions.lengthM || 0;
       const computedSqFt = computedSqM * 10.7639;
 
       // Format numbers using mocked bids but accurate base reserve if possible, based on rates
       const reserveValue =
-        (auction.minratesqftmonthinRS || 0) * computedSqFt * 12; // Annualized
+        (proposal.minratesqftmonthinRS || 0) * computedSqFt * 12; // Annualized
       const reserveFmt = reserveValue.toLocaleString("en-IN", {
         maximumFractionDigits: 0,
       });
@@ -653,11 +653,11 @@
       // Populate Header
       document.getElementById("modalHeaderContent").innerHTML = `
                 <div class="text-uppercase fw-bold text-muted font-size-sm letter-spacing-md mb-2">
-                    NIT: ${auction.nitNumber} &nbsp;â€¢&nbsp; <span class="${statusColor}">${auction.Bidstatus.toUpperCase()}</span>
+                    NIT: ${proposal.nitNumber} &nbsp;&bull;&nbsp; <span class="${statusColor}">${proposal.Bidstatus.toUpperCase()}</span>
                 </div>
-                <h3 class="font-playfair fw-bold mb-3 text-dark">${auction.title}</h3>
+                <h3 class="font-playfair fw-bold mb-3 text-dark">${proposal.title}</h3>
                 <div class="text-muted font-size-sm mb-4">
-                    ${auction.category} â€¢ ${auction.floor} â€¢ Carpet Area: <span class="fw-bold text-dark">${computedSqM.toFixed(2)} Sq.m</span>
+                    ${proposal.category} &bull; ${proposal.floor} &bull; Carpet Area: <span class="fw-bold text-dark">${computedSqM.toFixed(2)} Sq.m</span>
                 </div>
                 <hr class="border-dark-transparent mb-4">
                 
@@ -781,12 +781,12 @@
     let modalImageOverlay = null;
     let modalMarker = null;
 
-    window.viewOnMap = function (auctionId) {
-      const auction = window.auctionData.find((a) => a.id === auctionId);
-      if (!auction) return;
+    window.viewOnMap = function (proposalId) {
+      const proposal = window.auctionData.find((a) => a.id === proposalId);
+      if (!proposal) return;
 
       document.getElementById("mapModalTitle").innerText =
-        auction.title + " Location";
+        proposal.title + " Location";
 
       if (!mapModalInstance) {
         mapModalInstance = new bootstrap.Modal(
@@ -830,18 +830,18 @@
           [0, 0],
           [4963, 3509],
         ];
-        modalImageOverlay = L.imageOverlay(auction.imgsrc, imageBounds).addTo(
+        modalImageOverlay = L.imageOverlay(proposal.imgsrc, imageBounds).addTo(
           modalMap,
         );
         modalMap.fitBounds(imageBounds);
 
-        if (auction.mapX !== undefined && auction.mapY !== undefined) {
-          modalMarker = L.marker([auction.mapY, auction.mapX]).addTo(
+        if (proposal.mapX !== undefined && proposal.mapY !== undefined) {
+          modalMarker = L.marker([proposal.mapY, proposal.mapX]).addTo(
             modalMap,
           );
           modalMarker
             .bindPopup(
-              "<b>" + auction.unitNumber + "</b><br>" + auction.category,
+              "<b>" + proposal.unitNumber + "</b><br>" + proposal.category,
             )
             .openPopup();
         }

@@ -35,7 +35,7 @@
           BULLETIN / GAZETTE</span
         >
         <span class="text-light d-none d-md-inline opacity-85"
-          >IDA E-Auction Notice NIT-2026/094 for Commercial Office Spaces on 1st
+          >IDA E-Proposal Notice NIT-2026/094 for Commercial Office Spaces on 1st
           Floor is now LIVE</span
         >
       </div>
@@ -134,10 +134,10 @@
 
         <div class="d-flex d-lg-flex gap-3 align-items-center">
           <a
-            href="viewauction.html"
+            href="viewproposal.html"
             class="btn bg-dark-accent text-white fw-bold rounded-0 px-2 py-2 d-flex align-items-center gap-3 text-uppercase font-size-lg letter-spacing-md">
             <i class="bi bi-hammer"></i>
-            <span class="text-start line-height-sm">VIEW AUCTIONS</span>
+            <span class="text-start line-height-sm">VIEW PROPOSALS</span>
             <span
               class="badge bg-orange rounded-0 px-2 py-1 text-white font-size-sm line-height-md"
               >LIVE</span
@@ -161,7 +161,7 @@
               Commercial Real Estate & Retail Spaces
             </h2>
             <p class="font-size-xl mb-0 opacity-100">
-              Prime commercial real estate inventory for lease and e-auction.
+              Prime commercial real estate inventory for lease and e-proposal.
               Capitalize on 50,000+ daily commuter footfall across 3 distinct
               concourse levels.
             </p>
@@ -228,11 +228,11 @@
               <div
                 class="bg-dark p-4 p-lg-5 h-100 border border-secondary border-opacity-25">
                 <div class="text-uppercase fw-bold text-orange mb-3">
-                  01 / TRANSPARENT E-AUCTION
+                  01 / TRANSPARENT E-PROPOSAL
                 </div>
                 <p class="text-white">
                   All commercial units are allotted exclusively via the official
-                  IDA E-Auction portal to ensure fair, open public bidding under
+                  IDA E-Proposal portal to ensure fair, open public bidding under
                   state procurement norms.
                 </p>
               </div>
@@ -659,31 +659,31 @@
     <!-- Render Data -->
     <script>
       window.auctionData = []; // Store globally for the modal
-      let currentModalAuction = null;
+      let currentModalProposal = null;
       let bidModalInstance = null;
 
-      function renderAuctions(filterCategory = "all") {
+      function renderProposals(filterCategory = "all") {
         if (typeof filterCategory !== "string") filterCategory = "all"; // Handle DOMContentLoaded event object
         fetch("./auction.json")
           .then((response) => response.json())
           .then((data) => {
-            let AUCTION_ITEMS = [];
+            let PROPOSAL_ITEMS = [];
             if (Array.isArray(data)) {
-              AUCTION_ITEMS = data; // Fallback for old format
+              PROPOSAL_ITEMS = data; // Fallback for old format
             } else {
               // Extract all arrays from object dynamically
               for (const key in data) {
                 if (Array.isArray(data[key])) {
-                  AUCTION_ITEMS = AUCTION_ITEMS.concat(data[key]);
+                  PROPOSAL_ITEMS = PROPOSAL_ITEMS.concat(data[key]);
                 }
               }
             }
 
-            window.auctionData = AUCTION_ITEMS;
+            window.auctionData = PROPOSAL_ITEMS;
 
             // Generate filter categories based on 'categorytype'
-            const categoryCounts = { all: AUCTION_ITEMS.length };
-            AUCTION_ITEMS.forEach((item) => {
+            const categoryCounts = { all: PROPOSAL_ITEMS.length };
+            PROPOSAL_ITEMS.forEach((item) => {
               let ct = item.categorytype || "Other";
               categoryCounts[ct] = (categoryCounts[ct] || 0) + 1;
             });
@@ -692,7 +692,7 @@
               "filterButtonsContainer",
             );
             if (filterContainer) {
-              let buttonsHtml = `<button onclick="renderAuctions('all')" class="btn ${filterCategory === "all" ? "btn-dark text-white" : "btn-outline-dark bg-transparent text-muted"} fw-bold rounded-0 px-4 py-2 font-size-lg letter-spacing-md border-dark-transparent">ALL [${categoryCounts["all"].toString().padStart(2, "0")}]</button>`;
+              let buttonsHtml = `<button onclick="renderProposals('all')" class="btn ${filterCategory === "all" ? "btn-dark text-white" : "btn-outline-dark bg-transparent text-muted"} fw-bold rounded-0 px-4 py-2 font-size-lg letter-spacing-md border-dark-transparent">ALL [${categoryCounts["all"].toString().padStart(2, "0")}]</button>`;
 
               Object.keys(categoryCounts).forEach((ct) => {
                 if (ct === "all") return;
@@ -700,18 +700,18 @@
                 const btnClass = isActive
                   ? "btn-dark text-white"
                   : "btn-outline-dark bg-transparent text-muted";
-                buttonsHtml += `<button onclick="renderAuctions('${ct}')" class="btn ${btnClass} fw-bold rounded-0 px-4 py-2 font-size-lg letter-spacing-md border-dark-transparent">${ct.toUpperCase()} [${categoryCounts[ct].toString().padStart(2, "0")}]</button>`;
+                buttonsHtml += `<button onclick="renderProposals('${ct}')" class="btn ${btnClass} fw-bold rounded-0 px-4 py-2 font-size-lg letter-spacing-md border-dark-transparent">${ct.toUpperCase()} [${categoryCounts[ct].toString().padStart(2, "0")}]</button>`;
               });
               filterContainer.innerHTML = buttonsHtml;
             }
 
-            const grid = document.getElementById("auctionsGrid");
+            const grid = document.getElementById("proposalsGrid");
             if (!grid) return;
 
             const filteredItems =
               filterCategory === "all"
-                ? AUCTION_ITEMS
-                : AUCTION_ITEMS.filter(
+                ? PROPOSAL_ITEMS
+                : PROPOSAL_ITEMS.filter(
                     (a) => a.categorytype === filterCategory,
                   );
 
@@ -841,7 +841,7 @@
                             
                             <!-- Buttons -->
                             <div class="mt-auto d-flex flex-column flex-xl-row gap-2">
-                                ${item.Bidstatus.toLowerCase() !== "reserved" ? `<button class="btn btn-dark fw-bold rounded-0 py-3 flex-grow-1 font-size-lg letter-spacing-md d-flex align-items-center justify-content-center gap-2" onclick="openBidModal('${item.id}')"><i class="bi bi-hammer fs-6"></i> ENTER LIVE AUCTION & BID</button>` : ""}
+                                ${item.Bidstatus.toLowerCase() !== "reserved" ? `<button class="btn btn-dark fw-bold rounded-0 py-3 flex-grow-1 font-size-lg letter-spacing-md d-flex align-items-center justify-content-center gap-2" onclick="openBidModal('${item.id}')"><i class="bi bi-hammer fs-6"></i> ENTER LIVE PROPOSAL & BID</button>` : ""}
                                 <button class="btn btn-outline-dark fw-bold rounded-0 py-3 px-4 font-size-lg letter-spacing-md d-flex align-items-center justify-content-center gap-2 border-dark-transparent" onclick="viewOnMap('${item.id}')"><i class="bi bi-geo-alt fs-6"></i> VIEW ON MAP</button>
                             </div>
                         </div>
@@ -852,24 +852,24 @@
 
             grid.innerHTML = html;
           })
-          .catch((error) => console.error("Error loading auctions:", error));
+          .catch((error) => console.error("Error loading proposals:", error));
       }
 
-      window.openBidModal = function (auctionId) {
-        const auction = window.auctionData.find((a) => a.id === auctionId);
-        if (!auction) return;
-        currentModalAuction = auction;
+      window.openBidModal = function (proposalId) {
+        const proposal = window.auctionData.find((a) => a.id === proposalId);
+        if (!proposal) return;
+        currentModalProposal = proposal;
 
-        const isLive = auction.Bidstatus === "Open";
+        const isLive = proposal.Bidstatus === "Open";
         const statusColor = isLive ? "text-orange" : "text-secondary";
 
         const computedSqM =
-          auction.dimensions.widthM * auction.dimensions.lengthM || 0;
+          proposal.dimensions.widthM * proposal.dimensions.lengthM || 0;
         const computedSqFt = computedSqM * 10.7639;
 
         // Format numbers using mocked bids but accurate base reserve if possible, based on rates
         const reserveValue =
-          (auction.minratesqftmonthinRS || 0) * computedSqFt * 12; // Annualized
+          (proposal.minratesqftmonthinRS || 0) * computedSqFt * 12; // Annualized
         const reserveFmt = reserveValue.toLocaleString("en-IN", {
           maximumFractionDigits: 0,
         });
@@ -879,17 +879,17 @@
         const emdVal = 100000;
         const emdFmt = emdVal.toLocaleString("en-IN");
         const minValidBid = Math.round(reserveValue);
-        currentModalAuction.currentHighBid = reserveValue;
-        currentModalAuction.minIncrement = 0;
+        currentModalProposal.currentHighBid = reserveValue;
+        currentModalProposal.minIncrement = 0;
 
         // Populate Header
         document.getElementById("modalHeaderContent").innerHTML = `
                 <div class="text-uppercase fw-bold text-muted font-size-sm letter-spacing-md mb-2">
-                    NIT: ${auction.nitNumber} &nbsp;â€¢&nbsp; <span class="${statusColor}">${auction.Bidstatus.toUpperCase()}</span>
+                    NIT: ${proposal.nitNumber} &nbsp;â€¢&nbsp; <span class="${statusColor}">${proposal.Bidstatus.toUpperCase()}</span>
                 </div>
-                <h3 class="font-playfair fw-bold mb-3 text-dark">${auction.title}</h3>
+                <h3 class="font-playfair fw-bold mb-3 text-dark">${proposal.title}</h3>
                 <div class="text-muted font-size-lg mb-4">
-                    ${auction.category} â€¢ ${auction.floor} â€¢ Carpet Area: <span class="fw-bold text-dark">${computedSqM.toFixed(2)} Sq.m</span>
+                    ${proposal.category} â€¢ ${proposal.floor} â€¢ Carpet Area: <span class="fw-bold text-dark">${computedSqM.toFixed(2)} Sq.m</span>
                 </div>
                 <hr class="border-dark-transparent mb-4">
                 
@@ -957,7 +957,7 @@
         const email = document.getElementById("bidderEmail").value;
         const btn = document.getElementById("submitBidBtn");
 
-        if (parseInt(amount) < Math.round(currentModalAuction.currentHighBid)) {
+        if (parseInt(amount) < Math.round(currentModalProposal.currentHighBid)) {
           alert("Bid amount is lower than the minimum valid bid!");
           return;
         }
@@ -1013,12 +1013,12 @@
       let modalImageOverlay = null;
       let modalMarker = null;
 
-      window.viewOnMap = function (auctionId) {
-        const auction = window.auctionData.find((a) => a.id === auctionId);
-        if (!auction) return;
+      window.viewOnMap = function (proposalId) {
+        const proposal = window.auctionData.find((a) => a.id === proposalId);
+        if (!proposal) return;
 
         document.getElementById("mapModalTitle").innerText =
-          auction.title + " Location";
+          proposal.title + " Location";
 
         if (!mapModalInstance) {
           mapModalInstance = new bootstrap.Modal(
@@ -1062,18 +1062,18 @@
             [0, 0],
             [4963, 3509],
           ];
-          modalImageOverlay = L.imageOverlay(auction.imgsrc, imageBounds).addTo(
+          modalImageOverlay = L.imageOverlay(proposal.imgsrc, imageBounds).addTo(
             modalMap,
           );
           modalMap.fitBounds(imageBounds);
 
-          if (auction.mapX !== undefined && auction.mapY !== undefined) {
-            modalMarker = L.marker([auction.mapY, auction.mapX]).addTo(
+          if (proposal.mapX !== undefined && proposal.mapY !== undefined) {
+            modalMarker = L.marker([proposal.mapY, proposal.mapX]).addTo(
               modalMap,
             );
             modalMarker
               .bindPopup(
-                "<b>" + auction.unitNumber + "</b><br>" + auction.category,
+                "<b>" + proposal.unitNumber + "</b><br>" + proposal.category,
               )
               .openPopup();
           }
