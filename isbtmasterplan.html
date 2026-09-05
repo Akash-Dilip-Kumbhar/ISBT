@@ -1,0 +1,335 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Modal Operations - ISBT Kumedi Indore</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="bg-light d-flex flex-column min-vh-100">
+    <!-- Top Bulletin Bar -->
+    <div
+      class="bg-dark-accent text-white py-2 px-3 px-lg-3 d-flex justify-content-between align-items-center font-size-xl">
+      <div class="d-flex align-items-center gap-3">
+        <span
+          class="badge bg-orange text-uppercase rounded-0 px-2 py-1 d-flex align-items-center gap-2 letter-spacing-md"
+          ><span class="rounded-circle bg-white d-inline-block size-5"></span>
+          BULLETIN / GAZETTE</span
+        >
+        <span class="text-light d-none d-md-inline opacity-85"
+          >ISBT-STMB-IDR-EOI-2026/108 for Commercial, Retail, Restaurants (F&B)
+          is now LIVE</span
+        >
+      </div>
+      <div class="d-flex align-items-center gap-4">
+        <a
+          href="#"
+          class="text-orange text-decoration-none fw-bold text-uppercase d-flex align-items-center gap-1 letter-spacing-md"
+          >READ DISPATCH
+          <i class="bi bi-chevron-right font-size-base icon-stroke-1"></i
+        ></a>
+        <button
+          class="btn btn-link text-white p-0 border-0 text-decoration-none">
+          <i class="bi bi-x-lg font-size-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg py-3 bg-warm-light border-bottom-soft">
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+          <div
+            class="bg-dark-accent text-white rounded-0 d-flex align-items-center justify-content-center size-60 font-weight-800 font-playfair px-2">
+            ISBT
+          </div>
+          <div>
+            <div
+              class="text-muted mt-1 font-size-sm font-weight-800 text-uppercase letter-spacing-lg">
+              SHREE TANTYA MAMA BHIL
+            </div>
+            <div
+              class="fw-bold text-dark font-playfair font-size-7xl line-height-xs">
+              ISBT KUMEDI INDORE
+            </div>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav">
+          <ul
+            class="navbar-nav gap-2 text-uppercase fw-bold align-items-center font-size-lg letter-spacing-md">
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="index.html">
+                <span
+                  class="opacity-40 fw-normal font-size-base mt-1"
+                  >01</span
+                >
+                HOME
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="aboutus.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">02</span>
+                ABOUT
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="facilities.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">03</span>
+                FACILITIES
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="shopOffice.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">04</span>
+                <span class="text-start">SHOPS & OFFICES</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="Gallery.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">05</span>
+                <span class="text-start">GALLERY</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex d-lg-flex gap-3 align-items-center">
+          <a
+            href="viewauction.html"
+            class="btn bg-dark-accent text-white fw-bold rounded-0 px-2 py-2 d-flex align-items-center gap-3 text-uppercase font-size-lg letter-spacing-md">
+            <i class="bi bi-hammer"></i>
+            <span class="text-start line-height-sm">VIEW AUCTIONS</span>
+            <span
+              class="badge bg-orange rounded-0 px-2 py-1 text-white font-size-xs line-height-md"
+              >LIVE</span
+            >
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 bg-warm-lighter border-bottom-soft">
+      <div class="container py-4 text-center">
+        <div class="text-uppercase fw-bold text-orange mb-2 font-size-lg letter-spacing-md">ISBT TERMINAL</div>
+        <h1 class="display-5 font-playfair fw-bold text-dark">Master Plan & Maps</h1>
+        <p class="lead text-muted mt-3 max-w-800 mx-auto font-size-xl">
+          Explore the facility layouts, arrivals, departures, and ground floor plans of the ISBT Kumedi Indore.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-5 bg-white flex-grow-1">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border shadow-sm overflow-hidden rounded-0">
+              <div class="bg-light p-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                <img src="img/Maps/Arrivals.jpg" class="img-fluid object-fit-contain" alt="Arrivals Map" style="max-height: 100%;">
+              </div>
+              <div class="card-body text-center bg-white border-top">
+                <h5 class="fw-bold mb-0 font-playfair text-dark">Arrivals Map</h5>
+              </div>
+              <div class="card-footer bg-white border-top-0 pb-4 d-flex justify-content-center flex-wrap gap-2">
+                <button type="button" class="btn btn-dark btn-sm fw-bold px-3 d-flex align-items-center gap-2 rounded-0 letter-spacing-sm text-uppercase" onclick="viewOnMap('Arrivals Map', 'img/Maps/Arrivals.jpg')">
+                  <i class="bi bi-eye"></i> View Map
+                </button>
+                <a href="img/Maps/Arrivals.jpg" download="Arrivals_Map.jpg" class="btn btn-outline-dark btn-sm fw-bold px-3 d-flex align-items-center gap-2 rounded-0 letter-spacing-sm text-uppercase">
+                  <i class="bi bi-download"></i> Download
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border shadow-sm overflow-hidden rounded-0">
+              <div class="bg-light p-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                <img src="img/Maps/FLOOR-PLAN.jpg" class="img-fluid object-fit-contain" alt="Floor Plan" style="max-height: 100%;">
+              </div>
+              <div class="card-body text-center bg-white border-top">
+                <h5 class="fw-bold mb-0 font-playfair text-dark">Floor Plan</h5>
+              </div>
+              <div class="card-footer bg-white border-top-0 pb-4 d-flex justify-content-center flex-wrap gap-2">
+                <button type="button" class="btn btn-dark btn-sm fw-bold px-3 d-flex align-items-center gap-2 rounded-0 letter-spacing-sm text-uppercase" onclick="viewOnMap('Floor Plan', 'img/Maps/FLOOR-PLAN.jpg')">
+                  <i class="bi bi-eye"></i> View Map
+                </button>
+                <a href="img/Maps/FLOOR-PLAN.jpg" download="Floor_Plan.jpg" class="btn btn-outline-dark btn-sm fw-bold px-3 d-flex align-items-center gap-2 rounded-0 letter-spacing-sm text-uppercase">
+                  <i class="bi bi-download"></i> Download
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border shadow-sm overflow-hidden rounded-0">
+              <div class="bg-light p-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                <img src="img/Maps/FirstFloor.jpg" class="img-fluid object-fit-contain" alt="First Floor Map" style="max-height: 100%;">
+              </div>
+              <div class="card-body text-center bg-white border-top">
+                <h5 class="fw-bold mb-0 font-playfair text-dark">First Floor</h5>
+              </div>
+              <div class="card-footer bg-white border-top-0 pb-4 d-flex justify-content-center flex-wrap gap-2">
+                <button type="button" class="btn btn-dark btn-sm fw-bold px-3 d-flex align-items-center gap-2 rounded-0 letter-spacing-sm text-uppercase" onclick="viewOnMap('First Floor', 'img/Maps/FirstFloor.jpg')">
+                  <i class="bi bi-eye"></i> View Map
+                </button>
+                <a href="img/Maps/FirstFloor.jpg" download="First_Floor_Map.jpg" class="btn btn-outline-dark btn-sm fw-bold px-3 d-flex align-items-center gap-2 rounded-0 letter-spacing-sm text-uppercase">
+                  <i class="bi bi-download"></i> Download
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border shadow-sm overflow-hidden rounded-0">
+              <div class="bg-light p-2 text-center" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                <img src="img/Maps/GroundFloor.jpg" class="img-fluid object-fit-contain" alt="Ground Floor Map" style="max-height: 100%;">
+              </div>
+              <div class="card-body text-center bg-white border-top">
+                <h5 class="fw-bold mb-0 font-playfair text-dark">Ground Floor</h5>
+              </div>
+              <div class="card-footer bg-white border-top-0 pb-4 d-flex justify-content-center flex-wrap gap-2">
+                <button type="button" class="btn btn-dark btn-sm fw-bold px-3 d-flex align-items-center gap-2 rounded-0 letter-spacing-sm text-uppercase" onclick="viewOnMap('Ground Floor', 'img/Maps/GroundFloor.jpg')">
+                  <i class="bi bi-eye"></i> View Map
+                </button>
+                <a href="img/Maps/GroundFloor.jpg" download="Ground_Floor_Map.jpg" class="btn btn-outline-dark btn-sm fw-bold px-3 d-flex align-items-center gap-2 rounded-0 letter-spacing-sm text-uppercase">
+                  <i class="bi bi-download"></i> Download
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Map Modal -->
+    <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered" style="height: 90vh;">
+        <div class="modal-content border-0 rounded-0 bg-transparent h-100">
+          <div class="modal-header border-0 pb-0 position-absolute top-0 end-0 z-3 p-3">
+            <button type="button" class="btn-close rounded-circle p-2 " data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0 position-relative h-100 bg-white shadow-lg rounded">
+            <h5 class="mb-0 p-3 font-playfair fw-bold border-bottom" id="mapModalTitle">Map</h5>
+            <div id="modal-map" style="width: 100%; height: calc(100% - 60px); background: #eee;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Map Modal Logic -->
+    <script>
+      let mapModalInstance = null;
+      let modalMap = null;
+      let modalImageOverlay = null;
+      let currentMapTitle = "";
+      let currentMapImg = "";
+
+      window.viewOnMap = function (title, imgSrc) {
+        currentMapTitle = title;
+        currentMapImg = imgSrc;
+
+        document.getElementById("mapModalTitle").innerText = title;
+
+        if (!mapModalInstance) {
+          mapModalInstance = new bootstrap.Modal(document.getElementById("mapModal"));
+        }
+        mapModalInstance.show();
+
+        const mapModalEl = document.getElementById("mapModal");
+
+        if (window._mapModalShownListener) {
+          mapModalEl.removeEventListener("shown.bs.modal", window._mapModalShownListener);
+        }
+
+        window._mapModalShownListener = function () {
+          if (!modalMap) {
+            modalMap = L.map("modal-map", {
+              crs: L.CRS.Simple,
+              minZoom: -2.5,
+              maxZoom: 20,
+              center: [0, 0],
+              zoom: 1,
+              attributionControl: false,
+            });
+          }
+
+          modalMap.invalidateSize();
+
+          if (modalImageOverlay) {
+            modalMap.removeLayer(modalImageOverlay);
+          }
+
+          // Get image dimensions dynamically to avoid distortion
+          let img = new Image();
+          img.onload = function() {
+            var imageBounds = [
+              [0, 0],
+              [this.naturalHeight, this.naturalWidth],
+            ];
+            modalImageOverlay = L.imageOverlay(currentMapImg, imageBounds).addTo(modalMap);
+            modalMap.fitBounds(imageBounds);
+          };
+          img.src = currentMapImg;
+        };
+
+        mapModalEl.addEventListener("shown.bs.modal", window._mapModalShownListener, { once: true });
+      };
+    </script>
+  
+  <script src="footer.js"></script>
+  <script src="whatsappbtn.js"></script>
+</body>
+</html>
+

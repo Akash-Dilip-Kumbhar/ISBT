@@ -1,0 +1,373 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - ISBT Kumedi Indore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .masonry-gallery {
+        column-count: 4;
+        column-gap: 1.5rem;
+      }
+      .masonry-item {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        break-inside: avoid;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        min-height: 200px;
+        background-color: #f1ebd8;
+      }
+      .masonry-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+      }
+      .masonry-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      @media (max-width: 1200px) { .masonry-gallery { column-count: 3; } }
+      @media (max-width: 768px) { .masonry-gallery { column-count: 2; } }
+      @media (max-width: 576px) { .masonry-gallery { column-count: 1; } }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="bg-dark-accent text-white py-2 px-3 px-lg-3 d-flex justify-content-between align-items-center font-size-xl">
+      <div class="d-flex align-items-center gap-3">
+        <span class="badge bg-orange text-uppercase rounded-0 px-2 py-1 d-flex align-items-center gap-2 letter-spacing-md">
+          <span class="rounded-circle bg-white d-inline-block size-5"></span> BULLETIN / GAZETTE
+        </span>
+        <span class="text-light d-none d-md-inline opacity-85">ISBT-STMB-IDR-EOI-2026/108 for Commercial, Retail, Restaurants (F&B) is now LIVE</span>
+      </div>
+      <div class="d-flex align-items-center gap-4">
+        <a href="#" class="text-orange text-decoration-none fw-bold text-uppercase d-flex align-items-center gap-1 letter-spacing-md">
+          READ DISPATCH <i class="bi bi-chevron-right font-size-base icon-stroke-1"></i>
+        </a>
+        <button class="btn btn-link text-white p-0 border-0 text-decoration-none">
+          <i class="bi bi-x-lg font-size-lg"></i>
+        </button>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg py-3 bg-warm-light border-bottom-soft">
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+          <div
+            class="bg-dark-accent text-white rounded-0 d-flex align-items-center justify-content-center size-60 font-weight-800 font-playfair px-2">
+            ISBT
+          </div>
+          <div>
+            <div
+              class="text-muted mt-1 font-size-sm font-weight-800 text-uppercase letter-spacing-lg">
+              SHREE TANTYA MAMA BHIL
+            </div>
+            <div
+              class="fw-bold text-dark font-playfair font-size-7xl line-height-xs">
+              ISBT KUMEDI INDORE
+            </div>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav">
+          <ul
+            class="navbar-nav gap-2 text-uppercase fw-bold align-items-center font-size-lg letter-spacing-md">
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="index.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">01</span>
+                HOME
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="aboutus.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">02</span>
+                ABOUT
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="facilities.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">03</span>
+                FACILITIES
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="shopOffice.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">04</span>
+                <span class="text-start">SHOPS & OFFICES</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark active d-flex gap-2 position-relative pb-1 border-bottom-orange"
+                href="Gallery.html">
+                <span
+                  class="text-muted opacity-40 fw-normal font-size-base mt-1"
+                  >05</span
+                >
+                <span class="text-start">GALLERY</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex d-lg-flex gap-3 align-items-center">
+          <a
+            href="viewauction.html"
+            class="btn bg-dark-accent text-white fw-bold rounded-0 px-2 py-2 d-flex align-items-center gap-3 text-uppercase font-size-lg letter-spacing-md">
+            <i class="bi bi-hammer"></i>
+            <span class="text-start line-height-sm">VIEW AUCTIONS</span>
+            <span
+              class="badge bg-orange rounded-0 px-2 py-1 text-white font-size-xs line-height-md"
+              >LIVE</span
+            >
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section class="py-5 bg-warm-lighter border-bottom-soft">
+      <div class="container py-4 text-center">
+        <div class="text-uppercase fw-bold text-orange mb-2 font-size-lg letter-spacing-md">VISUAL TOUR</div>
+        <h1 class="display-5 font-playfair fw-bold text-dark">Project Gallery</h1>
+      </div>
+    </section>
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="masonry-gallery">
+          <a href="img/gallery/img1.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 1" class="masonry-item">
+            <img src="img/gallery/img1.jpeg" loading="lazy" alt="Gallery Image 1" />
+          </a>
+          <a href="img/gallery/img2.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 2" class="masonry-item">
+            <img src="img/gallery/img2.jpeg" loading="lazy" alt="Gallery Image 2" />
+          </a>
+          <a href="img/gallery/img3.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 3" class="masonry-item">
+            <img src="img/gallery/img3.jpeg" loading="lazy" alt="Gallery Image 3" />
+          </a>
+          <a href="img/gallery/img4.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 4" class="masonry-item">
+            <img src="img/gallery/img4.jpeg" loading="lazy" alt="Gallery Image 4" />
+          </a>
+          <a href="img/gallery/img5.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 5" class="masonry-item">
+            <img src="img/gallery/img5.jpeg" loading="lazy" alt="Gallery Image 5" />
+          </a>
+          <a href="img/gallery/img6.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 6" class="masonry-item">
+            <img src="img/gallery/img6.jpeg" loading="lazy" alt="Gallery Image 6" />
+          </a>
+          <a href="img/gallery/img7.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 7" class="masonry-item">
+            <img src="img/gallery/img7.jpeg" loading="lazy" alt="Gallery Image 7" />
+          </a>
+          <a href="img/gallery/img8.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 8" class="masonry-item">
+            <img src="img/gallery/img8.jpeg" loading="lazy" alt="Gallery Image 8" />
+          </a>
+          <a href="img/gallery/img9.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 9" class="masonry-item">
+            <img src="img/gallery/img9.jpeg" loading="lazy" alt="Gallery Image 9" />
+          </a>
+          <a href="img/gallery/img10.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 10" class="masonry-item">
+            <img src="img/gallery/img10.jpeg" loading="lazy" alt="Gallery Image 10" />
+          </a>
+          <a href="img/gallery/img11.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 11" class="masonry-item">
+            <img src="img/gallery/img11.jpeg" loading="lazy" alt="Gallery Image 11" />
+          </a>
+          <a href="img/gallery/img12.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 12" class="masonry-item">
+            <img src="img/gallery/img12.jpeg" loading="lazy" alt="Gallery Image 12" />
+          </a>
+          <a href="img/gallery/img13.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 13" class="masonry-item">
+            <img src="img/gallery/img13.jpeg" loading="lazy" alt="Gallery Image 13" />
+          </a>
+          <a href="img/gallery/img14.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 14" class="masonry-item">
+            <img src="img/gallery/img14.jpeg" loading="lazy" alt="Gallery Image 14" />
+          </a>
+          <a href="img/gallery/img15.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 15" class="masonry-item">
+            <img src="img/gallery/img15.jpeg" loading="lazy" alt="Gallery Image 15" />
+          </a>
+          <a href="img/gallery/img16.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 16" class="masonry-item">
+            <img src="img/gallery/img16.jpeg" loading="lazy" alt="Gallery Image 16" />
+          </a>
+          <a href="img/gallery/img17.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 17" class="masonry-item">
+            <img src="img/gallery/img17.jpeg" loading="lazy" alt="Gallery Image 17" />
+          </a>
+          <a href="img/gallery/img18.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 18" class="masonry-item">
+            <img src="img/gallery/img18.jpeg" loading="lazy" alt="Gallery Image 18" />
+          </a>
+          <a href="img/gallery/img19.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 19" class="masonry-item">
+            <img src="img/gallery/img19.jpeg" loading="lazy" alt="Gallery Image 19" />
+          </a>
+          <a href="img/gallery/img20.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 20" class="masonry-item">
+            <img src="img/gallery/img20.jpeg" loading="lazy" alt="Gallery Image 20" />
+          </a>
+          <a href="img/gallery/img21.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 21" class="masonry-item">
+            <img src="img/gallery/img21.jpeg" loading="lazy" alt="Gallery Image 21" />
+          </a>
+          <a href="img/gallery/img22.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 22" class="masonry-item">
+            <img src="img/gallery/img22.jpeg" loading="lazy" alt="Gallery Image 22" />
+          </a>
+          <a href="img/gallery/img23.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 23" class="masonry-item">
+            <img src="img/gallery/img23.jpeg" loading="lazy" alt="Gallery Image 23" />
+          </a>
+          <a href="img/gallery/img24.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 24" class="masonry-item">
+            <img src="img/gallery/img24.jpeg" loading="lazy" alt="Gallery Image 24" />
+          </a>
+          <a href="img/gallery/img25.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 25" class="masonry-item">
+            <img src="img/gallery/img25.jpeg" loading="lazy" alt="Gallery Image 25" />
+          </a>
+          <a href="img/gallery/img26.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 26" class="masonry-item">
+            <img src="img/gallery/img26.jpeg" loading="lazy" alt="Gallery Image 26" />
+          </a>
+          <a href="img/gallery/img27.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 27" class="masonry-item">
+            <img src="img/gallery/img27.jpeg" loading="lazy" alt="Gallery Image 27" />
+          </a>
+          <a href="img/gallery/img28.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 28" class="masonry-item">
+            <img src="img/gallery/img28.jpeg" loading="lazy" alt="Gallery Image 28" />
+          </a>
+          <a href="img/gallery/img29.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 29" class="masonry-item">
+            <img src="img/gallery/img29.jpeg" loading="lazy" alt="Gallery Image 29" />
+          </a>
+          <a href="img/gallery/img30.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 30" class="masonry-item">
+            <img src="img/gallery/img30.jpeg" loading="lazy" alt="Gallery Image 30" />
+          </a>
+          <a href="img/gallery/img31.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 31" class="masonry-item">
+            <img src="img/gallery/img31.jpeg" loading="lazy" alt="Gallery Image 31" />
+          </a>
+          <a href="img/gallery/img32.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 32" class="masonry-item">
+            <img src="img/gallery/img32.jpeg" loading="lazy" alt="Gallery Image 32" />
+          </a>
+          <a href="img/gallery/img33.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 33" class="masonry-item">
+            <img src="img/gallery/img33.jpeg" loading="lazy" alt="Gallery Image 33" />
+          </a>
+          <a href="img/gallery/img34.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 34" class="masonry-item">
+            <img src="img/gallery/img34.jpeg" loading="lazy" alt="Gallery Image 34" />
+          </a>
+          <a href="img/gallery/img35.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 35" class="masonry-item">
+            <img src="img/gallery/img35.jpeg" loading="lazy" alt="Gallery Image 35" />
+          </a>
+          <a href="img/gallery/img36.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 36" class="masonry-item">
+            <img src="img/gallery/img36.jpeg" loading="lazy" alt="Gallery Image 36" />
+          </a>
+          <a href="img/gallery/img37.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 37" class="masonry-item">
+            <img src="img/gallery/img37.jpeg" loading="lazy" alt="Gallery Image 37" />
+          </a>
+          <a href="img/gallery/img38.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 38" class="masonry-item">
+            <img src="img/gallery/img38.jpeg" loading="lazy" alt="Gallery Image 38" />
+          </a>
+          <a href="img/gallery/img39.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 39" class="masonry-item">
+            <img src="img/gallery/img39.jpeg" loading="lazy" alt="Gallery Image 39" />
+          </a>
+          <a href="img/gallery/img40.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 40" class="masonry-item">
+            <img src="img/gallery/img40.jpeg" loading="lazy" alt="Gallery Image 40" />
+          </a>
+          <a href="img/gallery/img41.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 41" class="masonry-item">
+            <img src="img/gallery/img41.jpeg" loading="lazy" alt="Gallery Image 41" />
+          </a>
+          <a href="img/gallery/img42.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 42" class="masonry-item">
+            <img src="img/gallery/img42.jpeg" loading="lazy" alt="Gallery Image 42" />
+          </a>
+          <a href="img/gallery/img43.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 43" class="masonry-item">
+            <img src="img/gallery/img43.jpeg" loading="lazy" alt="Gallery Image 43" />
+          </a>
+          <a href="img/gallery/img44.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 44" class="masonry-item">
+            <img src="img/gallery/img44.jpeg" loading="lazy" alt="Gallery Image 44" />
+          </a>
+          <a href="img/gallery/img45.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 45" class="masonry-item">
+            <img src="img/gallery/img45.jpeg" loading="lazy" alt="Gallery Image 45" />
+          </a>
+          <a href="img/gallery/img46.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 46" class="masonry-item">
+            <img src="img/gallery/img46.jpeg" loading="lazy" alt="Gallery Image 46" />
+          </a>
+          <a href="img/gallery/img47.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 47" class="masonry-item">
+            <img src="img/gallery/img47.jpeg" loading="lazy" alt="Gallery Image 47" />
+          </a>
+          <a href="img/gallery/img48.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 48" class="masonry-item">
+            <img src="img/gallery/img48.jpeg" loading="lazy" alt="Gallery Image 48" />
+          </a>
+          <a href="img/gallery/img49.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 49" class="masonry-item">
+            <img src="img/gallery/img49.jpeg" loading="lazy" alt="Gallery Image 49" />
+          </a>
+          <a href="img/gallery/img50.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 50" class="masonry-item">
+            <img src="img/gallery/img50.jpeg" loading="lazy" alt="Gallery Image 50" />
+          </a>
+          <a href="img/gallery/img51.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 51" class="masonry-item">
+            <img src="img/gallery/img51.jpeg" loading="lazy" alt="Gallery Image 51" />
+          </a>
+          <a href="img/gallery/img52.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 52" class="masonry-item">
+            <img src="img/gallery/img52.jpeg" loading="lazy" alt="Gallery Image 52" />
+          </a>
+          <a href="img/gallery/img53.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 53" class="masonry-item">
+            <img src="img/gallery/img53.jpeg" loading="lazy" alt="Gallery Image 53" />
+          </a>
+          <a href="img/gallery/img54.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 54" class="masonry-item">
+            <img src="img/gallery/img54.jpeg" loading="lazy" alt="Gallery Image 54" />
+          </a>
+          <a href="img/gallery/img55.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 55" class="masonry-item">
+            <img src="img/gallery/img55.jpeg" loading="lazy" alt="Gallery Image 55" />
+          </a>
+          <a href="img/gallery/img56.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 56" class="masonry-item">
+            <img src="img/gallery/img56.jpeg" loading="lazy" alt="Gallery Image 56" />
+          </a>
+          <a href="img/gallery/img57.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 57" class="masonry-item">
+            <img src="img/gallery/img57.jpeg" loading="lazy" alt="Gallery Image 57" />
+          </a>
+          <a href="img/gallery/img58.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 58" class="masonry-item">
+            <img src="img/gallery/img58.jpeg" loading="lazy" alt="Gallery Image 58" />
+          </a>
+          <a href="img/gallery/img59.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 59" class="masonry-item">
+            <img src="img/gallery/img59.jpeg" loading="lazy" alt="Gallery Image 59" />
+          </a>
+          <a href="img/gallery/img60.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 60" class="masonry-item">
+            <img src="img/gallery/img60.jpeg" loading="lazy" alt="Gallery Image 60" />
+          </a>
+          <a href="img/gallery/img61.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 61" class="masonry-item">
+            <img src="img/gallery/img61.jpeg" loading="lazy" alt="Gallery Image 61" />
+          </a>
+          <a href="img/gallery/img62.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 62" class="masonry-item">
+            <img src="img/gallery/img62.jpeg" loading="lazy" alt="Gallery Image 62" />
+          </a>
+          <a href="img/gallery/img63.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 63" class="masonry-item">
+            <img src="img/gallery/img63.jpeg" loading="lazy" alt="Gallery Image 63" />
+          </a>
+          <a href="img/gallery/img64.jpeg" data-lightbox="isbt-gallery" data-title="ISBT Kumedi Gallery Image 64" class="masonry-item">
+            <img src="img/gallery/img64.jpeg" loading="lazy" alt="Gallery Image 64" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script>
+      lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'albumLabel': 'Image %1 of %2'
+      });
+    </script>
+  
+  <script src="footer.js"></script>
+  <script src="whatsappbtn.js"></script>
+</body>
+</html>
+

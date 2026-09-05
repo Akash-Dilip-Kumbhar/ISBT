@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ISBT Kumedi Indore - Commercial Property E-Auctions</title>
+  <title>ISBT Kumedi Indore - Commercial Property E-Proposals</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
@@ -20,27 +20,8 @@
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
-    a{
-  text-decoration:none;
-}
-.floating_btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content:center;
-  z-index: 1000;
-}
 
-@keyframes pulsing {
-  to {
-    box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
-  }
-}
+
 
 .contact_icon {
   background-color: #42db87;
@@ -85,7 +66,7 @@
         class="badge bg-orange text-uppercase rounded-0 px-2 py-1 d-flex align-items-center gap-2 letter-spacing-md"><span
           class="rounded-circle bg-white d-inline-block size-5"></span>
         BULLETIN / GAZETTE</span>
-      <span class="text-light d-none d-md-inline opacity-85">IDA E-Auction Notice NIT-2026/094 for Commercial Office
+      <span class="text-light d-none d-md-inline opacity-85">IDA E-Proposal Notice NIT-2026/094 for Commercial Office
         Spaces on 1st
         Floor is now LIVE</span>
     </div>
@@ -102,65 +83,93 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg py-3 bg-warm-light border-bottom-soft">
-        <div class="container-fluid px-4 px-lg-5">
-            <a class="navbar-brand d-flex align-items-center gap-3" href="#">
-                <div
-                    class="bg-dark-accent text-white rounded-0 d-flex align-items-center justify-content-center size-60 font-weight-800 font-playfair px-2">
-                    ISBT
-                </div>
-                <div>
-                    <div class="fw-bold text-dark font-playfair font-size-7xl line-height-xs">ISBT Kumedi Indore
-                    </div>
-                    <div
-                        class="text-muted mt-1 font-size-sm font-weight-800 text-uppercase letter-spacing-lg opacity-70">
-                        INDORE DEVELOPMENT AUTHORITY</div>
-                </div>
-            </a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul
-                    class="navbar-nav gap-3 gap-xl-4 text-uppercase fw-bold align-items-center font-size-lg letter-spacing-md">
-                    <li class="nav-item">
-                        <a class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
-                            href="index.html">
-                            <span class="opacity-40 fw-normal font-size-base mt-1">01</span> HOME
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm" href="aboutus.html">
-                            <span class="opacity-40 fw-normal font-size-base mt-1">02</span> ABOUT
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
-                            href="facilities.html">
-                            <span class="opacity-40 fw-normal font-size-base mt-1">03</span> FACILITIES
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-muted d-flex gap-2 position-relative pb-1"
-                            href="shopOffice.html">
-                            <span class="text-muted opacity-40 fw-normal font-size-base mt-1">04</span> <span
-                                class="text-start">SHOPS & OFFICES</span>
-                        </a>
-                    </li>
-                </ul>
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+          <div
+            class="bg-dark-accent text-white rounded-0 d-flex align-items-center justify-content-center size-60 font-weight-800 font-playfair px-2">
+            ISBT
+          </div>
+          <div>
+            <div
+              class="text-muted mt-1 font-size-sm font-weight-800 text-uppercase letter-spacing-lg">
+              SHREE TANTYA MAMA BHIL
             </div>
-
-            <div class="d-none d-lg-flex gap-3 align-items-center">
-                <a href="viewauction.html"
-                    class="btn bg-dark-accent text-white fw-bold rounded-0 px-2 py-2 d-flex align-items-center gap-3 text-uppercase font-size-lg letter-spacing-md">
-                    <i class="bi bi-hammer"></i> <span class="text-start line-height-sm">VIEW AUCTIONS</span> <span
-                        class="badge bg-orange rounded-0 px-2 py-1   text-white font-size-xs line-height-md">LIVE</span>
-                </a>
-
+            <div
+              class="fw-bold text-dark font-playfair font-size-7xl line-height-xs">
+              ISBT KUMEDI INDORE
             </div>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav">
+          <ul
+            class="navbar-nav gap-2 text-uppercase fw-bold align-items-center font-size-lg letter-spacing-md">
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="index.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">01</span>
+                HOME
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="aboutus.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">02</span>
+                ABOUT
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="facilities.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">03</span>
+                FACILITIES
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="shopOffice.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">04</span>
+                <span class="text-start">SHOPS & OFFICES</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="Gallery.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">05</span>
+                <span class="text-start">GALLERY</span>
+              </a>
+            </li>
+          </ul>
         </div>
+
+        <div class="d-flex d-lg-flex gap-3 align-items-center">
+          <a
+            href="viewauction.html"
+            class="btn bg-dark-accent text-white fw-bold rounded-0 px-2 py-2 d-flex align-items-center gap-3 text-uppercase font-size-lg letter-spacing-md">
+            <i class="bi bi-hammer"></i>
+            <span class="text-start line-height-sm">VIEW PROPOSALS</span>
+            <span
+              class="badge bg-orange rounded-0 px-2 py-1 text-white font-size-sm line-height-md"
+              >LIVE</span
+            >
+          </a>
+        </div>
+      </div>
     </nav>
 
   <!-- Main Content -->
@@ -168,15 +177,15 @@
     <div class="container py-5">
       <!-- Breadcrumbs & Header -->
       <div class="text-uppercase fw-bold text-orange mb-2 font-size-md letter-spacing-md">
-        PUBLIC TENDERS > E-AUCTIONS ON IDA E-AUCTION PORTAL & PUBLIC
+        PUBLIC TENDERS > E-PROPOSALS ON IDA E-PROPOSAL PORTAL & PUBLIC
         PROCUREMENT
       </div>
       <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-start mb-2">
         <div class="pe-lg-5">
-          <h2 class="display-5 font-playfair fw-bold mb-3 text-dark">
-            Commercial Property E-Auctions
+          <h2 class="fs-2 font-playfair fw-bold mb-3 text-dark">
+            Commercial Property E-Proposals
           </h2>
-          <p class="text-muted font-size-2xl max-w-800 line-height-lg mb-0 opacity-85">
+          <p class="text-muted font-size-xl max-w-800 line-height-lg mb-0 opacity-85">
             Transparent public bidding for prime retail shops, corporate
             offices, and food court kiosks at ISBT Kumedi under the Indore
             Development Authority.
@@ -202,8 +211,8 @@
         </div>
       </div>
 
-      <!-- Auctions Grid dynamically generated by JS -->
-      <div class="row g-4 mb-5" id="auctionsGrid">
+      <!-- Proposals Grid dynamically generated by JS -->
+      <div class="row g-4 mb-5" id="proposalsGrid">
         <!-- Cards will be injected here by data.js -->
       </div>
 
@@ -213,7 +222,7 @@
           <div class="text-uppercase fw-bold text-orange mb-2 font-size-sm letter-spacing-md">
             E-BIDDING PROTOCOL
           </div>
-          <h3 class="font-playfair fw-bold mb-4 text-dark display-6">
+          <h3 class="font-playfair fw-bold mb-4 text-dark fs-3">
             Official Step-by-Step E-Bidding Process
           </h3>
 
@@ -286,86 +295,8 @@
         </div>
       </div>
     </div>
-    <div class="floating_btn">
-    <a target="_blank" href="https://wa.me/">
-      <div class="contact_icon">
-        <i class="fa fa-whatsapp my-float"></i>
-      </div>
-    </a>
-    <p class="text_icon">Talk to us?</p>
-  </div>
+  
   </main>
-
-  <!-- Footer -->
-  <footer class="bg-white border-top pt-5 pb-4 bg-warm-lightest">
-    <div class="container">
-      <div class="row align-items-center mb-4">
-        <div class="col-md-4 mb-4 mb-md-0">
-          <a class="text-decoration-none text-dark d-flex align-items-center gap-2 mb-3" href="#">
-            <div
-              class="bg-dark text-white p-2 rounded d-flex align-items-center justify-content-center size-32 font-weight-800 font-size-2xl">
-              ISBT
-            </div>
-            <div class="fw-bold fs-6 line-height-xs">ISBT Kumedi Indore</div>
-          </a>
-          <p class="text-muted mb-0 pe-md-4 font-size-xl line-height-lg">
-            The Inter State Bus Terminal at Kumedi is a flagship civic
-            infrastructure project developed and managed by the Indore
-            Development Authority.
-          </p>
-          <a href="#"
-            class="d-inline-flex align-items-center gap-2 mt-3 fw-bold text-orange text-decoration-none text-uppercase font-size-lg letter-spacing-sm">
-            <i class="bi bi-geo-alt"></i> VIEW ON GOOGLE MAPS
-          </a>
-        </div>
-        <div class="col-md-8">
-          <div
-            class="d-flex flex-wrap gap-4 justify-content-md-end text-uppercase fw-semibold font-size-md letter-spacing-sm">
-            <a href="#" class="text-dark text-decoration-none">ISBT Master Plan</a>
-            <a href="#" class="text-dark text-decoration-none">IDA Commercial Spaces</a>
-            <a href="#" class="text-dark text-decoration-none">Multi-Modal Operations</a>
-            <a href="#" class="text-dark text-decoration-none">Smart Fleet Management</a>
-            <a href="#" class="text-dark text-decoration-none">Help / Support</a>
-            <a href="#" class="text-dark text-decoration-none">Bus Operators <i
-                class="bi bi-box-arrow-up-right ms-1"></i></a>
-          </div>
-        </div>
-      </div>
-      <hr class="text-muted opacity-40 my-4" />
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
-        <div class="mb-3 mb-md-0">
-          <div class="text-uppercase fw-bold text-muted mb-1 font-size-base letter-spacing-md">
-            EXECUTIVE AUTHORITY
-          </div>
-          <div class="text-dark fw-semibold font-size-xl">
-            MR-10 Super Corridor Hub, Indore (M.P.) 452010
-          </div>
-        </div>
-        <div class="mb-3 mb-md-0 text-md-center">
-          <div class="text-uppercase fw-bold text-muted mb-1 font-size-base letter-spacing-md">
-            PROJECT OWNER
-          </div>
-          <div class="text-dark fw-semibold font-size-xl">
-            Indore Development Authority
-          </div>
-        </div>
-        <div class="text-md-end">
-          <div class="text-uppercase fw-bold text-muted mb-1 font-size-base letter-spacing-md">
-            CONTACT HUB
-          </div>
-          <div class="text-dark fw-semibold font-size-xl">
-            Contact Us at +91 731 243 0000
-          </div>
-        </div>
-      </div>
-      <div class="mt-4 pt-3 border-top d-flex flex-column flex-md-row justify-content-between text-muted font-size-lg">
-        <div class="mb-2 mb-md-0">
-          © 2026 Indore Development Authority. All Rights Reserved.
-        </div>
-        <div>Terms & Conditions | Privacy Policy | Refund Policy</div>
-      </div>
-    </div>
-  </footer>
 
   <!-- Bid Modal -->
   <div class="modal fade" id="bidModal" tabindex="-1" aria-labelledby="bidModalLabel" aria-hidden="true">
@@ -383,9 +314,9 @@
             <!-- Bid Amount Section -->
             <div class="bg-white p-4 border border-dark-transparent mb-4">
               <div class="d-flex justify-content-between mb-2">
-                <span class="text-uppercase fw-bold text-dark font-size-xs letter-spacing-md">ENTER YOUR BID AMOUNT (INR
+                <span class="text-uppercase fw-bold text-dark font-size-sm letter-spacing-md">ENTER YOUR BID AMOUNT (INR
                   ₹)</span>
-                <span class="text-uppercase fw-bold text-orange font-size-xs letter-spacing-md"
+                <span class="text-uppercase fw-bold text-orange font-size-sm letter-spacing-md"
                   id="modalMinBidLabel">MIN VALID BID: ₹0</span>
               </div>
               <div class="input-group mb-3">
@@ -396,20 +327,20 @@
                   id="bidAmountInput" required />
               </div>
               <div class="d-flex align-items-center gap-2">
-                <span class="text-uppercase fw-bold text-muted font-size-xs letter-spacing-md me-2">QUICK
+                <span class="text-uppercase fw-bold text-muted font-size-sm letter-spacing-md me-2">QUICK
                   INCREMENT:</span>
                 <button type="button"
-                  class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-xs letter-spacing-md border-dark-transparent"
+                  class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-sm letter-spacing-md border-dark-transparent"
                   onclick="incrementBid(50000)">
                   +₹50,000
                 </button>
                 <button type="button"
-                  class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-xs letter-spacing-md border-dark-transparent"
+                  class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-sm letter-spacing-md border-dark-transparent"
                   onclick="incrementBid(100000)">
                   +₹1,00,000
                 </button>
                 <button type="button"
-                  class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-xs letter-spacing-md border-dark-transparent"
+                  class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-sm letter-spacing-md border-dark-transparent"
                   onclick="incrementBid(200000)">
                   +₹2,00,000
                 </button>
@@ -418,7 +349,7 @@
 
             <!-- Bidder Details Section -->
             <div class="bg-white p-4 border border-dark-transparent mb-4">
-              <div class="text-uppercase fw-bold text-dark font-size-xs letter-spacing-md mb-3">
+              <div class="text-uppercase fw-bold text-dark font-size-sm letter-spacing-md mb-3">
                 BIDDER AUTHENTICATION & DETAILS
               </div>
               <div class="row g-3">
@@ -496,31 +427,31 @@
   <!-- Render Data -->
   <script>
     window.auctionData = []; // Store globally for the modal
-    let currentModalAuction = null;
+    let currentModalProposal = null;
     let bidModalInstance = null;
 
-    function renderAuctions(filterCategory = "all") {
+    function renderProposals(filterCategory = "all") {
       if (typeof filterCategory !== "string") filterCategory = "all"; // Handle DOMContentLoaded event object
       fetch("./auction.json")
         .then((response) => response.json())
         .then((data) => {
-          let AUCTION_ITEMS = [];
+          let PROPOSAL_ITEMS = [];
           if (Array.isArray(data)) {
-            AUCTION_ITEMS = data; // Fallback for old format
+            PROPOSAL_ITEMS = data; // Fallback for old format
           } else {
             // Extract all arrays from object dynamically
             for (const key in data) {
               if (Array.isArray(data[key])) {
-                AUCTION_ITEMS = AUCTION_ITEMS.concat(data[key]);
+                PROPOSAL_ITEMS = PROPOSAL_ITEMS.concat(data[key]);
               }
             }
           }
 
-          window.auctionData = AUCTION_ITEMS;
+          window.auctionData = PROPOSAL_ITEMS;
 
           // Generate filter categories based on 'categorytype'
-          const categoryCounts = { all: AUCTION_ITEMS.length };
-          AUCTION_ITEMS.forEach((item) => {
+          const categoryCounts = { all: PROPOSAL_ITEMS.length };
+          PROPOSAL_ITEMS.forEach((item) => {
             let ct = item.categorytype || "Other";
             categoryCounts[ct] = (categoryCounts[ct] || 0) + 1;
           });
@@ -529,7 +460,7 @@
             "filterButtonsContainer",
           );
           if (filterContainer) {
-            let buttonsHtml = `<button onclick="renderAuctions('all')" class="btn ${filterCategory === "all" ? "btn-dark text-white" : "btn-outline-dark bg-transparent text-muted"} fw-bold rounded-0 px-4 py-2 font-size-sm letter-spacing-md border-dark-transparent">ALL [${categoryCounts["all"].toString().padStart(2, "0")}]</button>`;
+            let buttonsHtml = `<button onclick="renderProposals('all')" class="btn ${filterCategory === "all" ? "btn-dark text-white" : "btn-outline-dark bg-transparent text-muted"} fw-bold rounded-0 px-4 py-2 font-size-sm letter-spacing-md border-dark-transparent">ALL [${categoryCounts["all"].toString().padStart(2, "0")}]</button>`;
 
             Object.keys(categoryCounts).forEach((ct) => {
               if (ct === "all") return;
@@ -537,18 +468,18 @@
               const btnClass = isActive
                 ? "btn-dark text-white"
                 : "btn-outline-dark bg-transparent text-muted";
-              buttonsHtml += `<button onclick="renderAuctions('${ct}')" class="btn ${btnClass} fw-bold rounded-0 px-4 py-2 font-size-sm letter-spacing-md border-dark-transparent">${ct.toUpperCase()} [${categoryCounts[ct].toString().padStart(2, "0")}]</button>`;
+              buttonsHtml += `<button onclick="renderProposals('${ct}')" class="btn ${btnClass} fw-bold rounded-0 px-4 py-2 font-size-sm letter-spacing-md border-dark-transparent">${ct.toUpperCase()} [${categoryCounts[ct].toString().padStart(2, "0")}]</button>`;
             });
             filterContainer.innerHTML = buttonsHtml;
           }
 
-          const grid = document.getElementById("auctionsGrid");
+          const grid = document.getElementById("proposalsGrid");
           if (!grid) return;
 
           const filteredItems =
             filterCategory === "all"
-              ? AUCTION_ITEMS
-              : AUCTION_ITEMS.filter(
+              ? PROPOSAL_ITEMS
+              : PROPOSAL_ITEMS.filter(
                 (a) => a.categorytype === filterCategory,
               );
 
@@ -557,8 +488,8 @@
           filteredItems.forEach((item) => {
             const isLive = item.Bidstatus === "Open";
             const statusBadge = isLive
-              ? `<span class="badge bg-orange rounded-0 px-2 py-1 font-size-xs letter-spacing-md">OPEN</span>`
-              : `<span class="badge bg-secondary rounded-0 px-2 py-1 font-size-xs letter-spacing-md">${item.Bidstatus.toUpperCase()}</span>`;
+              ? `<span class="badge bg-orange rounded-0 px-2 py-1 font-size-sm letter-spacing-md">OPEN</span>`
+              : `<span class="badge bg-secondary rounded-0 px-2 py-1 font-size-sm letter-spacing-md">${item.Bidstatus.toUpperCase()}</span>`;
 
             const computedSqM = item.dimensions
               ? item.dimensions.widthM * item.dimensions.lengthM
@@ -625,33 +556,33 @@
                             
                             <!-- Property Details -->
                             <div class="d-flex flex-wrap gap-2 mb-3">
-                                <span class="badge bg-light text-dark border border-dark-transparent font-size-xs letter-spacing-md px-2 py-1"><i class="bi bi-tag"></i> CATEGORY: ${item.category}</span>
-                                <span class="badge bg-light text-dark border border-dark-transparent font-size-xs letter-spacing-md px-2 py-1"><i class="bi bi-tags"></i> TYPE: ${item.categorytype}</span>
-                                <span class="badge bg-light text-dark border border-dark-transparent font-size-xs letter-spacing-md px-2 py-1"><i class="bi bi-building"></i> FLOOR: ${item.floor}</span>
-                                ${item.location ? `<span class="badge bg-light text-dark border border-dark-transparent font-size-xs letter-spacing-md px-2 py-1"><i class="bi bi-geo-alt"></i> LOCATION: ${item.location}</span>` : ""}
+                                <span class="badge bg-light text-dark border border-dark-transparent font-size-sm letter-spacing-md px-2 py-1"><i class="bi bi-tag"></i> CATEGORY: ${item.category}</span>
+                                <span class="badge bg-light text-dark border border-dark-transparent font-size-sm letter-spacing-md px-2 py-1"><i class="bi bi-tags"></i> TYPE: ${item.categorytype}</span>
+                                <span class="badge bg-light text-dark border border-dark-transparent font-size-sm letter-spacing-md px-2 py-1"><i class="bi bi-building"></i> FLOOR: ${item.floor}</span>
+                                ${item.location ? `<span class="badge bg-light text-dark border border-dark-transparent font-size-sm letter-spacing-md px-2 py-1"><i class="bi bi-geo-alt"></i> LOCATION: ${item.location}</span>` : ""}
                             </div>
                             
                             <!-- Stats Row -->
                             <div class="bg-warm-lightest p-3 d-flex flex-wrap justify-content-between mb-4 border border-dark-transparent" style="row-gap: 15px;">
                                 <div class="text-center px-1 flex-fill">
-                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">AREA (SQ.M)</div>
+                                    <div class="text-muted font-size-sm letter-spacing-md text-uppercase mb-1 opacity-85">AREA (SQ.M)</div>
                                     <div class="fw-bold text-dark font-size-xl">${areaSqMStr}</div>
                                 </div>
                                 <div class="text-center px-1 flex-fill border-start border-dark-transparent">
-                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">AREA (SQ.FT)</div>
+                                    <div class="text-muted font-size-sm letter-spacing-md text-uppercase mb-1 opacity-85">AREA (SQ.FT)</div>
                                     <div class="fw-bold text-orange font-size-xl">${areaSqFtStr}</div>
                                 </div>
                                 
                                 <div class="text-center px-1 flex-fill border-start border-dark-transparent">
-                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">BASE RATE</div>
+                                    <div class="text-muted font-size-sm letter-spacing-md text-uppercase mb-1 opacity-85">BASE RATE</div>
                                     <div class="fw-bold text-dark font-size-xl">${item.BaseRate ? (isNaN(item.BaseRate) ? item.BaseRate : "₹" + item.BaseRate) : "N/A"}</div>
-                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">${item.BaseRateTxt}</div>
+                                    <div class="text-muted font-size-sm letter-spacing-md text-uppercase mb-1 opacity-85">${item.BaseRateTxt}</div>
                                 </div>
                                 
                                 <div class="text-center px-1 flex-fill border-start border-dark-transparent">
-                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85">AVG. MONTHLY LEASE</div>
+                                    <div class="text-muted font-size-sm letter-spacing-md text-uppercase mb-1 opacity-85">AVG. MONTHLY LEASE</div>
                                     <div class="fw-bold text-orange font-size-xl">₹${avgMonthlyLeaseStr}</div>
-                                    <div class="text-muted font-size-xs letter-spacing-md text-uppercase mb-1 opacity-85"></div>
+                                    <div class="text-muted font-size-sm letter-spacing-md text-uppercase mb-1 opacity-85"></div>
                                 </div>
 
                             </div>
@@ -660,13 +591,13 @@
                             <div class="bg-dark-accent p-4 d-flex justify-content-between align-items-center mb-4 text-white">
                                 <div>
                                     <div class="text-uppercase font-size-sm letter-spacing-md mb-1">AVG. ANNUAL LEASE</div>
-                                    <div class="fw-bold fs-3 d-flex align-items-baseline gap-1">
+                                    <div class="fw-bold fs-4 d-flex align-items-baseline gap-1">
                                         ₹${avgYearlyLeaseStr}
                                     </div>
-                                    <div class=" font-size-xs mt-1 text-white opacity-70">Estimated 1-Year Lease (Avg Rate)</div>
+                                    <div class=" font-size-sm mt-1 text-white opacity-70">Estimated 1-Year Lease (Avg Rate)</div>
                                 </div>
                                 <div class="bg-dark px-4 py-3 border border-secondary border-opacity-25 d-flex flex-column align-items-center text-center">
-                                    <div class="text-uppercase font-size-xs letter-spacing-md mb-1">UNIT</div>
+                                    <div class="text-uppercase font-size-sm letter-spacing-md mb-1">UNIT</div>
                                     <div class="fw-bold text-orange font-size-2xl">${item.unitNumber}</div>
                                 </div>
                             </div>
@@ -678,7 +609,7 @@
                             
                             <!-- Buttons -->
                             <div class="mt-auto d-flex flex-column flex-xl-row gap-2">
-                                ${item.Bidstatus.toLowerCase() !== "reserved" ? `<button class="btn btn-dark fw-bold rounded-0 py-3 flex-grow-1 font-size-sm letter-spacing-md d-flex align-items-center justify-content-center gap-2" onclick="openBidModal('${item.id}')"><i class="bi bi-hammer fs-6"></i> ENTER LIVE AUCTION & BID</button>` : ""}
+                                ${item.Bidstatus.toLowerCase() !== "reserved" ? `<button class="btn btn-dark fw-bold rounded-0 py-3 flex-grow-1 font-size-sm letter-spacing-md d-flex align-items-center justify-content-center gap-2" onclick="openBidModal('${item.id}')"><i class="bi bi-hammer fs-6"></i> ENTER LIVE PROPOSAL & BID</button>` : ""}
                                 <button class="btn btn-outline-dark fw-bold rounded-0 py-3 px-4 font-size-sm letter-spacing-md d-flex align-items-center justify-content-center gap-2 border-dark-transparent" onclick="viewOnMap('${item.id}')"><i class="bi bi-geo-alt fs-6"></i> VIEW ON MAP</button>
                             </div>
                         </div>
@@ -689,13 +620,13 @@
 
           grid.innerHTML = html;
         })
-        .catch((error) => console.error("Error loading auctions:", error));
+        .catch((error) => console.error("Error loading proposals:", error));
     }
 
     window.openBidModal = function (auctionId) {
       const auction = window.auctionData.find((a) => a.id === auctionId);
       if (!auction) return;
-      currentModalAuction = auction;
+      currentModalProposal = auction;
 
       const isLive = auction.Bidstatus === "Open";
       const statusColor = isLive ? "text-orange" : "text-secondary";
@@ -716,26 +647,26 @@
       const emdVal = 100000;
       const emdFmt = emdVal.toLocaleString("en-IN");
       const minValidBid = Math.round(reserveValue);
-      currentModalAuction.currentHighBid = reserveValue;
-      currentModalAuction.minIncrement = 0;
+      currentModalProposal.currentHighBid = reserveValue;
+      currentModalProposal.minIncrement = 0;
 
       // Populate Header
       document.getElementById("modalHeaderContent").innerHTML = `
-                <div class="text-uppercase fw-bold text-muted font-size-xs letter-spacing-md mb-2">
-                    NIT: ${auction.nitNumber} &nbsp;•&nbsp; <span class="${statusColor}">${auction.Bidstatus.toUpperCase()}</span>
+                <div class="text-uppercase fw-bold text-muted font-size-sm letter-spacing-md mb-2">
+                    NIT: ${auction.nitNumber} &nbsp;â€¢&nbsp; <span class="${statusColor}">${auction.Bidstatus.toUpperCase()}</span>
                 </div>
                 <h3 class="font-playfair fw-bold mb-3 text-dark">${auction.title}</h3>
                 <div class="text-muted font-size-sm mb-4">
-                    ${auction.category} • ${auction.floor} • Carpet Area: <span class="fw-bold text-dark">${computedSqM.toFixed(2)} Sq.m</span>
+                    ${auction.category} â€¢ ${auction.floor} â€¢ Carpet Area: <span class="fw-bold text-dark">${computedSqM.toFixed(2)} Sq.m</span>
                 </div>
                 <hr class="border-dark-transparent mb-4">
                 
                 <div class="bg-dark-accent p-4 text-white mb-4">
                     <div class="row align-items-center">
                         <div class="col-md-12 mb-3 mb-md-0">
-                            <div class="text-uppercase text-white opacity-85 font-size-xs letter-spacing-md mb-2">CURRENT HIGHEST BID (H1)</div>
+                            <div class="text-uppercase text-white opacity-85 font-size-sm letter-spacing-md mb-2">CURRENT HIGHEST BID (H1)</div>
                             <div class="fw-bold display-5 mb-2 font-playfair">₹${currentBidFmt}</div>
-                            <div class="text-white opacity-70 font-size-xs">Base Reserve Price (Annual): ₹${reserveFmt}</div>
+                            <div class="text-white opacity-70 font-size-sm">Base Reserve Price (Annual): ₹${reserveFmt}</div>
                         </div>
                        
                     </div>
@@ -793,7 +724,7 @@
       const btn = document.getElementById("submitBidBtn");
 
       if (
-        parseInt(amount) < Math.round(currentModalAuction.currentHighBid)
+        parseInt(amount) < Math.round(currentModalProposal.currentHighBid)
       ) {
         alert("Bid amount is lower than the minimum valid bid!");
         return;
@@ -924,8 +855,11 @@
     };
 
     // Render on load
-    document.addEventListener("DOMContentLoaded", renderAuctions);
+    document.addEventListener("DOMContentLoaded", renderProposals);
   </script>
+
+  <script src="footer.js"></script>
+  <script src="whatsappbtn.js"></script>
 </body>
 
 </html>

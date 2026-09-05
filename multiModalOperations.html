@@ -1,0 +1,890 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Modal Operations & E-Brochures - ISBT Kumedi Indore</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <!-- DearFlip CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/@dearhive/dearflip-jquery-flipbook@1.7.3/dflip/css/dflip.min.css"
+      rel="stylesheet"
+      type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@dearhive/dearflip-jquery-flipbook@1.7.3/dflip/css/themify-icons.css"
+      rel="stylesheet"
+      type="text/css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .flipbook-wrapper {
+        background: #111827;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .flipbook-toolbar {
+        background: #1e293b;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .doc-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        border-radius: 6px;
+      }
+      .doc-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+        border-color: #cbd5e1;
+      }
+      .doc-card.active-doc {
+        border: 2px solid var(--theme-orange, #ff6b35);
+        background: #fffdfa;
+      }
+      .df-container {
+        height: 720px;
+        width: 100%;
+        position: relative;
+      }
+      @media (max-width: 768px) {
+        .df-container {
+          height: 520px;
+        }
+      }
+      .tab-doc-btn {
+        transition: all 0.2s ease;
+        border-radius: 4px;
+      }
+      .tab-doc-btn.active {
+        background-color: var(--theme-orange, #ff6b35) !important;
+        color: #ffffff !important;
+      }
+      .feature-pillar-box {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        transition: all 0.25s ease;
+      }
+      .feature-pillar-box:hover {
+        background: #ffffff;
+        border-color: #cbd5e1;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </head>
+
+  <body class="bg-light d-flex flex-column min-vh-100">
+    <!-- Top Bulletin Bar -->
+    <div
+      class="bg-dark-accent text-white py-2 px-3 px-lg-3 d-flex justify-content-between align-items-center font-size-xl">
+      <div class="d-flex align-items-center gap-3">
+        <span
+          class="badge bg-orange text-uppercase rounded-0 px-2 py-1 d-flex align-items-center gap-2 letter-spacing-md"
+          ><span class="rounded-circle bg-white d-inline-block size-5"></span>
+          BULLETIN / GAZETTE</span
+        >
+        <span class="text-light d-none d-md-inline opacity-85"
+          >ISBT-STMB-IDR-EOI-2026/108 for Commercial, Retail, Restaurants (F&B)
+          is now LIVE</span
+        >
+      </div>
+      <div class="d-flex align-items-center gap-4">
+        <a
+          href="#"
+          class="text-orange text-decoration-none fw-bold text-uppercase d-flex align-items-center gap-1 letter-spacing-md"
+          >READ DISPATCH
+          <i class="bi bi-chevron-right font-size-base icon-stroke-1"></i
+        ></a>
+        <button
+          class="btn btn-link text-white p-0 border-0 text-decoration-none"
+          onclick="this.closest('.bg-dark-accent').style.display = 'none'">
+          <i class="bi bi-x-lg font-size-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg py-3 bg-warm-light border-bottom-soft">
+      <div class="container-fluid px-4 px-lg-5">
+        <a
+          class="navbar-brand d-flex align-items-center gap-3"
+          href="index.html">
+          <div
+            class="bg-dark-accent text-white rounded-0 d-flex align-items-center justify-content-center size-60 font-weight-800 font-playfair px-2">
+            ISBT
+          </div>
+          <div>
+            <div
+              class="text-muted mt-1 font-size-sm font-weight-800 text-uppercase letter-spacing-lg">
+              SHREE TANTYA MAMA BHIL
+            </div>
+            <div
+              class="fw-bold text-dark font-playfair font-size-7xl line-height-xs">
+              ISBT KUMEDI INDORE
+            </div>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav">
+          <ul
+            class="navbar-nav gap-2 text-uppercase fw-bold align-items-center font-size-lg letter-spacing-md">
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="index.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">01</span>
+                HOME
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="aboutus.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">02</span>
+                ABOUT
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="facilities.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">03</span>
+                FACILITIES
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="shopOffice.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">04</span>
+                <span class="text-start">SHOPS & OFFICES</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                href="Gallery.html">
+                <span class="opacity-40 fw-normal font-size-base mt-1">05</span>
+                <span class="text-start">GALLERY</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex d-lg-flex gap-3 align-items-center">
+          <a
+            href="viewauction.html"
+            class="btn bg-dark-accent text-white fw-bold rounded-0 px-2 py-2 d-flex align-items-center gap-3 text-uppercase font-size-lg letter-spacing-md">
+            <i class="bi bi-hammer"></i>
+            <span class="text-start line-height-sm">VIEW AUCTIONS</span>
+            <span
+              class="badge bg-orange rounded-0 px-2 py-1 text-white font-size-xs line-height-md"
+              >LIVE</span
+            >
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header Hero Section -->
+    <header class="bg-warm-lighter py-5 border-bottom">
+      <div class="container py-3">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h1 class="display-5 fw-bold text-dark font-playfair mb-3">
+              Multi-Modal Operations & Publications
+            </h1>
+            <p
+              class="lead text-muted font-sans font-size-3xl mb-0 max-w-800 line-height-md">
+              Browse through official property customer handbooks, commercial
+              leasing brochures, platform usage tariffs, and terminal
+              operational manuals in a realistic turn-page 3D reader.
+            </p>
+          </div>
+          <div class="col-lg-4 mt-4 mt-lg-0 text-lg-end">
+            <div
+              class="d-inline-flex flex-column gap-2 text-start bg-white p-3 border rounded-1 shadow-sm">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-file-earmark-pdf-fill text-danger fs-4"></i>
+                <div>
+                  <div class="fw-bold font-sans font-size-xl text-dark">
+                    3 Official Publications
+                  </div>
+                </div>
+              </div>
+              <hr class="my-1 opacity-25" />
+              <div class="d-flex gap-2">
+                <a
+                  href="#featured-reader"
+                  class="btn btn-sm btn-dark rounded-0 px-3 py-1 font-size-base fw-bold font-sans">
+                  <i class="bi bi-book me-1"></i> OPEN VIEWER
+                </a>
+                <a
+                  href="isbtmasterplan.html"
+                  class="btn btn-sm btn-outline-secondary rounded-0 px-3 py-1 font-size-base fw-bold font-sans">
+                  <i class="bi bi-map me-1"></i> VIEW MAPS
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container py-5 flex-grow-1">
+      <!-- Section Title -->
+      <div
+        class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 pb-2 border-bottom">
+        <div>
+          <span
+            class="text-orange text-uppercase fw-bold font-size-sm letter-spacing-lg font-sans"
+            >DOCUMENTS & FLYERS</span
+          >
+          <h2 class="font-playfair fw-bold text-dark h3 mb-1">
+            Available Terminal Publications
+          </h2>
+          <p class="text-muted font-sans font-size-base mb-0">
+            Select any document below to load it directly into the 3D
+            interactive viewer or open in full-screen modal.
+          </p>
+        </div>
+        <div class="mt-3 mt-md-0 d-flex gap-2">
+          <button
+            class="btn btn-sm btn-outline-dark rounded-0 font-sans font-size-base fw-semibold"
+            onclick="scrollToReader()">
+            <i class="bi bi-arrows-fullscreen me-1"></i> Go to Reader
+          </button>
+        </div>
+      </div>
+
+      <!-- Publication Cards Grid -->
+      <div class="row g-4 mb-5" id="document-cards-row">
+        <!-- Document 1: Property Customer Handbook -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="doc-card h-100 p-4 d-flex flex-column justify-content-between active-doc"
+            id="card-doc-1">
+            <div>
+              <div
+                class="d-flex justify-content-between align-items-start mb-3">
+                <span
+                  class="badge bg-dark text-white rounded-0 px-2 py-1 font-size-xs letter-spacing-md"
+                  >HANDBOOK</span
+                >
+                <span
+                  class="badge bg-success-subtle text-success border border-success-subtle rounded-0 px-2 py-1 font-size-xs fw-bold"
+                  >3.2 MB</span
+                >
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <div
+                  class="bg-danger-subtle text-danger p-2 rounded-1 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-book-half fs-4"></i>
+                </div>
+                <div>
+                  <h3 class="h6 fw-bold text-dark font-sans mb-0">
+                    Property Customer Handbook
+                  </h3>
+                  <span class="text-muted font-size-xs font-sans"
+                    >Edition 2026 â€¢ Official Guidelines</span
+                  >
+                </div>
+              </div>
+              <p
+                class="text-muted font-sans font-size-xl line-height-md mt-3 mb-4">
+                Complete guide for passengers, commercial tenants, and
+                operators. Covers luggage & cloakrooms, ticketing bays, parking
+                layouts, security protocols, and commuter convenience amenities.
+              </p>
+            </div>
+            <div>
+              <hr class="opacity-20 my-3" />
+              <div class="d-flex flex-column gap-2">
+                <button
+                  type="button"
+                  class="btn btn-orange w-100 rounded-0 py-2 font-sans font-size-xl fw-bold d-flex align-items-center justify-content-center gap-2"
+                  onclick="
+                    selectDocument(
+                      1,
+                      'img/PDF/ISBT_Kumedi_Property_Customer_Handbook-2.pdf',
+                      'ISBT Kumedi - Property Customer Handbook',
+                    )
+                  ">
+                  <i class="bi bi-eye-fill"></i> READ IN VIEWER
+                </button>
+                <div class="d-flex gap-2">
+                  <button
+                    type="button"
+                    class="_df_button btn btn-outline-dark flex-grow-1 rounded-0 py-1 font-sans font-size-base fw-bold"
+                    source="img/PDF/ISBT_Kumedi_Property_Customer_Handbook-2.pdf">
+                    <i class="bi bi-fullscreen me-1"></i> 3D Lightbox
+                  </button>
+                  <a
+                    href="img/PDF/ISBT_Kumedi_Property_Customer_Handbook-2.pdf"
+                    download="ISBT_Kumedi_Property_Customer_Handbook.pdf"
+                    class="btn btn-outline-secondary rounded-0 py-1 px-3 font-sans font-size-base fw-bold text-decoration-none d-flex align-items-center">
+                    <i class="bi bi-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Document 2: Commercial Leasing Flyer 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="doc-card h-100 p-4 d-flex flex-column justify-content-between"
+            id="card-doc-2">
+            <div>
+              <div
+                class="d-flex justify-content-between align-items-start mb-3">
+                <span
+                  class="badge bg-primary text-white rounded-0 px-2 py-1 font-size-xs letter-spacing-md"
+                  >LEASING FLYER 1</span
+                >
+                <span
+                  class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-0 px-2 py-1 font-size-xs fw-bold"
+                  >2.3 MB</span
+                >
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <div
+                  class="bg-primary-subtle text-primary p-2 rounded-1 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-shop fs-4"></i>
+                </div>
+                <div>
+                  <h3 class="h6 fw-bold text-dark font-sans mb-0">
+                    Commercial Leasing Flyer (Vol. 1)
+                  </h3>
+                  <span class="text-muted font-size-xs font-sans"
+                    >Phase 1 â€¢ Retail & Food Courts</span
+                  >
+                </div>
+              </div>
+              <p
+                class="text-muted font-sans font-size-xl line-height-md mt-3 mb-4">
+                Detailed commercial prospectus highlighting high-footfall ground
+                floor retail shops, quick-service food court stalls, restaurant
+                spaces, kiosk islands, and ticketing operator counter
+                allotments.
+              </p>
+            </div>
+            <div>
+              <hr class="opacity-20 my-3" />
+              <div class="d-flex flex-column gap-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-dark w-100 rounded-0 py-2 font-sans font-size-xl fw-bold d-flex align-items-center justify-content-center gap-2"
+                  onclick="
+                    selectDocument(
+                      2,
+                      'img/PDF/ISBT_Kumedi_Commercial_Leasing_Flyer-1.pdf',
+                      'ISBT Kumedi - Commercial Leasing Flyer (Volume 1)',
+                    )
+                  ">
+                  <i class="bi bi-eye-fill"></i> READ IN VIEWER
+                </button>
+                <div class="d-flex gap-2">
+                  <button
+                    type="button"
+                    class="_df_button btn btn-outline-dark flex-grow-1 rounded-0 py-1 font-sans font-size-base fw-bold"
+                    source="img/PDF/ISBT_Kumedi_Commercial_Leasing_Flyer-1.pdf">
+                    <i class="bi bi-fullscreen me-1"></i> 3D Lightbox
+                  </button>
+                  <a
+                    href="img/PDF/ISBT_Kumedi_Commercial_Leasing_Flyer-1.pdf"
+                    download="ISBT_Kumedi_Commercial_Leasing_Flyer_1.pdf"
+                    class="btn btn-outline-secondary rounded-0 py-1 px-3 font-sans font-size-base fw-bold text-decoration-none d-flex align-items-center">
+                    <i class="bi bi-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Document 3: Commercial Leasing Flyer 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div
+            class="doc-card h-100 p-4 d-flex flex-column justify-content-between"
+            id="card-doc-3">
+            <div>
+              <div
+                class="d-flex justify-content-between align-items-start mb-3">
+                <span
+                  class="badge bg-warning text-dark rounded-0 px-2 py-1 font-size-xs letter-spacing-md"
+                  >LEASING FLYER 2</span
+                >
+                <span
+                  class="badge bg-warning-subtle text-dark border border-warning-subtle rounded-0 px-2 py-1 font-size-xs fw-bold"
+                  >1.4 MB</span
+                >
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <div
+                  class="bg-warning-subtle text-dark p-2 rounded-1 d-flex align-items-center justify-content-center">
+                  <i class="bi bi-building-check fs-4"></i>
+                </div>
+                <div>
+                  <h3 class="h6 fw-bold text-dark font-sans mb-0">
+                    Commercial Leasing Flyer (Vol. 2)
+                  </h3>
+                  <span class="text-muted font-size-xs font-sans"
+                    >Phase 2 â€¢ Offices & Mobility</span
+                  >
+                </div>
+              </div>
+              <p
+                class="text-muted font-sans font-size-xl line-height-md mt-3 mb-4">
+                Corporate floor plates, co-working suites, travel agency
+                offices, banking & ATM allocations, multi-tier EV parking hubs,
+                and multi-modal transport interchange specifications.
+              </p>
+            </div>
+            <div>
+              <hr class="opacity-20 my-3" />
+              <div class="d-flex flex-column gap-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-dark w-100 rounded-0 py-2 font-sans font-size-xl fw-bold d-flex align-items-center justify-content-center gap-2"
+                  onclick="
+                    selectDocument(
+                      3,
+                      'img/PDF/ISBT_Kumedi_Commercial_Leasing_Flyer-2.pdf',
+                      'ISBT Kumedi - Commercial Leasing Flyer (Volume 2)',
+                    )
+                  ">
+                  <i class="bi bi-eye-fill"></i> READ IN VIEWER
+                </button>
+                <div class="d-flex gap-2">
+                  <button
+                    type="button"
+                    class="_df_button btn btn-outline-dark flex-grow-1 rounded-0 py-1 font-sans font-size-base fw-bold"
+                    source="img/PDF/ISBT_Kumedi_Commercial_Leasing_Flyer-2.pdf">
+                    <i class="bi bi-fullscreen me-1"></i> 3D Lightbox
+                  </button>
+                  <a
+                    href="img/PDF/ISBT_Kumedi_Commercial_Leasing_Flyer-2.pdf"
+                    download="ISBT_Kumedi_Commercial_Leasing_Flyer_2.pdf"
+                    class="btn btn-outline-secondary rounded-0 py-1 px-3 font-sans font-size-base fw-bold text-decoration-none d-flex align-items-center">
+                    <i class="bi bi-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Interactive 3D Flipbook Reader Container -->
+      <section id="featured-reader" class="mb-5 pt-2">
+        <div class="flipbook-wrapper">
+          <!-- Flipbook Header & Document Switcher Toolbar -->
+          <div
+            class="flipbook-toolbar p-3 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+            <div class="d-flex align-items-center gap-3">
+              <span
+                class="badge bg-orange text-white rounded-0 px-2 py-1 font-size-xs fw-bold"
+                >ACTIVE PUBLICATION</span
+              >
+              <div>
+                <h4
+                  class="text-white font-sans fw-bold mb-0 font-size-4xl"
+                  id="current-doc-title">
+                  ISBT Kumedi - Property Customer Handbook
+                </h4>
+                <span
+                  class="text-white-50 font-size-xs font-sans"
+                  id="current-doc-subtitle">
+                  Official Transit & Property Operations Manual (Turn pages
+                  using mouse drag, arrows, or bottom controls)
+                </span>
+              </div>
+            </div>
+
+            <!-- Quick Document Switching Pills -->
+            <div class="d-flex flex-wrap gap-2">
+              <button
+                type="button"
+                id="tab-btn-1"
+                class="btn btn-sm btn-dark text-white border-secondary font-sans font-size-xs px-3 py-2 tab-doc-btn active"
+                onclick="
+                  selectDocument(
+                    1,
+                    'img/PDF/ISBT_Kumedi_Property_Customer_Handbook-2.pdf',
+                    'ISBT Kumedi - Property Customer Handbook',
+                  )
+                ">
+                <i class="bi bi-journal-text me-1"></i> Handbook
+              </button>
+              <button
+                type="button"
+                id="tab-btn-2"
+                class="btn btn-sm btn-dark text-white border-secondary font-sans font-size-xs px-3 py-2 tab-doc-btn"
+                onclick="
+                  selectDocument(
+                    2,
+                    'img/PDF/ISBT_Kumedi_Commercial_Leasing_Flyer-1.pdf',
+                    'ISBT Kumedi - Commercial Leasing Flyer (Volume 1)',
+                  )
+                ">
+                <i class="bi bi-shop me-1"></i> Leasing Flyer 1
+              </button>
+              <button
+                type="button"
+                id="tab-btn-3"
+                class="btn btn-sm btn-dark text-white border-secondary font-sans font-size-xs px-3 py-2 tab-doc-btn"
+                onclick="
+                  selectDocument(
+                    3,
+                    'img/PDF/ISBT_Kumedi_Commercial_Leasing_Flyer-2.pdf',
+                    'ISBT Kumedi - Commercial Leasing Flyer (Volume 2)',
+                  )
+                ">
+                <i class="bi bi-building me-1"></i> Leasing Flyer 2
+              </button>
+              <a
+                id="btn-direct-download"
+                href="img/PDF/ISBT_Kumedi_Property_Customer_Handbook-2.pdf"
+                download
+                class="btn btn-sm btn-outline-light font-sans font-size-xs px-3 py-2 text-decoration-none">
+                <i class="bi bi-download me-1"></i> Download PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- Flipbook Canvas Container -->
+          <div class="position-relative bg-dark" style="min-height: 720px">
+            <div id="flipbook-holder" class="df-container"></div>
+          </div>
+
+          <!-- Flipbook Footer Bar -->
+          <div
+            class="p-2 px-3 bg-dark text-white-50 font-size-xs font-sans d-flex justify-content-between align-items-center border-top border-secondary border-opacity-25">
+            <div>
+              <i class="bi bi-info-circle me-1 text-orange"></i> Use click &
+              drag or arrow buttons to flip pages. Fullscreen, zoom, thumbnails
+              & search available in toolbar.
+            </div>
+            <div>Powered by <strong>DearFlip 3D WebGL Engine</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Operational Pillars Information Grid -->
+      <section class="mt-5 pt-3">
+        <div class="text-center max-w-800 mx-auto mb-5">
+          <span
+            class="text-orange text-uppercase fw-bold font-size-sm letter-spacing-lg font-sans"
+            >TRANSIT & COMMERCIAL EXCELLENCE</span
+          >
+          <h2 class="font-playfair fw-bold text-dark h3 mt-1">
+            Key Operational Highlights
+          </h2>
+          <p class="text-muted font-sans font-size-base">
+            Detailed information, layout specifications, and regulatory
+            frameworks documented inside our official publications.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-pillar-box p-4 rounded-1 h-100">
+              <div
+                class="size-40 bg-dark-accent text-white rounded-1 d-flex align-items-center justify-content-center mb-3">
+                <i class="bi bi-bus-front fs-5"></i>
+              </div>
+              <h3 class="h6 fw-bold text-dark font-sans">
+                24Ã—7 Transit Operations
+              </h3>
+              <p class="text-muted font-sans font-size-xl line-height-md mb-0">
+                Automated platform & bay allocation, digital ticketing
+                concourse, bus holding yards, and inter-city fleet management.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-pillar-box p-4 rounded-1 h-100">
+              <div
+                class="size-40 bg-dark-accent text-white rounded-1 d-flex align-items-center justify-content-center mb-3">
+                <i class="bi bi-bag-check fs-5"></i>
+              </div>
+              <h3 class="h6 fw-bold text-dark font-sans">
+                Retail & Dining Hub
+              </h3>
+              <p class="text-muted font-sans font-size-xl line-height-md mb-0">
+                Prime commercial shop spaces, hygienic food court zones,
+                specialty cafes, and automated grab-and-go vending kiosks.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-pillar-box p-4 rounded-1 h-100">
+              <div
+                class="size-40 bg-dark-accent text-white rounded-1 d-flex align-items-center justify-content-center mb-3">
+                <i class="bi bi-person-hearts fs-5"></i>
+              </div>
+              <h3 class="h6 fw-bold text-dark font-sans">Commuter Amenities</h3>
+              <p class="text-muted font-sans font-size-xl line-height-md mb-0">
+                Air-conditioned waiting lounges, secure cloakrooms, digital
+                flight/bus info displays (PIS), and medical emergency rooms.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-pillar-box p-4 rounded-1 h-100">
+              <div
+                class="size-40 bg-dark-accent text-white rounded-1 d-flex align-items-center justify-content-center mb-3">
+                <i class="bi bi-ev-station fs-5"></i>
+              </div>
+              <h3 class="h6 fw-bold text-dark font-sans">
+                Smart Mobility & EV
+              </h3>
+              <p class="text-muted font-sans font-size-xl line-height-md mb-0">
+                High-capacity multi-level vehicle parking, fast EV charging
+                hubs, app-based taxi bays, and direct feeder metro connectivity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inquiry Call-to-Action Banner -->
+      <section
+        class="mt-5 bg-dark-accent text-white p-4 p-lg-5 rounded-1 position-relative overflow-hidden">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <span
+              class="badge bg-orange text-white rounded-0 px-2 py-1 font-size-xs letter-spacing-md mb-2"
+              >OFFICIAL LEASING & OPERATIONS</span
+            >
+            <h3 class="display-6 font-playfair fw-bold mb-2">
+              Have Inquiries Regarding Commercial Allotments?
+            </h3>
+            <p
+              class="text-white-50 font-sans font-size-2xl mb-0 max-w-600 line-height-md">
+              For complete auction terms, shop leasing schedules, platform
+              concessionaire agreements, or custom operator contracts, contact
+              our dedicated project desk.
+            </p>
+          </div>
+          <div class="col-lg-4 mt-4 mt-lg-0 text-lg-end">
+            <div
+              class="d-flex flex-column flex-sm-row gap-2 justify-content-lg-end">
+              <a
+                href="viewauction.html"
+                class="btn btn-orange rounded-0 px-4 py-2 fw-bold font-sans font-size-lg letter-spacing-md text-uppercase">
+                <i class="bi bi-hammer me-1"></i> VIEW AUCTIONS
+              </a>
+              <a
+                href="shopOffice.html"
+                class="btn btn-outline-light rounded-0 px-4 py-2 fw-bold font-sans font-size-lg letter-spacing-md text-uppercase">
+                <i class="bi bi-building me-1"></i> EXPLORE SHOPS
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <!-- jQuery (Required for DearFlip) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Configure DearFlip Asset Path Before Loading dflip.min.js -->
+    <script>
+      window.dFlipLocation =
+        "https://cdn.jsdelivr.net/npm/@dearhive/dearflip-jquery-flipbook@1.7.3/dflip/";
+    </script>
+    <!-- DearFlip JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@dearhive/dearflip-jquery-flipbook@1.7.3/dflip/js/dflip.min.js"></script>
+
+    <!-- Flipbook Controller Script -->
+    <script>
+      const documentsList = [
+        {
+          id: 1,
+          title: "ISBT Kumedi - Property Customer Handbook",
+          subtitle:
+            "Official Transit & Property Operations Manual (Turn pages using mouse drag, arrows, or bottom controls)",
+          source: "img/PDF/ISBT_Kumedi_Property_Customer_Handbook-2.pdf",
+          downloadName: "ISBT_Kumedi_Property_Customer_Handbook.pdf",
+        },
+        {
+          id: 2,
+          title: "ISBT Kumedi - Commercial Leasing Flyer (Volume 1)",
+          subtitle:
+            "Phase 1 Retail Shops, Kiosks, Food Court & Operator Counter Opportunities",
+          source: "img/PDF/ISBT_Kumedi_Commercial_Leasing_Flyer-1.pdf",
+          downloadName: "ISBT_Kumedi_Commercial_Leasing_Flyer_1.pdf",
+        },
+        {
+          id: 3,
+          title: "ISBT Kumedi - Commercial Leasing Flyer (Volume 2)",
+          subtitle:
+            "Phase 2 Commercial Office Floor Plates, Mobility Hubs & EV Infrastructure",
+          source: "img/PDF/ISBT_Kumedi_Commercial_Leasing_Flyer-2.pdf",
+          downloadName: "ISBT_Kumedi_Commercial_Leasing_Flyer_2.pdf",
+        },
+      ];
+
+      let currentFlipBookInstance = null;
+      let activeDocId = 1;
+
+      function renderFlipbook(pdfSource) {
+        const holder = document.getElementById("flipbook-holder");
+        if (!holder) return;
+
+        // Clean container contents
+        holder.innerHTML = "";
+
+        // Create inner book element
+        const bookDiv = document.createElement("div");
+        bookDiv.id = "active-dflip-viewer";
+        bookDiv.className = "_df_book";
+        bookDiv.setAttribute("source", pdfSource);
+        bookDiv.style.height = "720px";
+        bookDiv.style.width = "100%";
+        holder.appendChild(bookDiv);
+
+        // DearFlip Options
+        const options = {
+          source: pdfSource,
+          webgl: true,
+          height: 720,
+          duration: 700,
+          backgroundColor: "#111827",
+          sound: true,
+          autoEnableOutline: true,
+          autoEnableThumbnail: true,
+          pageMode: 2, // Double page
+          singlePageMode: 1,
+          showDownloadControl: true,
+          showSoundControl: true,
+          showPrintControl: true,
+          controlsPosition: "bottom",
+          padding: {
+            top: 20,
+            bottom: 20,
+            left: 20,
+            right: 20,
+          },
+        };
+
+        try {
+          if (window.jQuery && window.jQuery(bookDiv).flipBook) {
+            currentFlipBookInstance = window
+              .jQuery(bookDiv)
+              .flipBook(pdfSource, options);
+          }
+        } catch (e) {
+          console.warn("DearFlip automatic init fallback:", e);
+        }
+      }
+
+      function selectDocument(id, sourceUrl, title) {
+        activeDocId = id;
+        const doc = documentsList.find((d) => d.id === id) || {
+          title: title,
+          subtitle: "Interactive Flipbook Reader",
+          source: sourceUrl,
+          downloadName: "document.pdf",
+        };
+
+        // Update titles
+        document.getElementById("current-doc-title").innerText = doc.title;
+        document.getElementById("current-doc-subtitle").innerText =
+          doc.subtitle;
+
+        // Update download button
+        const dlBtn = document.getElementById("btn-direct-download");
+        if (dlBtn) {
+          dlBtn.href = doc.source;
+          dlBtn.download = doc.downloadName;
+        }
+
+        // Update tabs active state
+        for (let i = 1; i <= 3; i++) {
+          const tabBtn = document.getElementById(`tab-btn-${i}`);
+          const cardEl = document.getElementById(`card-doc-${i}`);
+          if (tabBtn) {
+            if (i === id) {
+              tabBtn.classList.add("active");
+            } else {
+              tabBtn.classList.remove("active");
+            }
+          }
+          if (cardEl) {
+            const readBtn = cardEl.querySelector(
+              ".btn-orange, .btn-outline-dark",
+            );
+            if (i === id) {
+              cardEl.classList.add("active-doc");
+              if (readBtn) {
+                readBtn.className =
+                  "btn btn-orange w-100 rounded-0 py-2 font-sans font-size-xl fw-bold d-flex align-items-center justify-content-center gap-2";
+              }
+            } else {
+              cardEl.classList.remove("active-doc");
+              if (readBtn) {
+                readBtn.className =
+                  "btn btn-outline-dark w-100 rounded-0 py-2 font-sans font-size-xl fw-bold d-flex align-items-center justify-content-center gap-2";
+              }
+            }
+          }
+        }
+
+        // Render PDF in viewer
+        renderFlipbook(doc.source);
+      }
+
+      function scrollToReader() {
+        const reader = document.getElementById("featured-reader");
+        if (reader) {
+          reader.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      // Initialize on DOM ready
+      document.addEventListener("DOMContentLoaded", function () {
+        // Load default first document
+        selectDocument(1, documentsList[0].source, documentsList[0].title);
+      });
+    </script>
+  
+  <script src="footer.js"></script>
+  <script src="whatsappbtn.js"></script>
+</body>
+</html>
+
