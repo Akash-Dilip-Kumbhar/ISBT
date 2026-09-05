@@ -153,7 +153,7 @@
         <!-- Breadcrumbs & Header -->
         <div
           class="text-uppercase fw-bold text-orange mb-2 font-size-lg letter-spacing-md">
-          REAL ESTATE CATALOG > CHAPTER 05: COMMERCIAL LOTS & CORPORATE SPACES
+         COMMERCIAL LOTS & CORPORATE SPACES
         </div>
         <div class="mb-5">
           <div class="">
@@ -284,13 +284,13 @@
             <div class="bg-white p-4 border border-dark-transparent mb-4">
               <div class="d-flex justify-content-between mb-2">
                 <span class="text-uppercase fw-bold text-dark font-size-sm letter-spacing-md">ENTER YOUR BID AMOUNT (INR
-                  â‚¹)</span>
+                  ₹)</span>
                 <span class="text-uppercase fw-bold text-orange font-size-sm letter-spacing-md"
-                  id="modalMinBidLabel">MIN VALID BID: â‚¹0</span>
+                  id="modalMinBidLabel">MIN VALID BID: ₹0</span>
               </div>
               <div class="input-group mb-3">
                 <span
-                  class="input-group-text bg-warm-lightest border-dark-transparent rounded-0 text-dark fw-bold fs-4 border-end-0 px-4">â‚¹</span>
+                  class="input-group-text bg-warm-lightest border-dark-transparent rounded-0 text-dark fw-bold fs-4 border-end-0 px-4">₹</span>
                 <input type="number"
                   class="form-control form-control-lg border-dark-transparent border-start-0 rounded-0 bg-warm-lightest font-playfair fw-bold fs-4 shadow-none"
                   id="bidAmountInput" required />
@@ -301,17 +301,17 @@
                 <button type="button"
                   class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-sm letter-spacing-md border-dark-transparent"
                   onclick="incrementBid(50000)">
-                  +â‚¹50,000
+                  +₹50,000
                 </button>
                 <button type="button"
                   class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-sm letter-spacing-md border-dark-transparent"
                   onclick="incrementBid(100000)">
-                  +â‚¹1,00,000
+                  +₹1,00,000
                 </button>
                 <button type="button"
                   class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-sm letter-spacing-md border-dark-transparent"
                   onclick="incrementBid(200000)">
-                  +â‚¹2,00,000
+                  +₹2,00,000
                 </button>
               </div>
             </div>
@@ -764,7 +764,7 @@
                   })
                 : computedSqFt.toFixed(2);
               const rateSqFtMoStr = item.RateperSqFtPerMonth
-                ? "â‚¹" +
+                ? "₹" +
                   item.RateperSqFtPerMonth.toLocaleString("en-IN", {
                     maximumFractionDigits: 2,
                   })
@@ -807,13 +807,13 @@
                                 
                                 <div class="text-center px-1 flex-fill border-start border-dark-transparent">
                                     <div class="text-muted font-size-sm letter-spacing-md text-uppercase mb-1 opacity-85">BASE RATE</div>
-                                    <div class="fw-bold text-dark font-size-xl">${item.BaseRate ? (isNaN(item.BaseRate) ? item.BaseRate : "â‚¹" + item.BaseRate) : "N/A"}</div>
+                                    <div class="fw-bold text-dark font-size-xl">${item.BaseRate ? (isNaN(item.BaseRate) ? item.BaseRate : "₹" + item.BaseRate) : "N/A"}</div>
                                     <div class="text-muted font-size-sm letter-spacing-md text-uppercase mb-1 opacity-85">${item.BaseRateTxt}</div>
                                 </div>
                                 
                                 <div class="text-center px-1 flex-fill border-start border-dark-transparent">
                                     <div class="text-muted font-size-sm letter-spacing-md text-uppercase mb-1 opacity-85">AVG. MONTHLY LEASE</div>
-                                    <div class="fw-bold text-orange font-size-xl">â‚¹${avgMonthlyLeaseStr}</div>
+                                    <div class="fw-bold text-orange font-size-xl">₹${avgMonthlyLeaseStr}</div>
                                     <div class="text-muted font-size-sm letter-spacing-md text-uppercase mb-1 opacity-85"></div>
                                 </div>
 
@@ -824,7 +824,7 @@
                                 <div>
                                     <div class="text-uppercase font-size-lg letter-spacing-md mb-1">AVG. ANNUAL LEASE</div>
                                     <div class="fw-bold fs-3 d-flex align-items-baseline gap-1">
-                                        â‚¹${avgYearlyLeaseStr}
+                                        ₹${avgYearlyLeaseStr}
                                     </div>
                                     <div class=" font-size-sm mt-1 text-white opacity-70">Estimated 1-Year Lease (Avg Rate)</div>
                                 </div>
@@ -897,8 +897,8 @@
                     <div class="row align-items-center">
                         <div class="col-md-12 mb-3 mb-md-0">
                             <div class="text-uppercase text-white opacity-85 font-size-sm letter-spacing-md mb-2">CURRENT HIGHEST BID (H1)</div>
-                            <div class="fw-bold display-5 mb-2 font-playfair">â‚¹${currentBidFmt}</div>
-                            <div class="text-white opacity-70 font-size-sm">Base Reserve Price (Annual): â‚¹${reserveFmt}</div>
+                            <div class="fw-bold display-5 mb-2 font-playfair">₹${currentBidFmt}</div>
+                            <div class="text-white opacity-70 font-size-sm">Base Reserve Price (Annual): ₹${reserveFmt}</div>
                         </div>
                        
                     </div>
@@ -907,13 +907,13 @@
 
         // Setup Form Inputs
         document.getElementById("modalMinBidLabel").innerText =
-          "MIN VALID BID: â‚¹" + minValidBid.toLocaleString("en-IN");
+          "MIN VALID BID: ₹" + minValidBid.toLocaleString("en-IN");
         document.getElementById("bidAmountInput").value =
           Math.round(reserveValue);
         document.getElementById("bidAmountInput").min =
           Math.round(reserveValue);
         document.getElementById("modalTncLabel").innerText =
-          `I certify that I have read the IDA tender conditions, have deposited the requisite EMD of â‚¹${emdFmt}, and authorize this digital bid.`;
+          `I certify that I have read the IDA tender conditions, have deposited the requisite EMD of ₹${emdFmt}, and authorize this digital bid.`;
 
         updateSubmitButton();
 
@@ -945,7 +945,7 @@
         const btn = document.getElementById("submitBidBtn");
         if (input && btn) {
           const val = parseInt(input.value || 0);
-          btn.innerHTML = `<i class="bi bi-hammer fs-5"></i> SUBMIT BID OF â‚¹${val.toLocaleString("en-IN")}`;
+          btn.innerHTML = `<i class="bi bi-hammer fs-5"></i> SUBMIT BID OF ₹${val.toLocaleString("en-IN")}`;
         }
       }
 
@@ -987,7 +987,7 @@
 
           if (result.success) {
             alert(
-              `Bid successfully submitted for â‚¹${parseInt(amount).toLocaleString("en-IN")} by ${name}!\nReceipt sent successfully.`,
+              `Bid successfully submitted for ₹${parseInt(amount).toLocaleString("en-IN")} by ${name}!\nReceipt sent successfully.`,
             );
             bidModalInstance.hide();
             e.target.reset();
