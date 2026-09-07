@@ -13,7 +13,7 @@
             </a>
             <p class="text-muted mb-0 pe-md-4 font-size-xl line-height-lg">
               The Inter State Bus Terminal at Kumedi is a flagship civic
-              infrastructure project developed and managed by the Indore
+              infrastructure project developed by the Indore
               Development Authority.
             </p>
             <a href="https://maps.app.goo.gl/BVg1Gi1tbBRd87wQ8" target="_blank" class="d-inline-flex align-items-center gap-2 mt-3 fw-bold text-orange text-decoration-none text-uppercase font-size-lg letter-spacing-sm">
@@ -23,7 +23,7 @@
           <div class="col-md-8">
             <div class="d-flex flex-wrap gap-4 justify-content-md-end text-uppercase fw-semibold font-size-md letter-spacing-sm">
               <a href="isbtmasterplan.html" class="text-dark text-decoration-none">ISBT Master Plan</a>
-              <a href="#" data-bs-toggle="modal" data-bs-target="#footerRatecardModal" class="text-dark text-decoration-none" style="cursor: pointer;">IDA Commercial Spaces</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#footerRatecardModal" class="text-dark text-decoration-none" style="cursor: pointer;">Commercial Spaces</a>
               <a href="multiModalOperations.html" class="text-dark text-decoration-none">Multi-Modal Operations</a>
             </div>
           </div>
@@ -44,9 +44,12 @@
               CONTACT HUB
             </div>
             <div class="text-dark fw-semibold font-size-xl">
-              <a href="https://bvgindia.com/contact-us/" target="_blank" class="text-dark text-decoration-none hover-orange transition-all">Contact Us at +91 731 243 0000</a>
+              <a href="https://bvgindia.com/contact-us/" target="_blank" class="text-dark text-decoration-none hover-orange transition-all">Contact Us at +91 7387017067</a>
             </div>
+             <div class="text-dark fw-semibold font-size-xl">
+            <div class="text-muted font-size-lg">or Email us at <a href="mailto:isbt.indore@bvgindia.com" class="text-dark text-decoration-none hover-orange transition-all">isbt.indore@bvgindia.com</a></div>
           </div>
+            </div>
         </div>
         <div class="mt-4 pt-3 border-top d-flex flex-column flex-md-row justify-content-between text-muted font-size-lg">
           <div class="mb-2 mb-md-0">
@@ -62,7 +65,7 @@
       <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content rounded-0 border-0 bg-warm-lightest">
           <div class="modal-header border-dark-transparent bg-white">
-            <h5 class="modal-title font-playfair fw-bold" id="footerRatecardModalLabel">IDA Commercial Spaces Rate Card</h5>
+            <h5 class="modal-title font-playfair fw-bold" id="footerRatecardModalLabel"> Commercial Spaces Rate Card</h5>
             <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body p-0 position-relative">

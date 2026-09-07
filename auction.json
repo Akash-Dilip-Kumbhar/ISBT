@@ -2,7 +2,7 @@
   "Shops": [
     {
       "id": "auc-isbt-shop-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/001",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/001",
       "title": "E-Auction for Retail Shops - Internal - SHOP-1",
       "unitNumber": "Internal Shop-1",
       "category": "Shops",
@@ -29,7 +29,7 @@
     },
     {
       "id": "auc-isbt-shop-02",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/002",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/002",
       "title": "E-Auction for Retail Shops - Internal - SHOP-2",
       "unitNumber": "Internal Shop-2",
       "category": "Shops",
@@ -56,7 +56,7 @@
     },
     {
       "id": "auc-isbt-shop-03",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/003",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/003",
       "title": "E-Auction for Retail Shops - Internal - SHOP-3",
       "unitNumber": "Internal Shop-3",
       "category": "Shops",
@@ -83,7 +83,7 @@
     },
     {
       "id": "auc-isbt-shop-04",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/004",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/004",
       "title": "E-Auction for Retail Shops - Internal - SHOP-4",
       "unitNumber": "Internal Shop-4",
       "category": "Shops",
@@ -110,7 +110,7 @@
     },
     {
       "id": "auc-isbt-shop-05",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/005",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/005",
       "title": "E-Auction for Retail Shops - Internal - SHOP-5",
       "unitNumber": "Internal Shop-5",
       "category": "Shops",
@@ -137,7 +137,7 @@
     },
     {
       "id": "auc-isbt-shop-06",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/006",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/006",
       "title": "E-Auction for Retail Shops - Internal - SHOP-6",
       "unitNumber": "Internal Shop-6",
       "category": "Shops",
@@ -164,7 +164,7 @@
     },
     {
       "id": "auc-isbt-shop-07",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/007",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/007",
       "title": "E-Auction for Retail Shops - Internal - SHOP-7",
       "unitNumber": "Internal Shop-7",
       "category": "Shops",
@@ -191,7 +191,7 @@
     },
     {
       "id": "auc-isbt-shop-08",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/008",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/008",
       "title": "E-Auction for Retail Shops - Internal - SHOP-8",
       "unitNumber": "Internal Shop-8",
       "category": "Shops",
@@ -218,7 +218,7 @@
     },
     {
       "id": "auc-isbt-shop-09",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/009",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/009",
       "title": "E-Auction for Retail Shops - Internal - SHOP-9",
       "unitNumber": "Internal Shop-9",
       "category": "Shops",
@@ -245,7 +245,7 @@
     },
     {
       "id": "auc-isbt-shop-10",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/010",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/010",
       "title": "E-Auction for Retail Shops - Internal - SHOP-10",
       "unitNumber": "Internal Shop-10",
       "category": "Shops",
@@ -272,7 +272,7 @@
     },
     {
       "id": "auc-isbt-shop-11",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/011",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/011",
       "title": "E-Auction for Retail Shops - Internal - SHOP-11",
       "unitNumber": "Internal Shop-11",
       "category": "Shops",
@@ -299,7 +299,7 @@
     },
     {
       "id": "auc-isbt-shop-12",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/012",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/012",
       "title": "E-Auction for Retail Shops - Internal - SHOP-12",
       "unitNumber": "Internal Shop-12",
       "category": "Shops",
@@ -326,7 +326,7 @@
     },
     {
       "id": "auc-isbt-shop-13",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/013",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/013",
       "title": "E-Auction for Retail Shops - Internal - SHOP-13",
       "unitNumber": "Internal Shop-13",
       "category": "Shops",
@@ -353,7 +353,7 @@
     },
     {
       "id": "auc-isbt-shop-14",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/014",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/014",
       "title": "E-Auction for Retail Shops - Internal - SHOP-14",
       "unitNumber": "Internal Shop-14",
       "category": "Shops",
@@ -380,7 +380,7 @@
     },
     {
       "id": "auc-isbt-shop-15",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/015",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/015",
       "title": "E-Auction for Retail Shops - Internal - SHOP-15",
       "unitNumber": "Internal Shop-15",
       "category": "Shops",
@@ -407,7 +407,7 @@
     },
     {
       "id": "auc-isbt-shop-16",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/016",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/016",
       "title": "E-Auction for Retail Shops - Internal - SHOP-16",
       "unitNumber": "Internal Shop-16",
       "category": "Shops",
@@ -434,7 +434,7 @@
     },
     {
       "id": "auc-isbt-shop-17",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/017",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/017",
       "title": "E-Auction for Retail Shops - Internal - SHOP-17",
       "unitNumber": "Internal Shop-17",
       "category": "Shops",
@@ -461,7 +461,7 @@
     },
     {
       "id": "auc-isbt-shop-18",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/018",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/018",
       "title": "E-Auction for Retail Shops - Internal - SHOP-18",
       "unitNumber": "Internal Shop-18",
       "category": "Shops",
@@ -488,7 +488,7 @@
     },
     {
       "id": "auc-isbt-shop-19",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/019",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/019",
       "title": "E-Auction for Retail Shops - Internal - SHOP-19",
       "unitNumber": "Internal Shop-19",
       "category": "Shops",
@@ -515,7 +515,7 @@
     },
     {
       "id": "auc-isbt-shop-20",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/020",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/020",
       "title": "E-Auction for Retail Shops - Internal - SHOP-20",
       "unitNumber": "Internal Shop-20",
       "category": "Shops",
@@ -542,7 +542,7 @@
     },
     {
       "id": "auc-isbt-shop-21",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/021",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/021",
       "title": "E-Auction for Retail Shops - Internal - SHOP-21",
       "unitNumber": "Internal Shop-21",
       "category": "Shops",
@@ -569,7 +569,7 @@
     },
     {
       "id": "auc-isbt-shop-22",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/022",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/022",
       "title": "E-Auction for Retail Shops - Internal - SHOP-22",
       "unitNumber": "Internal Shop-22",
       "category": "Shops",
@@ -596,7 +596,7 @@
     },
     {
       "id": "auc-isbt-shop-23",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/023",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/023",
       "title": "E-Auction for Retail Shops - Internal - SHOP-23",
       "unitNumber": "Internal Shop-23",
       "category": "Shops",
@@ -623,7 +623,7 @@
     },
     {
       "id": "auc-isbt-shop-24",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/024",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/024",
       "title": "E-Auction for Retail Shops - Internal - SHOP-24",
       "unitNumber": "Internal Shop-24",
       "category": "Shops",
@@ -650,7 +650,7 @@
     },
     {
       "id": "auc-isbt-externalshop-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/094",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/094",
       "title": "E-Auction for External Shop-01",
       "unitNumber": "External Shop-01",
       "category": "Shops",
@@ -677,7 +677,7 @@
     },
     {
       "id": "auc-isbt-externalshop-02",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/095",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/095",
       "title": "E-Auction for External Shop-02",
       "unitNumber": "External Shop-02",
       "category": "Shops",
@@ -704,7 +704,7 @@
     },
     {
       "id": "auc-isbt-externalshop-03",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/096",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/096",
       "title": "E-Auction for External Shop-03",
       "unitNumber": "External Shop-03",
       "category": "Shops",
@@ -731,7 +731,7 @@
     },
     {
       "id": "auc-isbt-externalshop-04",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/097",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/097",
       "title": "E-Auction for External Shop-04",
       "unitNumber": "External Shop-04",
       "category": "Shops",
@@ -758,7 +758,7 @@
     },
     {
       "id": "auc-isbt-externalshop-05",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/098",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/098",
       "title": "E-Auction for External Shop-05",
       "unitNumber": "External Shop-05",
       "category": "Shops",
@@ -785,7 +785,7 @@
     },
     {
       "id": "auc-isbt-externalshop-06",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/099",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/099",
       "title": "E-Auction for External Shop-06",
       "unitNumber": "External Shop-06",
       "category": "Shops",
@@ -812,7 +812,7 @@
     },
     {
       "id": "auc-isbt-externalshop-07",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/100",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/100",
       "title": "E-Auction for External Shop-07",
       "unitNumber": "External Shop-07",
       "category": "Shops",
@@ -839,7 +839,7 @@
     },
     {
       "id": "auc-isbt-externalshop-08",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/101",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/101",
       "title": "E-Auction for External Shop-08",
       "unitNumber": "External Shop-08",
       "category": "Shops",
@@ -866,7 +866,7 @@
     },
     {
       "id": "auc-isbt-externalshop-09",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/102",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/102",
       "title": "E-Auction for External Shop-09",
       "unitNumber": "External Shop-09",
       "category": "Shops",
@@ -893,7 +893,7 @@
     },
     {
       "id": "auc-isbt-externalshop-10",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/103",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/103",
       "title": "E-Auction for External Shop-10",
       "unitNumber": "External Shop-10",
       "category": "Shops",
@@ -920,7 +920,7 @@
     },
     {
       "id": "auc-isbt-externalshop-11",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/104",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/104",
       "title": "E-Auction for External Shop-11",
       "unitNumber": "External Shop-11",
       "category": "Shops",
@@ -947,7 +947,7 @@
     },
     {
       "id": "auc-isbt-externalshop-12",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/105",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/105",
       "title": "E-Auction for External Shop-12",
       "unitNumber": "External Shop-12",
       "category": "Shops",
@@ -974,7 +974,7 @@
     },
     {
       "id": "auc-isbt-externalshop-14",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/106",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/106",
       "title": "E-Auction for External Shop-14",
       "unitNumber": "External Shop-14",
       "category": "Shops",
@@ -1001,7 +1001,7 @@
     },
     {
       "id": "auc-isbt-externalshop-15",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/107",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/107",
       "title": "E-Auction for External Shop-15",
       "unitNumber": "External Shop-15",
       "category": "Shops",
@@ -1030,7 +1030,7 @@
   "Offices": [
     {
       "id": "auc-isbt-office-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/025",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/025",
       "title": "E-Auction for Offices-01",
       "unitNumber": "OFFICE-01",
       "category": "Office",
@@ -1057,7 +1057,7 @@
     },
     {
       "id": "auc-isbt-office-02",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/026",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/026",
       "title": "E-Auction for Offices-02",
       "unitNumber": "OFFICE-02",
       "category": "Office",
@@ -1084,7 +1084,7 @@
     },
     {
       "id": "auc-isbt-office-03",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/027",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/027",
       "title": "E-Auction for Offices-03",
       "unitNumber": "OFFICE-03",
       "category": "Office",
@@ -1111,7 +1111,7 @@
     },
     {
       "id": "auc-isbt-office-04",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/028",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/028",
       "title": "E-Auction for Offices-04",
       "unitNumber": "OFFICE-04",
       "category": "Office",
@@ -1138,7 +1138,7 @@
     },
     {
       "id": "auc-isbt-office-05",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/029",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/029",
       "title": "E-Auction for Offices-05",
       "unitNumber": "OFFICE-05",
       "category": "Office",
@@ -1165,7 +1165,7 @@
     },
     {
       "id": "auc-isbt-office-06",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/030",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/030",
       "title": "E-Auction for Offices-06",
       "unitNumber": "OFFICE-06",
       "category": "Office",
@@ -1192,7 +1192,7 @@
     },
     {
       "id": "auc-isbt-office-07",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/031",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/031",
       "title": "E-Auction for Offices-07",
       "unitNumber": "OFFICE-07",
       "category": "Office",
@@ -1219,7 +1219,7 @@
     },
     {
       "id": "auc-isbt-office-08",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/032",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/032",
       "title": "E-Auction for Offices-08",
       "unitNumber": "OFFICE-08",
       "category": "Office",
@@ -1246,7 +1246,7 @@
     },
     {
       "id": "auc-isbt-office-09",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/033",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/033",
       "title": "E-Auction for Offices-09",
       "unitNumber": "OFFICE-09",
       "category": "Office",
@@ -1273,7 +1273,7 @@
     },
     {
       "id": "auc-isbt-office-10",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/034",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/034",
       "title": "E-Auction for Offices-10",
       "unitNumber": "OFFICE-10",
       "category": "Office",
@@ -1300,7 +1300,7 @@
     },
     {
       "id": "auc-isbt-office-11",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/035",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/035",
       "title": "E-Auction for Offices-11",
       "unitNumber": "OFFICE-11",
       "category": "Office",
@@ -1327,7 +1327,7 @@
     },
     {
       "id": "auc-isbt-office-12",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/036",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/036",
       "title": "E-Auction for Offices-12",
       "unitNumber": "OFFICE-12",
       "category": "Office",
@@ -1354,7 +1354,7 @@
     },
     {
       "id": "auc-isbt-office-13",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/037",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/037",
       "title": "E-Auction for Offices-13",
       "unitNumber": "OFFICE-13",
       "category": "Office",
@@ -1381,7 +1381,7 @@
     },
     {
       "id": "auc-isbt-office-14",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/038",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/038",
       "title": "E-Auction for Offices-14",
       "unitNumber": "OFFICE-14",
       "category": "Office",
@@ -1408,7 +1408,7 @@
     },
     {
       "id": "auc-isbt-office-15",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/039",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/039",
       "title": "E-Auction for Offices-15",
       "unitNumber": "OFFICE-15",
       "category": "Office",
@@ -1435,7 +1435,7 @@
     },
     {
       "id": "auc-isbt-office-16",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/040",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/040",
       "title": "E-Auction for Offices-16",
       "unitNumber": "OFFICE-16",
       "category": "Office",
@@ -1462,7 +1462,7 @@
     },
     {
       "id": "auc-isbt-office-17",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/041",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/041",
       "title": "E-Auction for Offices-17",
       "unitNumber": "OFFICE-17",
       "category": "Office",
@@ -1489,7 +1489,7 @@
     },
     {
       "id": "auc-isbt-office-18",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/042",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/042",
       "title": "E-Auction for Offices-18",
       "unitNumber": "OFFICE-18",
       "category": "Office",
@@ -1516,7 +1516,7 @@
     },
     {
       "id": "auc-isbt-office-19",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/043",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/043",
       "title": "E-Auction for Offices-19",
       "unitNumber": "OFFICE-19",
       "category": "Office",
@@ -1543,7 +1543,7 @@
     },
     {
       "id": "auc-isbt-office-20",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/044",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/044",
       "title": "E-Auction for Offices-20",
       "unitNumber": "OFFICE-20",
       "category": "Office",
@@ -1570,7 +1570,7 @@
     },
     {
       "id": "auc-isbt-office-21",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/045",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/045",
       "title": "E-Auction for Offices-21",
       "unitNumber": "OFFICE-21",
       "category": "Office",
@@ -1597,7 +1597,7 @@
     },
     {
       "id": "auc-isbt-office-22",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/046",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/046",
       "title": "E-Auction for Offices-22",
       "unitNumber": "OFFICE-22",
       "category": "Office",
@@ -1624,7 +1624,7 @@
     },
     {
       "id": "auc-isbt-office-23",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/047",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/047",
       "title": "E-Auction for Offices-23",
       "unitNumber": "OFFICE-23",
       "category": "Office",
@@ -1651,7 +1651,7 @@
     },
     {
       "id": "auc-isbt-office-24",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/048",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/048",
       "title": "E-Auction for Offices-24",
       "unitNumber": "OFFICE-24",
       "category": "Office",
@@ -1678,7 +1678,7 @@
     },
     {
       "id": "auc-isbt-office-25",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/049",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/049",
       "title": "E-Auction for Offices-25",
       "unitNumber": "OFFICE-25",
       "category": "Office",
@@ -1705,7 +1705,7 @@
     },
     {
       "id": "auc-isbt-office-26",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/050",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/050",
       "title": "E-Auction for Offices-26",
       "unitNumber": "OFFICE-26",
       "category": "Office",
@@ -1731,7 +1731,7 @@
     },
     {
       "id": "auc-isbt-office-27",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/051",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/051",
       "title": "E-Auction for Offices-27",
       "unitNumber": "OFFICE-27",
       "category": "Office",
@@ -1758,7 +1758,7 @@
     },
     {
       "id": "auc-isbt-office-28",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/052",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/052",
       "title": "E-Auction for Offices-28",
       "unitNumber": "OFFICE-28",
       "category": "Office",
@@ -1785,7 +1785,7 @@
     },
     {
       "id": "auc-isbt-office-29",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/053",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/053",
       "title": "E-Auction for Offices-29",
       "unitNumber": "OFFICE-29",
       "category": "Office",
@@ -1812,7 +1812,7 @@
     },
     {
       "id": "auc-isbt-office-30",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/054",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/054",
       "title": "E-Auction for Offices-30",
       "unitNumber": "OFFICE-30",
       "category": "Office",
@@ -1839,7 +1839,7 @@
     },
     {
       "id": "auc-isbt-office-31",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/055",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/055",
       "title": "E-Auction for Offices-31",
       "unitNumber": "OFFICE-31",
       "category": "Office",
@@ -1866,7 +1866,7 @@
     },
     {
       "id": "auc-isbt-office-32",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/056",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/056",
       "title": "E-Auction for Offices-32",
       "unitNumber": "OFFICE-32",
       "category": "Office",
@@ -1893,7 +1893,7 @@
     },
     {
       "id": "auc-isbt-office-33",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/057",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/057",
       "title": "E-Auction for Offices-33",
       "unitNumber": "OFFICE-33",
       "category": "Office",
@@ -1922,7 +1922,7 @@
   "FoodOutlet": [
     {
       "id": "auc-isbt-foodoutlet-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/058",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/058",
       "title": "E-Auction for Ground Floor FoodOutlet-01",
       "unitNumber": "FoodOutlet-01",
       "category": "FoodOutlet",
@@ -1949,7 +1949,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-02",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/059",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/059",
       "title": "E-Auction for Ground Floor FoodOutlet-02",
       "unitNumber": "FoodOutlet-02",
       "category": "FoodOutlet",
@@ -1976,7 +1976,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-03",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/060",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/060",
       "title": "E-Auction for Ground Floor FoodOutlet-03",
       "unitNumber": "FoodOutlet-03",
       "category": "FoodOutlet",
@@ -2003,7 +2003,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-04",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/061",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/061",
       "title": "E-Auction for Ground Floor FoodOutlet-04",
       "unitNumber": "FoodOutlet-04",
       "category": "FoodOutlet",
@@ -2030,7 +2030,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-05",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/062",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/062",
       "title": "E-Auction for Ground Floor FoodOutlet-05",
       "unitNumber": "FoodOutlet-05",
       "category": "FoodOutlet",
@@ -2057,7 +2057,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-06",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/063",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/063",
       "title": "E-Auction for Ground Floor FoodOutlet-06",
       "unitNumber": "FoodOutlet-06",
       "category": "FoodOutlet",
@@ -2084,7 +2084,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-07",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/064",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/064",
       "title": "E-Auction for Ground Floor FoodOutlet-07",
       "unitNumber": "FoodOutlet-07",
       "category": "FoodOutlet",
@@ -2111,7 +2111,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-08",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/065",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/065",
       "title": "E-Auction for Ground Floor FoodOutlet-08",
       "unitNumber": "FoodOutlet-08",
       "category": "FoodOutlet",
@@ -2138,7 +2138,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-09",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/066",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/066",
       "title": "E-Auction for Ground Floor FoodOutlet-09",
       "unitNumber": "FoodOutlet-09",
       "category": "FoodOutlet",
@@ -2165,7 +2165,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-10",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/067",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/067",
       "title": "E-Auction for Ground Floor FoodOutlet-10",
       "unitNumber": "FoodOutlet-10",
       "category": "FoodOutlet",
@@ -2192,7 +2192,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-11",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/068",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/068",
       "title": "E-Auction for Ground Floor FoodOutlet-11",
       "unitNumber": "FoodOutlet-11",
       "category": "FoodOutlet",
@@ -2219,7 +2219,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-12",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/069",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/069",
       "title": "E-Auction for Ground Floor FoodOutlet-12",
       "unitNumber": "FoodOutlet-12",
       "category": "FoodOutlet",
@@ -2246,7 +2246,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-13",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/070",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/070",
       "title": "E-Auction for First Floor FoodOutlet-13",
       "unitNumber": "FoodOutlet-13",
       "category": "FoodOutlet",
@@ -2273,7 +2273,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-14",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/071",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/071",
       "title": "E-Auction for First Floor FoodOutlet-14",
       "unitNumber": "FoodOutlet-14",
       "category": "FoodOutlet",
@@ -2300,7 +2300,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-15",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/072",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/072",
       "title": "E-Auction for First Floor FoodOutlet-15",
       "unitNumber": "FoodOutlet-15",
       "category": "FoodOutlet",
@@ -2327,7 +2327,7 @@
     },
     {
       "id": "auc-isbt-foodoutlet-16",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/073",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/073",
       "title": "E-Auction for First Floor FoodOutlet-16",
       "unitNumber": "FoodOutlet-16",
       "category": "FoodOutlet",
@@ -2356,7 +2356,7 @@
   "TicketBookingCounter": [
     {
       "id": "auc-isbt-tbc-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/070",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/070",
       "title": "E-Auction for Ticket Booking Counter-01",
       "unitNumber": "Ticket Booking Counter-01",
       "category": "Ticket Booking Counter",
@@ -2383,7 +2383,7 @@
     },
     {
       "id": "auc-isbt-tbc-02",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/071",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/071",
       "title": "E-Auction for Ticket Booking Counter-02",
       "unitNumber": "Ticket Booking Counter-02",
       "category": "Ticket Booking Counter",
@@ -2410,7 +2410,7 @@
     },
     {
       "id": "auc-isbt-tbc-03",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/072",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/072",
       "title": "E-Auction for Ticket Booking Counter-03",
       "unitNumber": "Ticket Booking Counter-03",
       "category": "Ticket Booking Counter",
@@ -2437,7 +2437,7 @@
     },
     {
       "id": "auc-isbt-tbc-04",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/073",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/073",
       "title": "E-Auction for Ticket Booking Counter-04",
       "unitNumber": "Ticket Booking Counter-04",
       "category": "Ticket Booking Counter",
@@ -2464,7 +2464,7 @@
     },
     {
       "id": "auc-isbt-tbc-05",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/074",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/074",
       "title": "E-Auction for Ticket Booking Counter-05",
       "unitNumber": "Ticket Booking Counter-05",
       "category": "Ticket Booking Counter",
@@ -2491,7 +2491,7 @@
     },
     {
       "id": "auc-isbt-tbc-06",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/075",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/075",
       "title": "E-Auction for Ticket Booking Counter-06",
       "unitNumber": "Ticket Booking Counter-06",
       "category": "Ticket Booking Counter",
@@ -2518,7 +2518,7 @@
     },
     {
       "id": "auc-isbt-tbc-07",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/076",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/076",
       "title": "E-Auction for Ticket Booking Counter-07",
       "unitNumber": "Ticket Booking Counter-07",
       "category": "Ticket Booking Counter",
@@ -2545,7 +2545,7 @@
     },
     {
       "id": "auc-isbt-tbc-08",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/077",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/077",
       "title": "E-Auction for Ticket Booking Counter-08",
       "unitNumber": "Ticket Booking Counter-08",
       "category": "Ticket Booking Counter",
@@ -2572,7 +2572,7 @@
     },
     {
       "id": "auc-isbt-tbc-09",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/078",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/078",
       "title": "E-Auction for Ticket Booking Counter-09",
       "unitNumber": "Ticket Booking Counter-09",
       "category": "Ticket Booking Counter",
@@ -2599,7 +2599,7 @@
     },
     {
       "id": "auc-isbt-tbc-10",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/079",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/079",
       "title": "E-Auction for Ticket Booking Counter-10",
       "unitNumber": "Ticket Booking Counter-10",
       "category": "Ticket Booking Counter",
@@ -2626,7 +2626,7 @@
     },
     {
       "id": "auc-isbt-tbc-11",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/080",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/080",
       "title": "E-Auction for Ticket Booking Counter-11",
       "unitNumber": "Ticket Booking Counter-11",
       "category": "Ticket Booking Counter",
@@ -2653,7 +2653,7 @@
     },
     {
       "id": "auc-isbt-tbc-12",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/081",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/081",
       "title": "E-Auction for Ticket Booking Counter-12",
       "unitNumber": "Ticket Booking Counter-12",
       "category": "Ticket Booking Counter",
@@ -2680,7 +2680,7 @@
     },
     {
       "id": "auc-isbt-tbc-13",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/082",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/082",
       "title": "E-Auction for Ticket Booking Counter-13",
       "unitNumber": "Ticket Booking Counter-13",
       "category": "Ticket Booking Counter",
@@ -2707,7 +2707,7 @@
     },
     {
       "id": "auc-isbt-tbc-14",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/083",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/083",
       "title": "E-Auction for Ticket Booking Counter-14",
       "unitNumber": "Ticket Booking Counter-14",
       "category": "Ticket Booking Counter",
@@ -2736,7 +2736,7 @@
   "MedicalRoom": [
     {
       "id": "auc-isbt-medicalroom-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/083",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/083",
       "title": "E-Auction for Medical Room-01",
       "unitNumber": "Medical Room-01",
       "category": "Medical Room",
@@ -2762,7 +2762,7 @@
   "PoliceRoom": [
     {
       "id": "auc-isbt-policeroom-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/084",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/084",
       "title": "E-Auction for Police Room-01",
       "unitNumber": "Police Room-01",
       "category": "Police Room",
@@ -2789,7 +2789,7 @@
   "VipLounge": [
     {
       "id": "auc-isbt-viplounge-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/086",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/086",
       "title": "E-Auction for VIP Lounge-01",
       "unitNumber": "VIP Lounge-01",
       "category": "VIP Lounge",
@@ -2815,7 +2815,7 @@
   "Atm": [
     {
       "id": "auc-isbt-atm-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/087",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/087",
       "title": "E-Auction for ATM-01",
       "unitNumber": "ATM-01",
       "category": "ATM",
@@ -2842,7 +2842,7 @@
     },
     {
       "id": "auc-isbt-atm-02",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/088",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/088",
       "title": "E-Auction for ATM-02",
       "unitNumber": "ATM-02",
       "category": "ATM",
@@ -2869,7 +2869,7 @@
   "RailwayTicketingCounter": [
     {
       "id": "auc-isbt-railwayticketingcounter-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/089",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/089",
       "title": "E-Auction for Railway Ticketing Counter-01",
       "unitNumber": "Railway Ticketing Counter-01",
       "category": "Railway Ticketing Counter",
@@ -2895,7 +2895,7 @@
   "HelpDesk": [
     {
       "id": "auc-isbt-helpdesk-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/090",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/090",
       "title": "E-Auction for Help Desk / Tourist Information Center-01",
       "unitNumber": "Help Desk / Tourist Information Center-01",
       "category": "Help Desk / Tourist Information Center",
@@ -2921,7 +2921,7 @@
   "PoliceBooth": [
     {
       "id": "auc-isbt-policebooth-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/091",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/091",
       "title": "E-Auction for Police Booth-01",
       "unitNumber": "Police Booth-01",
       "category": "Police Booth",
@@ -2947,7 +2947,7 @@
   "Freight": [
     {
       "id": "auc-isbt-freight-01",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/092",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/092",
       "title": "E-Auction for Freight Store",
       "unitNumber": "Freight Store-01",
       "category": "Freight Store",
@@ -2974,7 +2974,7 @@
     },
     {
       "id": "auc-isbt-freight-02",
-      "nitNumber": "IDA/ISBT-KUMEDI/NIT-2026/093",
+      "nitNumber": "ISBT-KUMEDI/NIT-2026/093",
       "title": "E-Auction for Freight Office",
       "unitNumber": "Freight Office-01",
       "category": "Freight Office",

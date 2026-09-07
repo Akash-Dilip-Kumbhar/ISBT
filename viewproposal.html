@@ -1,102 +1,99 @@
 ﻿<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISBT Kumedi Indore - Commercial Property E-Proposals</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+      .contact_icon {
+        background-color: #42db87;
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translatey(0px);
+        animation: pulse 1.5s infinite;
+        box-shadow: 0 0 0 0 #42db87;
+        -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        font-weight: normal;
+        font-family: sans-serif;
+        text-decoration: none !important;
+        transition: all 300ms ease-in-out;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ISBT Kumedi Indore - Commercial Property E-Proposals</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
-    rel="stylesheet" />
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <style>
+      .text_icon {
+        margin-top: 8px;
+        color: #707070;
+        font-size: 13px;
+      }
+    </style>
+  </head>
 
-
-
-.contact_icon {
-  background-color: #42db87;
-  color: #fff;
-  width: 60px;
-  height: 60px;
-  font-size:30px;
-  border-radius: 50px;
-  text-align: center;
-  box-shadow: 2px 2px 3px #999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translatey(0px);
-  animation: pulse 1.5s infinite;
-  box-shadow: 0 0 0 0 #42db87;
-  -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  font-weight: normal;
-  font-family: sans-serif;
-  text-decoration: none !important;
-  transition: all 300ms ease-in-out;
-}
-
-
-.text_icon {
-  margin-top: 8px;
-  color: #707070;
-  font-size: 13px;
-}
-  </style>
-</head>
-
-<body class="bg-light">
-  <!-- Top Bulletin Bar -->
-  <div
-    class="bg-dark-accent text-white py-2 px-3 px-lg-3 d-flex justify-content-between align-items-center font-size-xl">
-    <div class="d-flex align-items-center gap-3">
-      <span
-        class="badge bg-orange text-uppercase rounded-0 px-2 py-1 d-flex align-items-center gap-2 letter-spacing-md"><span
-          class="rounded-circle bg-white d-inline-block size-5"></span>
-        BULLETIN / GAZETTE</span>
-      <span class="text-light d-none d-md-inline opacity-85">IDA E-Proposal Notice NIT-2026/094 for Commercial Office
-        Spaces on 1st
-        Floor is now LIVE</span>
+  <body class="bg-light">
+        <!-- Top Bulletin Bar -->
+    <div
+      class="bg-dark-accent text-white py-2 px-3 px-lg-3 d-flex justify-content-between align-items-center font-size-xl">
+      <div class="d-flex align-items-center gap-3">
+        <span
+          class="badge bg-orange text-uppercase rounded-0 px-2 py-1 d-flex align-items-center gap-2 letter-spacing-md"
+          ><span class="rounded-circle bg-white d-inline-block size-5"></span>
+          BULLETIN / GAZETTE</span
+        >
+        <span class="text-light d-none d-md-inline opacity-85"
+          >ISBT-STMB-IDR-EOI-2026/108 for Commercial, Retail, Restaurants (F&B)
+          is now LIVE</span
+        >
+      </div>
+      <div class="d-flex align-items-center gap-4">
+        <a
+          href="termcondition.html"
+          class="text-orange text-decoration-none fw-bold text-uppercase d-flex align-items-center gap-1 letter-spacing-md"
+          >READ DISCLAIMER &nbsp; <i class="bi bi-chevron-right font-size-base icon-stroke-1"></i
+        ></a>
+        <button
+          class="btn btn-link text-white p-0 border-0 text-decoration-none">
+          <i class="bi bi-x-lg font-size-lg"></i>
+        </button>
+      </div>
     </div>
-    <div class="d-flex align-items-center gap-4">
-      <a href="#"
-        class="text-orange text-decoration-none fw-bold text-uppercase d-flex align-items-center gap-1 letter-spacing-md">READ
-        DISPATCH
-        <i class="bi bi-chevron-right font-size-base icon-stroke-1"></i></a>
-      <button class="btn btn-link text-white p-0 border-0 text-decoration-none">
-        <i class="bi bi-x-lg font-size-lg"></i>
-      </button>
-    </div>
-  </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg py-3 bg-warm-light border-bottom-soft">
       <div class="container-fluid px-4 px-lg-5">
-        <a class="navbar-brand d-flex align-items-center gap-3" href="#">
-          <div
-            class="bg-dark-accent text-white rounded-0 d-flex align-items-center justify-content-center size-60 font-weight-800 font-playfair px-2">
-            ISBT
-          </div>
+        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+          <img src="img/logo/ISBTLogo.png" alt="ISBT Logo" style="height: 60px; width: auto;">
           <div>
-            <div
-              class="text-muted mt-1 font-size-sm font-weight-800 text-uppercase letter-spacing-lg">
-              SHREE TANTYA MAMA BHIL
-            </div>
-            <div
-              class="fw-bold text-dark font-playfair font-size-7xl line-height-xs">
-              ISBT KUMEDI INDORE
+            <div class="fw-semibold font-size-6xl line-height-xs" style="color:#8c3614;">
+             श्री टंट्या मामा भील अंतरराज्यीय बस टर्मिनल, इन्दौर
             </div>
           </div>
         </a>
@@ -115,13 +112,16 @@
             class="navbar-nav gap-2 text-uppercase fw-bold align-items-center font-size-lg letter-spacing-md">
             <li class="nav-item">
               <a
-                class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
+                class="nav-link text-dark active d-flex gap-2 position-relative pb-1 border-bottom-orange"
                 href="index.html">
-                <span class="opacity-40 fw-normal font-size-base mt-1">01</span>
+                <span
+                  class="text-muted opacity-40 fw-normal font-size-base mt-1"
+                  >01</span
+                >
                 HOME
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a
                 class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
                 href="aboutus.html">
@@ -136,13 +136,13 @@
                 <span class="opacity-40 fw-normal font-size-base mt-1">03</span>
                 FACILITIES
               </a>
-            </li>
+            </li> -->
 
             <li class="nav-item">
               <a
                 class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
                 href="shopOffice.html">
-                <span class="opacity-40 fw-normal font-size-base mt-1">04</span>
+                <span class="opacity-40 fw-normal font-size-base mt-1">02</span>
                 <span class="text-start">SHOPS & OFFICES</span>
               </a>
             </li>
@@ -150,7 +150,7 @@
               <a
                 class="nav-link text-muted d-flex gap-2 pb-1 text-center line-height-sm"
                 href="Gallery.html">
-                <span class="opacity-40 fw-normal font-size-base mt-1">05</span>
+                <span class="opacity-40 fw-normal font-size-base mt-1">03</span>
                 <span class="text-start">GALLERY</span>
               </a>
             </li>
@@ -162,9 +162,9 @@
             href="viewproposal.html"
             class="btn bg-dark-accent text-white fw-bold rounded-0 px-2 py-2 d-flex align-items-center gap-3 text-uppercase font-size-lg letter-spacing-md">
             <i class="bi bi-hammer"></i>
-            <span class="text-start line-height-sm">VIEW PROPOSALS</span>
+            <span class="text-start line-height-sm">VIEW E-PROPOSAL</span>
             <span
-              class="badge bg-orange rounded-0 px-2 py-1 text-white font-size-sm line-height-md"
+              class="badge bg-orange rounded-0 px-2 py-1 text-white font-size-xs line-height-md"
               >LIVE</span
             >
           </a>
@@ -172,377 +172,348 @@
       </div>
     </nav>
 
-  <!-- Main Content -->
-  <main class="bg-warm-lightest pb-5">
-    <div class="container py-5">
-      <!-- Breadcrumbs & Header -->
-      <div class="text-uppercase fw-bold text-orange mb-2 font-size-md letter-spacing-md">
-        PUBLIC TENDERS > E-PROPOSALS ON IDA E-PROPOSAL PORTAL & PUBLIC
-        PROCUREMENT
-      </div>
-      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-start mb-2">
-        <div class="pe-lg-5">
-          <h2 class="fs-2 font-playfair fw-bold mb-3 text-dark">
-            Commercial Property E-Proposals
-          </h2>
-          <p class="text-muted font-size-xl max-w-800 line-height-lg mb-0 opacity-85">
-            Transparent public bidding for prime retail shops, corporate
-            offices, and food court kiosks at ISBT Kumedi under the Indore
-            Development Authority.
-          </p>
-        </div>
-        <div class="d-flex flex-column gap-2 mt-4 mt-lg-0 flex-shrink-0">
-          <button
-            class="btn btn-outline-dark fw-bold rounded-0 px-3 py-2 bg-white font-size-sm letter-spacing-md d-flex align-items-center justify-content-between gap-3 border-dark-transparent">
-            <i class="bi bi-shield-check fs-6"></i> E-PROCUREMENT GUIDELINES
-          </button>
-          <button
-            class="btn btn-outline-dark fw-bold rounded-0 px-3 py-2 bg-white font-size-sm letter-spacing-md d-flex align-items-center justify-content-between gap-3 border-dark-transparent">
-            <i class="bi bi-info-circle fs-6"></i> VIEW BID INSTRUCTIONS
-          </button>
-        </div>
-      </div>
 
-      <!-- Filters / Tabs -->
 
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center border-bottom pb-4 mb-5">
-        <div class="d-flex flex-wrap gap-2" id="filterButtonsContainer">
-          <!-- Filter buttons dynamically generated by JS -->
-        </div>
-      </div>
-
-      <!-- Proposals Grid dynamically generated by JS -->
-      <div class="row g-4 mb-5" id="proposalsGrid">
-        <!-- Cards will be injected here by data.js -->
-      </div>
-
-      <!-- Protocol Section -->
-      <div class="mt-5 pt-4">
-        <div class="bg-warm-lighter p-4 p-md-5 border border-dark-transparent rounded-0 shadow-sm">
-          <div class="text-uppercase fw-bold text-orange mb-2 font-size-sm letter-spacing-md">
-            E-BIDDING PROTOCOL
+    <!-- Main Content -->
+    <main class="bg-warm-lightest pb-3">
+      <div class="container py-3">
+        <!-- Breadcrumbs & Header -->
+      
+        <div
+          class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-start mb-2">
+          <div class="pe-lg-5">
+            <h2 class="fs-2 font-playfair fw-bold mb-3 text-dark">
+              Commercial Property E-Proposals
+            </h2> 
           </div>
-          <h3 class="font-playfair fw-bold mb-4 text-dark fs-3">
-            Official Step-by-Step E-Bidding Process
-          </h3>
+        
+        </div>
 
-          <div class="row g-4 mt-2">
-            <!-- Step 1 -->
-            <div class="col-md-6 col-lg-3">
-              <div class="bg-white p-4 h-100 border border-dark-transparent shadow-sm">
-                <div
-                  class="bg-dark text-white rounded-0 size-32 d-flex align-items-center justify-content-center fw-bold mb-4 font-size-md">
-                  01
-                </div>
-                <h6 class="fw-bold text-dark mb-3 font-size-xl">
-                  Registration & KYC
-                </h6>
-                <p class="text-muted mb-0 font-size-xl line-height-lg">
-                  Register on the IDA portal using PAN, GST, and Aadhaar to
-                  create your bidder profile and digital lock ID.
-                </p>
-              </div>
-            </div>
-            <!-- Step 2 -->
-            <div class="col-md-6 col-lg-3">
-              <div class="bg-white p-4 h-100 border border-dark-transparent shadow-sm">
-                <div
-                  class="bg-dark text-white rounded-0 size-32 d-flex align-items-center justify-content-center fw-bold mb-4 font-size-md">
-                  02
-                </div>
-                <h6 class="fw-bold text-dark mb-3 font-size-xl">
-                  EMD Submission
-                </h6>
-                <p class="text-muted mb-0 font-size-xl line-height-lg">
-                  Securely remit Earnest Money Deposit (EMD) via NEFT/RTGS
-                  payment gateway prior to the proposal deadline.
-                </p>
-              </div>
-            </div>
-            <!-- Step 3 -->
-            <div class="col-md-6 col-lg-3">
-              <div class="bg-white p-4 h-100 border border-dark-transparent shadow-sm">
-                <div
-                  class="bg-dark text-white rounded-0 size-32 d-flex align-items-center justify-content-center fw-bold mb-4 font-size-md">
-                  03
-                </div>
-                <h6 class="fw-bold text-dark mb-3 font-size-xl">
-                  Live Online Bidding
-                </h6>
-                <p class="text-muted mb-0 font-size-xl line-height-lg">
-                  Participate in live bidding during the open window. Every
-                  5-minute extension applies if bids are placed late.
-                </p>
-              </div>
-            </div>
-            <!-- Step 4 -->
-            <div class="col-md-6 col-lg-3">
-              <div class="bg-white p-4 h-100 border border-dark-transparent shadow-sm">
-                <div
-                  class="bg-dark text-white rounded-0 size-32 d-flex align-items-center justify-content-center fw-bold mb-4 font-size-md">
-                  04
-                </div>
-                <h6 class="fw-bold text-dark mb-3 font-size-xl">
-                  Allotment & LOI
-                </h6>
-                <p class="text-muted mb-0 font-size-xl line-height-lg">
-                  Highest successful bidder receives the official Letter of
-                  Intent (LOI) within 72 hours of conclusion.
-                </p>
-              </div>
-            </div>
+        <!-- Filters / Tabs -->
+
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-md-center border-bottom pb-4 mb-5">
+          <div class="d-flex flex-wrap gap-2" id="filterButtonsContainer">
+            <!-- Filter buttons dynamically generated by JS -->
           </div>
         </div>
+
+        <!-- Proposals Grid dynamically generated by JS -->
+        <div class="row g-4 mb-3" id="proposalsGrid">
+          <!-- Cards will be injected here by data.js -->
+        </div>
+
       </div>
-    </div>
-  
-  </main>
+    </main>
 
-  <!-- Bid Modal -->
-  <div class="modal fade" id="bidModal" tabindex="-1" aria-labelledby="bidModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content rounded-0 border-0 bg-warm-lightest">
-        <div class="modal-body p-4 p-md-5 position-relative">
-          <button type="button" class="btn-close position-absolute top-0 end-0 m-4 shadow-none" data-bs-dismiss="modal"
-            aria-label="Close"></button>
+    <!-- Bid Modal -->
+    <div
+      class="modal fade"
+      id="bidModal"
+      tabindex="-1"
+      aria-labelledby="bidModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content rounded-0 border-0 bg-warm-lightest">
+          <div class="modal-body p-4 p-md-5 position-relative">
+            <button
+              type="button"
+              class="btn-close position-absolute top-0 end-0 m-4 shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
 
-          <div id="modalHeaderContent">
-            <!-- Populated dynamically -->
-          </div>
-
-          <form id="bidForm" onsubmit="submitBid(event)">
-            <!-- Bid Amount Section -->
-            <div class="bg-white p-4 border border-dark-transparent mb-4">
-              <div class="d-flex justify-content-between mb-2">
-                <span class="text-uppercase fw-bold text-dark font-size-sm letter-spacing-md">ENTER YOUR BID AMOUNT (INR
-                  ₹)</span>
-                <span class="text-uppercase fw-bold text-orange font-size-sm letter-spacing-md"
-                  id="modalMinBidLabel">MIN VALID BID: ₹0</span>
-              </div>
-              <div class="input-group mb-3">
-                <span
-                  class="input-group-text bg-warm-lightest border-dark-transparent rounded-0 text-dark fw-bold fs-4 border-end-0 px-4">₹</span>
-                <input type="number"
-                  class="form-control form-control-lg border-dark-transparent border-start-0 rounded-0 bg-warm-lightest font-playfair fw-bold fs-4 shadow-none"
-                  id="bidAmountInput" required />
-              </div>
-              <div class="d-flex align-items-center gap-2">
-                <span class="text-uppercase fw-bold text-muted font-size-sm letter-spacing-md me-2">QUICK
-                  INCREMENT:</span>
-                <button type="button"
-                  class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-sm letter-spacing-md border-dark-transparent"
-                  onclick="incrementBid(50000)">
-                  +₹50,000
-                </button>
-                <button type="button"
-                  class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-sm letter-spacing-md border-dark-transparent"
-                  onclick="incrementBid(100000)">
-                  +₹1,00,000
-                </button>
-                <button type="button"
-                  class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-sm letter-spacing-md border-dark-transparent"
-                  onclick="incrementBid(200000)">
-                  +₹2,00,000
-                </button>
-              </div>
+            <div id="modalHeaderContent">
+              <!-- Populated dynamically -->
             </div>
 
-            <!-- Bidder Details Section -->
-            <div class="bg-white p-4 border border-dark-transparent mb-4">
-              <div class="text-uppercase fw-bold text-dark font-size-sm letter-spacing-md mb-3">
-                BIDDER AUTHENTICATION & DETAILS
-              </div>
-              <div class="row g-3">
-                <div class="col-12">
-                  <label class="form-label font-size-sm fw-bold text-muted mb-1">Trade Name</label>
-                  <input type="text" class="form-control rounded-0 border-dark-transparent bg-warm-lightest shadow-none"
-                    id="bidderTradeName" required />
+            <form id="bidForm" onsubmit="submitBid(event)">
+              <!-- Bid Amount Section -->
+              <div class="bg-white p-4 border border-dark-transparent mb-4">
+                <div class="d-flex justify-content-between mb-2">
+                  <span
+                    class="text-uppercase fw-bold text-dark font-size-sm letter-spacing-md"
+                    >ENTER YOUR BID AMOUNT (INR ₹)</span
+                  >
+                  <span
+                    class="text-uppercase fw-bold text-orange font-size-sm letter-spacing-md"
+                    id="modalMinBidLabel"
+                    >MIN VALID BID: ₹0</span
+                  >
                 </div>
-                <div class="col-md-6">
-                  <label class="form-label font-size-sm fw-bold text-muted mb-1">Full Name</label>
-                  <input type="text" class="form-control rounded-0 border-dark-transparent bg-warm-lightest shadow-none"
-                    id="bidderName" required />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label font-size-sm fw-bold text-muted mb-1">Contact Number</label>
-                  <input type="tel" class="form-control rounded-0 border-dark-transparent bg-warm-lightest shadow-none"
-                    id="bidderPhone" required />
-                </div>
-                <div class="col-12">
-                  <label class="form-label font-size-sm fw-bold text-muted mb-1">Email Address (Gmail)</label>
-                  <input type="email"
-                    class="form-control rounded-0 border-dark-transparent bg-warm-lightest shadow-none" id="bidderEmail"
+                <div class="input-group mb-3">
+                  <span
+                    class="input-group-text bg-warm-lightest border-dark-transparent rounded-0 text-dark fw-bold fs-4 border-end-0 px-4"
+                    >₹</span
+                  >
+                  <input
+                    type="number"
+                    class="form-control form-control-lg border-dark-transparent border-start-0 rounded-0 bg-warm-lightest font-playfair fw-bold fs-4 shadow-none"
+                    id="bidAmountInput"
                     required />
                 </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span
+                    class="text-uppercase fw-bold text-muted font-size-sm letter-spacing-md me-2"
+                    >QUICK INCREMENT:</span
+                  >
+                  <button
+                    type="button"
+                    class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-sm letter-spacing-md border-dark-transparent"
+                    onclick="incrementBid(50000)">
+                    +₹50,000
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-sm letter-spacing-md border-dark-transparent"
+                    onclick="incrementBid(100000)">
+                    +₹1,00,000
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-light rounded-0 px-3 py-1 fw-bold font-size-sm letter-spacing-md border-dark-transparent"
+                    onclick="incrementBid(200000)">
+                    +₹2,00,000
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <div class="form-check mb-4 d-flex align-items-center gap-2">
-              <input class="form-check-input rounded-0 border-dark shadow-none mt-1" type="checkbox" id="tncCheck"
-                required />
-              <label class="form-check-label font-size-sm text-dark opacity-85 line-height-lg" for="tncCheck"
-                id="modalTncLabel">
-                I certify that I have read the IDA tender conditions, have
-                deposited the requisite EMD, and authorize this digital bid.
-              </label>
-            </div>
+              <!-- Bidder Details Section -->
+              <div class="bg-white p-4 border border-dark-transparent mb-4">
+                <div
+                  class="text-uppercase fw-bold text-dark font-size-sm letter-spacing-md mb-3">
+                  BIDDER AUTHENTICATION & DETAILS
+                </div>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label
+                      class="form-label font-size-sm fw-bold text-muted mb-1"
+                      >Trade Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control rounded-0 border-dark-transparent bg-warm-lightest shadow-none"
+                      id="bidderTradeName"
+                      required />
+                  </div>
+                  <div class="col-md-6">
+                    <label
+                      class="form-label font-size-sm fw-bold text-muted mb-1"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control rounded-0 border-dark-transparent bg-warm-lightest shadow-none"
+                      id="bidderName"
+                      required />
+                  </div>
+                  <div class="col-md-6">
+                    <label
+                      class="form-label font-size-sm fw-bold text-muted mb-1"
+                      >Contact Number</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control rounded-0 border-dark-transparent bg-warm-lightest shadow-none"
+                      id="bidderPhone"
+                      required />
+                  </div>
+                  <div class="col-12">
+                    <label
+                      class="form-label font-size-sm fw-bold text-muted mb-1"
+                      >Email Address (Gmail)</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control rounded-0 border-dark-transparent bg-warm-lightest shadow-none"
+                      id="bidderEmail"
+                      required />
+                  </div>
+                </div>
+              </div>
 
-            <button type="submit"
-              class="btn btn-dark w-100 fw-bold rounded-0 py-3 font-size-md letter-spacing-lg d-flex align-items-center justify-content-center gap-2"
-              id="submitBidBtn">
-              <i class="bi bi-hammer fs-5"></i> SUBMIT BID
-            </button>
-          </form>
+              <div class="form-check mb-4 d-flex align-items-center gap-2">
+                <input
+                  class="form-check-input rounded-0 border-dark shadow-none mt-1"
+                  type="checkbox"
+                  id="tncCheck"
+                  required />
+                <label
+                  class="form-check-label font-size-sm text-dark opacity-85 line-height-lg"
+                  for="tncCheck"
+                  id="modalTncLabel">
+                  I certify that I have read the IDA tender conditions, have
+                  deposited the requisite EMD, and authorize this digital bid.
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-dark w-100 fw-bold rounded-0 py-3 font-size-md letter-spacing-lg d-flex align-items-center justify-content-center gap-2"
+                id="submitBidBtn">
+                <i class="bi bi-hammer fs-5"></i> SUBMIT BID
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Map Modal -->
-  <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content rounded-0 border-0 bg-warm-lightest">
-        <div class="modal-body p-4 position-relative" style="height: 80vh">
-          <button type="button" class="btn-close position-absolute top-0 end-0 m-4 shadow-none" data-bs-dismiss="modal"
-            aria-label="Close" style="z-index: 1000"></button>
-          <h5 class="mb-3 font-playfair fw-bold" id="mapModalTitle">
-            Shop Location
-          </h5>
-          <div id="modal-map" style="
+    <!-- Map Modal -->
+    <div
+      class="modal fade"
+      id="mapModal"
+      tabindex="-1"
+      aria-labelledby="mapModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content rounded-0 border-0 bg-warm-lightest">
+          <div class="modal-body p-4 position-relative" style="height: 80vh">
+            <button
+              type="button"
+              class="btn-close position-absolute top-0 end-0 m-4 shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="z-index: 1000"></button>
+            <h5 class="mb-3 font-playfair fw-bold" id="mapModalTitle">
+              Shop Location
+            </h5>
+            <div
+              id="modal-map"
+              style="
                 width: 100%;
                 height: calc(100% - 40px);
                 background: #eee;
               "></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <!-- Render Data -->
-  <script>
-    window.auctionData = []; // Store globally for the modal
-    let currentModalProposal = null;
-    let bidModalInstance = null;
+    <!-- Render Data -->
+    <script>
+      window.auctionData = []; // Store globally for the modal
+      let currentModalProposal = null;
+      let bidModalInstance = null;
 
-    function renderProposals(filterCategory = "all") {
-      if (typeof filterCategory !== "string") filterCategory = "all"; // Handle DOMContentLoaded event object
-      fetch("./auction.json")
-        .then((response) => response.json())
-        .then((data) => {
-          let PROPOSAL_ITEMS = [];
-          if (Array.isArray(data)) {
-            PROPOSAL_ITEMS = data; // Fallback for old format
-          } else {
-            // Extract all arrays from object dynamically
-            for (const key in data) {
-              if (Array.isArray(data[key])) {
-                PROPOSAL_ITEMS = PROPOSAL_ITEMS.concat(data[key]);
+      function renderProposals(filterCategory = "all") {
+        if (typeof filterCategory !== "string") filterCategory = "all"; // Handle DOMContentLoaded event object
+        fetch("./auction.json")
+          .then((response) => response.json())
+          .then((data) => {
+            let PROPOSAL_ITEMS = [];
+            if (Array.isArray(data)) {
+              PROPOSAL_ITEMS = data; // Fallback for old format
+            } else {
+              // Extract all arrays from object dynamically
+              for (const key in data) {
+                if (Array.isArray(data[key])) {
+                  PROPOSAL_ITEMS = PROPOSAL_ITEMS.concat(data[key]);
+                }
               }
             }
-          }
 
-          window.auctionData = PROPOSAL_ITEMS;
+            window.auctionData = PROPOSAL_ITEMS;
 
-          // Generate filter categories based on 'categorytype'
-          const categoryCounts = { all: PROPOSAL_ITEMS.length };
-          PROPOSAL_ITEMS.forEach((item) => {
-            let ct = item.categorytype || "Other";
-            categoryCounts[ct] = (categoryCounts[ct] || 0) + 1;
-          });
-
-          const filterContainer = document.getElementById(
-            "filterButtonsContainer",
-          );
-          if (filterContainer) {
-            let buttonsHtml = `<button onclick="renderProposals('all')" class="btn ${filterCategory === "all" ? "btn-dark text-white" : "btn-outline-dark bg-transparent text-muted"} fw-bold rounded-0 px-4 py-2 font-size-sm letter-spacing-md border-dark-transparent">ALL [${categoryCounts["all"].toString().padStart(2, "0")}]</button>`;
-
-            Object.keys(categoryCounts).forEach((ct) => {
-              if (ct === "all") return;
-              const isActive = filterCategory === ct;
-              const btnClass = isActive
-                ? "btn-dark text-white"
-                : "btn-outline-dark bg-transparent text-muted";
-              buttonsHtml += `<button onclick="renderProposals('${ct}')" class="btn ${btnClass} fw-bold rounded-0 px-4 py-2 font-size-sm letter-spacing-md border-dark-transparent">${ct.toUpperCase()} [${categoryCounts[ct].toString().padStart(2, "0")}]</button>`;
+            // Generate filter categories based on 'categorytype'
+            const categoryCounts = { all: PROPOSAL_ITEMS.length };
+            PROPOSAL_ITEMS.forEach((item) => {
+              let ct = item.categorytype || "Other";
+              categoryCounts[ct] = (categoryCounts[ct] || 0) + 1;
             });
-            filterContainer.innerHTML = buttonsHtml;
-          }
 
-          const grid = document.getElementById("proposalsGrid");
-          if (!grid) return;
+            const filterContainer = document.getElementById(
+              "filterButtonsContainer",
+            );
+            if (filterContainer) {
+              let buttonsHtml = `<button onclick="renderProposals('all')" class="btn ${filterCategory === "all" ? "btn-dark text-white" : "btn-outline-dark bg-transparent text-muted"} fw-bold rounded-0 px-4 py-2 font-size-sm letter-spacing-md border-dark-transparent">ALL [${categoryCounts["all"].toString().padStart(2, "0")}]</button>`;
 
-          const filteredItems =
-            filterCategory === "all"
-              ? PROPOSAL_ITEMS
-              : PROPOSAL_ITEMS.filter(
-                (a) => a.categorytype === filterCategory,
-              );
+              Object.keys(categoryCounts).forEach((ct) => {
+                if (ct === "all") return;
+                const isActive = filterCategory === ct;
+                const btnClass = isActive
+                  ? "btn-dark text-white"
+                  : "btn-outline-dark bg-transparent text-muted";
+                buttonsHtml += `<button onclick="renderProposals('${ct}')" class="btn ${btnClass} fw-bold rounded-0 px-4 py-2 font-size-sm letter-spacing-md border-dark-transparent">${ct.toUpperCase()} [${categoryCounts[ct].toString().padStart(2, "0")}]</button>`;
+              });
+              filterContainer.innerHTML = buttonsHtml;
+            }
 
-          let html = "";
+            const grid = document.getElementById("proposalsGrid");
+            if (!grid) return;
 
-          filteredItems.forEach((item) => {
-            const isLive = item.Bidstatus === "Open";
-            const statusBadge = isLive
-              ? `<span class="badge bg-orange rounded-0 px-2 py-1 font-size-sm letter-spacing-md">OPEN</span>`
-              : `<span class="badge bg-secondary rounded-0 px-2 py-1 font-size-sm letter-spacing-md">${item.Bidstatus.toUpperCase()}</span>`;
+            const filteredItems =
+              filterCategory === "all"
+                ? PROPOSAL_ITEMS
+                : PROPOSAL_ITEMS.filter(
+                    (a) => a.categorytype === filterCategory,
+                  );
 
-            const computedSqM = item.dimensions
-              ? item.dimensions.widthM * item.dimensions.lengthM
-              : 0;
-            const computedSqFt = computedSqM * 10.7639;
+            let html = "";
 
-            const minRateStr = item.minratesqftmonthinRS
-              ? item.minratesqftmonthinRS.toLocaleString("en-IN")
-              : item.BaseRate || "0";
-            const maxRateStr = item.maxratesqftmonthinRS
-              ? item.maxratesqftmonthinRS.toLocaleString("en-IN")
-              : item.BaseRate || "0";
+            filteredItems.forEach((item) => {
+              const isLive = item.Bidstatus === "Open";
+              const statusBadge = isLive
+                ? `<span class="badge bg-orange rounded-0 px-2 py-1 font-size-sm letter-spacing-md">OPEN</span>`
+                : `<span class="badge bg-secondary rounded-0 px-2 py-1 font-size-sm letter-spacing-md">${item.Bidstatus.toUpperCase()}</span>`;
 
-            const avgRateSqft =
-              ((item.minratesqftmonthinRS || 0) +
-                (item.maxratesqftmonthinRS || 0)) /
-              2;
-            const avgMonthlyLease = avgRateSqft * computedSqFt;
-            const avgMonthlyLeaseStr = avgMonthlyLease
-              ? avgMonthlyLease.toLocaleString("en-IN", {
-                maximumFractionDigits: 0,
-              })
-              : "N/A";
+              const computedSqM = item.dimensions
+                ? item.dimensions.widthM * item.dimensions.lengthM
+                : 0;
+              const computedSqFt = computedSqM * 10.7639;
 
-            const avgYearlyLease = avgRateSqft * computedSqFt * 12;
-            const avgYearlyLeaseStr = avgYearlyLease
-              ? avgYearlyLease.toLocaleString("en-IN", {
-                maximumFractionDigits: 0,
-              })
-              : "N/A";
+              const minRateStr = item.minratesqftmonthinRS
+                ? item.minratesqftmonthinRS.toLocaleString("en-IN")
+                : item.BaseRate || "0";
+              const maxRateStr = item.maxratesqftmonthinRS
+                ? item.maxratesqftmonthinRS.toLocaleString("en-IN")
+                : item.BaseRate || "0";
 
-            const areaSqMStr = item.AreainSqMtr
-              ? item.AreainSqMtr.toLocaleString("en-IN", {
-                maximumFractionDigits: 2,
-              })
-              : computedSqM.toFixed(2);
-            const areaSqFtStr = item.AreainSqFt
-              ? item.AreainSqFt.toLocaleString("en-IN", {
-                maximumFractionDigits: 2,
-              })
-              : computedSqFt.toFixed(2);
-            const rateSqFtMoStr = item.RateperSqFtPerMonth
-              ? "₹" +
-              item.RateperSqFtPerMonth.toLocaleString("en-IN", {
-                maximumFractionDigits: 2,
-              })
-              : "N/A";
+              const avgRateSqft =
+                ((item.minratesqftmonthinRS || 0) +
+                  (item.maxratesqftmonthinRS || 0)) /
+                2;
+              const avgMonthlyLease = avgRateSqft * computedSqFt;
+              const avgMonthlyLeaseStr = avgMonthlyLease
+                ? avgMonthlyLease.toLocaleString("en-IN", {
+                    maximumFractionDigits: 0,
+                  })
+                : "N/A";
 
-            const baseRateText = item.BaseRateTxt
-              ? item.BaseRateTxt
-              : "Per Sq. Ft per month";
+              const avgYearlyLease = avgRateSqft * computedSqFt * 12;
+              const avgYearlyLeaseStr = avgYearlyLease
+                ? avgYearlyLease.toLocaleString("en-IN", {
+                    maximumFractionDigits: 0,
+                  })
+                : "N/A";
 
-            html += `
+              const areaSqMStr = item.AreainSqMtr
+                ? item.AreainSqMtr.toLocaleString("en-IN", {
+                    maximumFractionDigits: 2,
+                  })
+                : computedSqM.toFixed(2);
+              const areaSqFtStr = item.AreainSqFt
+                ? item.AreainSqFt.toLocaleString("en-IN", {
+                    maximumFractionDigits: 2,
+                  })
+                : computedSqFt.toFixed(2);
+              const rateSqFtMoStr = item.RateperSqFtPerMonth
+                ? "₹" +
+                  item.RateperSqFtPerMonth.toLocaleString("en-IN", {
+                    maximumFractionDigits: 2,
+                  })
+                : "N/A";
+
+              const baseRateText = item.BaseRateTxt
+                ? item.BaseRateTxt
+                : "Per Sq. Ft per month";
+
+              html += `
                 <div class="col-md-6">
                     <div class="card border-0 rounded-0 shadow-sm bg-white h-100 border border-dark-transparent">
                         <div class="p-4 p-md-5 d-flex flex-column h-100">
@@ -616,42 +587,42 @@
                     </div>
                 </div>
                 `;
-          });
+            });
 
-          grid.innerHTML = html;
-        })
-        .catch((error) => console.error("Error loading proposals:", error));
-    }
+            grid.innerHTML = html;
+          })
+          .catch((error) => console.error("Error loading proposals:", error));
+      }
 
-    window.openBidModal = function (proposalId) {
-      const proposal = window.auctionData.find((a) => a.id === proposalId);
-      if (!proposal) return;
-      currentModalProposal = proposal;
+      window.openBidModal = function (proposalId) {
+        const proposal = window.auctionData.find((a) => a.id === proposalId);
+        if (!proposal) return;
+        currentModalProposal = proposal;
 
-      const isLive = proposal.Bidstatus === "Open";
-      const statusColor = isLive ? "text-orange" : "text-secondary";
+        const isLive = proposal.Bidstatus === "Open";
+        const statusColor = isLive ? "text-orange" : "text-secondary";
 
-      const computedSqM =
-        proposal.dimensions.widthM * proposal.dimensions.lengthM || 0;
-      const computedSqFt = computedSqM * 10.7639;
+        const computedSqM =
+          proposal.dimensions.widthM * proposal.dimensions.lengthM || 0;
+        const computedSqFt = computedSqM * 10.7639;
 
-      // Format numbers using mocked bids but accurate base reserve if possible, based on rates
-      const reserveValue =
-        (proposal.minratesqftmonthinRS || 0) * computedSqFt * 12; // Annualized
-      const reserveFmt = reserveValue.toLocaleString("en-IN", {
-        maximumFractionDigits: 0,
-      });
-      const currentBidFmt = reserveFmt; // dummy
-      const minIncrementVal = 50000;
-      const incrementFmt = minIncrementVal.toLocaleString("en-IN");
-      const emdVal = 100000;
-      const emdFmt = emdVal.toLocaleString("en-IN");
-      const minValidBid = Math.round(reserveValue);
-      currentModalProposal.currentHighBid = reserveValue;
-      currentModalProposal.minIncrement = 0;
+        // Format numbers using mocked bids but accurate base reserve if possible, based on rates
+        const reserveValue =
+          (proposal.minratesqftmonthinRS || 0) * computedSqFt * 12; // Annualized
+        const reserveFmt = reserveValue.toLocaleString("en-IN", {
+          maximumFractionDigits: 0,
+        });
+        const currentBidFmt = reserveFmt; // dummy
+        const minIncrementVal = 50000;
+        const incrementFmt = minIncrementVal.toLocaleString("en-IN");
+        const emdVal = 100000;
+        const emdFmt = emdVal.toLocaleString("en-IN");
+        const minValidBid = Math.round(reserveValue);
+        currentModalProposal.currentHighBid = reserveValue;
+        currentModalProposal.minIncrement = 0;
 
-      // Populate Header
-      document.getElementById("modalHeaderContent").innerHTML = `
+        // Populate Header
+        document.getElementById("modalHeaderContent").innerHTML = `
                 <div class="text-uppercase fw-bold text-muted font-size-sm letter-spacing-md mb-2">
                     NIT: ${proposal.nitNumber} &nbsp;&bull;&nbsp; <span class="${statusColor}">${proposal.Bidstatus.toUpperCase()}</span>
                 </div>
@@ -673,193 +644,195 @@
                 </div>
             `;
 
-      // Setup Form Inputs
-      document.getElementById("modalMinBidLabel").innerText =
-        "MIN VALID BID: ₹" + minValidBid.toLocaleString("en-IN");
-      document.getElementById("bidAmountInput").value = Math.round(reserveValue);
-      document.getElementById("bidAmountInput").min = Math.round(reserveValue);
-      document.getElementById("modalTncLabel").innerText =
-        `I certify that I have read the IDA tender conditions, have deposited the requisite EMD of ₹${emdFmt}, and authorize this digital bid.`;
+        // Setup Form Inputs
+        document.getElementById("modalMinBidLabel").innerText =
+          "MIN VALID BID: ₹" + minValidBid.toLocaleString("en-IN");
+        document.getElementById("bidAmountInput").value =
+          Math.round(reserveValue);
+        document.getElementById("bidAmountInput").min =
+          Math.round(reserveValue);
+        document.getElementById("modalTncLabel").innerText =
+          `I certify that I have read the IDA tender conditions, have deposited the requisite EMD of ₹${emdFmt}, and authorize this digital bid.`;
 
-      updateSubmitButton();
+        updateSubmitButton();
 
-      // Show Modal
-      if (!bidModalInstance) {
-        bidModalInstance = new bootstrap.Modal(
-          document.getElementById("bidModal"),
-        );
-      }
-      bidModalInstance.show();
-    };
+        // Show Modal
+        if (!bidModalInstance) {
+          bidModalInstance = new bootstrap.Modal(
+            document.getElementById("bidModal"),
+          );
+        }
+        bidModalInstance.show();
+      };
 
-    window.incrementBid = function (amount) {
-      const input = document.getElementById("bidAmountInput");
-      input.value = parseInt(input.value || 0) + amount;
-      updateSubmitButton();
-    };
+      window.incrementBid = function (amount) {
+        const input = document.getElementById("bidAmountInput");
+        input.value = parseInt(input.value || 0) + amount;
+        updateSubmitButton();
+      };
 
-    // Listen for manual input changes to update submit button
-    document.addEventListener("DOMContentLoaded", () => {
-      const input = document.getElementById("bidAmountInput");
-      if (input) {
-        input.addEventListener("input", updateSubmitButton);
-      }
-    });
+      // Listen for manual input changes to update submit button
+      document.addEventListener("DOMContentLoaded", () => {
+        const input = document.getElementById("bidAmountInput");
+        if (input) {
+          input.addEventListener("input", updateSubmitButton);
+        }
+      });
 
-    function updateSubmitButton() {
-      const input = document.getElementById("bidAmountInput");
-      const btn = document.getElementById("submitBidBtn");
-      if (input && btn) {
-        const val = parseInt(input.value || 0);
-        btn.innerHTML = `<i class="bi bi-hammer fs-5"></i> SUBMIT BID OF ₹${val.toLocaleString("en-IN")}`;
-      }
-    }
-
-    window.submitBid = async function (e) {
-      e.preventDefault();
-      const amount = document.getElementById("bidAmountInput").value;
-      const name = document.getElementById("bidderName").value;
-      const phone = document.getElementById("bidderPhone").value;
-      const email = document.getElementById("bidderEmail").value;
-      const btn = document.getElementById("submitBidBtn");
-
-      if (
-        parseInt(amount) < Math.round(currentModalProposal.currentHighBid)
-      ) {
-        alert("Bid amount is lower than the minimum valid bid!");
-        return;
+      function updateSubmitButton() {
+        const input = document.getElementById("bidAmountInput");
+        const btn = document.getElementById("submitBidBtn");
+        if (input && btn) {
+          const val = parseInt(input.value || 0);
+          btn.innerHTML = `<i class="bi bi-hammer fs-5"></i> SUBMIT BID OF ₹${val.toLocaleString("en-IN")}`;
+        }
       }
 
-      const originalBtnText = btn.innerHTML;
-      btn.innerHTML = `<i class="bi bi-hourglass-split fs-5"></i> SUBMITTING...`;
-      btn.disabled = true;
+      window.submitBid = async function (e) {
+        e.preventDefault();
+        const amount = document.getElementById("bidAmountInput").value;
+        const name = document.getElementById("bidderName").value;
+        const phone = document.getElementById("bidderPhone").value;
+        const email = document.getElementById("bidderEmail").value;
+        const btn = document.getElementById("submitBidBtn");
 
-      try {
-        const response = await fetch(
-          "http://localhost:3000/AIzaSyA-mthgApZGgolCZUSBSRP6zUB4D0utDxY/submit-bid",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
+        if (
+          parseInt(amount) < Math.round(currentModalProposal.currentHighBid)
+        ) {
+          alert("Bid amount is lower than the minimum valid bid!");
+          return;
+        }
+
+        const originalBtnText = btn.innerHTML;
+        btn.innerHTML = `<i class="bi bi-hourglass-split fs-5"></i> SUBMITTING...`;
+        btn.disabled = true;
+
+        try {
+          const response = await fetch(
+            "http://localhost:3000/AIzaSyA-mthgApZGgolCZUSBSRP6zUB4D0utDxY/submit-bid",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                bidAmount: amount,
+                bidderName: name,
+                bidderPhone: phone,
+                bidderEmail: email,
+              }),
             },
-            body: JSON.stringify({
-              bidAmount: amount,
-              bidderName: name,
-              bidderPhone: phone,
-              bidderEmail: email,
-            }),
-          },
-        );
+          );
 
-        const result = await response.json();
+          const result = await response.json();
 
-        if (result.success) {
+          if (result.success) {
+            alert(
+              `Bid successfully submitted for ₹${parseInt(amount).toLocaleString("en-IN")} by ${name}!\nReceipt sent successfully.`,
+            );
+            bidModalInstance.hide();
+            e.target.reset();
+          } else {
+            alert(
+              "Error submitting bid: " + (result.message || "Unknown error"),
+            );
+          }
+        } catch (error) {
+          console.error("Submission error:", error);
           alert(
-            `Bid successfully submitted for ₹${parseInt(amount).toLocaleString("en-IN")} by ${name}!\nReceipt sent successfully.`,
+            "Could not connect to backend server. Make sure the backend is running.",
           );
-          bidModalInstance.hide();
-          e.target.reset();
-        } else {
-          alert(
-            "Error submitting bid: " + (result.message || "Unknown error"),
-          );
-        }
-      } catch (error) {
-        console.error("Submission error:", error);
-        alert(
-          "Could not connect to backend server. Make sure the backend is running.",
-        );
-      } finally {
-        btn.innerHTML = originalBtnText;
-        btn.disabled = false;
-      }
-    };
-
-    // Map Modal logic
-    let mapModalInstance = null;
-    let modalMap = null;
-    let modalImageOverlay = null;
-    let modalMarker = null;
-
-    window.viewOnMap = function (proposalId) {
-      const proposal = window.auctionData.find((a) => a.id === proposalId);
-      if (!proposal) return;
-
-      document.getElementById("mapModalTitle").innerText =
-        proposal.title + " Location";
-
-      if (!mapModalInstance) {
-        mapModalInstance = new bootstrap.Modal(
-          document.getElementById("mapModal"),
-        );
-      }
-      mapModalInstance.show();
-
-      const mapModalEl = document.getElementById("mapModal");
-
-      if (window._mapModalShownListener) {
-        mapModalEl.removeEventListener(
-          "shown.bs.modal",
-          window._mapModalShownListener,
-        );
-      }
-
-      window._mapModalShownListener = function () {
-        if (!modalMap) {
-          modalMap = L.map("modal-map", {
-            crs: L.CRS.Simple,
-            minZoom: -2.5,
-            maxZoom: 20,
-            center: [0, 0],
-            zoom: 1,
-            attributionControl: false,
-          });
-        }
-
-        modalMap.invalidateSize();
-
-        if (modalImageOverlay) {
-          modalMap.removeLayer(modalImageOverlay);
-        }
-        if (modalMarker) {
-          modalMap.removeLayer(modalMarker);
-        }
-
-        // Using typical architectural plan bounds for simple CRS [y, x] mapping
-        var imageBounds = [
-          [0, 0],
-          [4963, 3509],
-        ];
-        modalImageOverlay = L.imageOverlay(proposal.imgsrc, imageBounds).addTo(
-          modalMap,
-        );
-        modalMap.fitBounds(imageBounds);
-
-        if (proposal.mapX !== undefined && proposal.mapY !== undefined) {
-          modalMarker = L.marker([proposal.mapY, proposal.mapX]).addTo(
-            modalMap,
-          );
-          modalMarker
-            .bindPopup(
-              "<b>" + proposal.unitNumber + "</b><br>" + proposal.category,
-            )
-            .openPopup();
+        } finally {
+          btn.innerHTML = originalBtnText;
+          btn.disabled = false;
         }
       };
 
-      mapModalEl.addEventListener(
-        "shown.bs.modal",
-        window._mapModalShownListener,
-        { once: true },
-      );
-    };
+      // Map Modal logic
+      let mapModalInstance = null;
+      let modalMap = null;
+      let modalImageOverlay = null;
+      let modalMarker = null;
 
-    // Render on load
-    document.addEventListener("DOMContentLoaded", renderProposals);
-  </script>
+      window.viewOnMap = function (proposalId) {
+        const proposal = window.auctionData.find((a) => a.id === proposalId);
+        if (!proposal) return;
 
-  <script src="footer.js"></script>
-  <script src="whatsappbtn.js"></script>
-</body>
+        document.getElementById("mapModalTitle").innerText =
+          proposal.title + " Location";
 
+        if (!mapModalInstance) {
+          mapModalInstance = new bootstrap.Modal(
+            document.getElementById("mapModal"),
+          );
+        }
+        mapModalInstance.show();
+
+        const mapModalEl = document.getElementById("mapModal");
+
+        if (window._mapModalShownListener) {
+          mapModalEl.removeEventListener(
+            "shown.bs.modal",
+            window._mapModalShownListener,
+          );
+        }
+
+        window._mapModalShownListener = function () {
+          if (!modalMap) {
+            modalMap = L.map("modal-map", {
+              crs: L.CRS.Simple,
+              minZoom: -2.5,
+              maxZoom: 20,
+              center: [0, 0],
+              zoom: 1,
+              attributionControl: false,
+            });
+          }
+
+          modalMap.invalidateSize();
+
+          if (modalImageOverlay) {
+            modalMap.removeLayer(modalImageOverlay);
+          }
+          if (modalMarker) {
+            modalMap.removeLayer(modalMarker);
+          }
+
+          // Using typical architectural plan bounds for simple CRS [y, x] mapping
+          var imageBounds = [
+            [0, 0],
+            [4963, 3509],
+          ];
+          modalImageOverlay = L.imageOverlay(
+            proposal.imgsrc,
+            imageBounds,
+          ).addTo(modalMap);
+          modalMap.fitBounds(imageBounds);
+
+          if (proposal.mapX !== undefined && proposal.mapY !== undefined) {
+            modalMarker = L.marker([proposal.mapY, proposal.mapX]).addTo(
+              modalMap,
+            );
+            modalMarker
+              .bindPopup(
+                "<b>" + proposal.unitNumber + "</b><br>" + proposal.category,
+              )
+              .openPopup();
+          }
+        };
+
+        mapModalEl.addEventListener(
+          "shown.bs.modal",
+          window._mapModalShownListener,
+          { once: true },
+        );
+      };
+
+      // Render on load
+      document.addEventListener("DOMContentLoaded", renderProposals);
+    </script>
+
+    <script src="footer.js"></script>
+    <script src="whatsappbtn.js"></script>
+  </body>
 </html>
