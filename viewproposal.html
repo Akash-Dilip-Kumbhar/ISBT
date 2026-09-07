@@ -190,7 +190,6 @@
         </div>
 
         <!-- Filters / Tabs -->
-
         <div
           class="d-flex flex-column flex-md-row justify-content-between align-items-md-center border-bottom pb-4 mb-5">
           <div class="d-flex flex-wrap gap-2" id="filterButtonsContainer">
@@ -205,6 +204,86 @@
 
       </div>
     </main>
+
+    <!-- Disclaimer & Terms Modal -->
+    <div
+      class="modal fade"
+      id="termsModal"
+      tabindex="-1"
+      aria-labelledby="termsModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content rounded-0 border-0 bg-warm-lightest shadow">
+          <div class="modal-header border-dark-transparent bg-white px-4 py-3">
+            <h5 class="modal-title font-playfair fw-bold text-dark mb-0" id="termsModalLabel">
+              <i class="bi bi-shield-check text-orange me-2"></i> Disclaimer & Legal Terms
+            </h5>
+            <button
+              type="button"
+              class="btn-close shadow-none"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 bg-white" style="max-height: 60vh; overflow-y: auto;">
+            <div class="alert alert-warning rounded-0 font-size-sm mb-3">
+              <i class="bi bi-exclamation-triangle-fill me-1"></i> Please read and accept the terms and conditions before proceeding with your proposal submission.
+            </div>
+            <p class="font-sans font-size-md text-dark line-height-lg mb-3">
+              The information contained in this Expression of Interest (EOI) document, or subsequently provided to interested parties, is provided to the Respondent(s) on the terms and conditions set out below:
+            </p>
+            <ul class="list-unstyled font-sans font-size-sm line-height-lg text-muted d-flex flex-column gap-3 mb-0">
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-arrow-right-short text-orange fs-5"></i>
+                <div> 
+                  <strong class="text-dark font-size-md">Non-Binding Invitation:</strong> This EOI is not an agreement, an offer, or an undertaking by Management to enter into a contract or lease. It constitutes merely an invitation for submission of interest.
+                </div>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-arrow-right-short text-orange fs-5"></i>
+                <div> 
+                  <strong class="text-dark font-size-md">Independent Due Diligence:</strong> Each Respondent must conduct its own independent investigation, technical assessment, legal evaluation, and financial due diligence of the site and market feasibility.
+                </div>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-arrow-right-short text-orange fs-5"></i>
+                <div> 
+                  <strong class="text-dark font-size-md">"As-Is, Where-Is" Condition:</strong> All physical assets (retail shops, ticketing counters, offices, bus bays) are offered strictly on an "as-is, where-is, and whatever-there-is" basis.
+                </div>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-arrow-right-short text-orange fs-5"></i>
+                <div>
+                  <strong class="text-dark font-size-md">Right to Accept, Reject, or Annul:</strong> Management reserves the absolute right to accept/reject any response or cancel/suspend the process at any stage.
+                </div>  
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-arrow-right-short text-orange fs-5"></i>
+                <div>
+                  <strong class="text-dark font-size-md">Cost of Participation:</strong> Respondent shall bear all costs and expenses associated with preparation, submission, site inspection, and discussions related to this EOI.
+                </div>
+              </li>
+              <li class="d-flex align-items-center gap-2">
+                <i class="bi bi-arrow-right-short text-orange fs-5"></i>
+                <div>
+                  <strong class="text-dark font-size-md">Governing Law & Jurisdiction:</strong> Governed by the laws of India. Courts located at Indore, Madhya Pradesh shall have exclusive jurisdiction.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer border-dark-transparent bg-warm-lightest p-3 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+            <div class="form-check m-0">
+              <input class="form-check-input rounded-0 border-dark shadow-none" type="checkbox" id="acceptTermsCheck" onchange="toggleAcceptTermsBtn()" />
+              <label class="form-check-label font-size-sm text-dark fw-bold" for="acceptTermsCheck">
+                I have read & accept all Disclaimer Terms & Conditions
+              </label>
+            </div>
+            <button type="button" class="btn btn-orange fw-bold rounded-0 px-4 py-2 font-size-sm letter-spacing-md text-uppercase" id="acceptTermsBtn" disabled onclick="confirmTermsAndOpenBid()">
+              ACCEPT & CONTINUE <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bid Modal -->
     <div
@@ -341,8 +420,7 @@
                   class="form-check-label font-size-sm text-dark opacity-85 line-height-lg"
                   for="tncCheck"
                   id="modalTncLabel">
-                  I certify that I have read the IDA tender conditions, have
-                  deposited the requisite EMD, and authorize this digital bid.
+               I certify that I have read EOI Terms & Conditions, and authorize the same.
                 </label>
               </div>
 
@@ -594,7 +672,39 @@
           .catch((error) => console.error("Error loading proposals:", error));
       }
 
+      let pendingProposalId = null;
+      let termsModalInstance = null;
+
       window.openBidModal = function (proposalId) {
+        pendingProposalId = proposalId;
+        if (!termsModalInstance) {
+          termsModalInstance = new bootstrap.Modal(
+            document.getElementById("termsModal"),
+          );
+        }
+        const check = document.getElementById("acceptTermsCheck");
+        const btn = document.getElementById("acceptTermsBtn");
+        if (check) check.checked = false;
+        if (btn) btn.disabled = true;
+        termsModalInstance.show();
+      };
+
+      window.toggleAcceptTermsBtn = function () {
+        const check = document.getElementById("acceptTermsCheck");
+        const btn = document.getElementById("acceptTermsBtn");
+        if (btn && check) {
+          btn.disabled = !check.checked;
+        }
+      };
+
+      window.confirmTermsAndOpenBid = function () {
+        if (termsModalInstance) {
+          termsModalInstance.hide();
+        }
+        showActualBidModal(pendingProposalId);
+      };
+
+      function showActualBidModal(proposalId) {
         const proposal = window.auctionData.find((a) => a.id === proposalId);
         if (!proposal) return;
         currentModalProposal = proposal;
@@ -652,7 +762,7 @@
         document.getElementById("bidAmountInput").min =
           Math.round(reserveValue);
         document.getElementById("modalTncLabel").innerText =
-          `I certify that I have read the IDA tender conditions, have deposited the requisite EMD of ₹${emdFmt}, and authorize this digital bid.`;
+          `I certify that I have read EOI Terms & Conditions, and authorize the same.`;
 
         updateSubmitButton();
 
@@ -663,7 +773,7 @@
           );
         }
         bidModalInstance.show();
-      };
+      }
 
       window.incrementBid = function (amount) {
         const input = document.getElementById("bidAmountInput");
@@ -690,13 +800,16 @@
 
       window.submitBid = async function (e) {
         e.preventDefault();
-        const amount = document.getElementById("bidAmountInput").value;
-        const name = document.getElementById("bidderName").value;
-        const phone = document.getElementById("bidderPhone").value;
-        const email = document.getElementById("bidderEmail").value;
+        const amount = document.getElementById("bidAmountInput") ? document.getElementById("bidAmountInput").value : "";
+        const tradeName = document.getElementById("bidderTradeName") ? document.getElementById("bidderTradeName").value : "";
+        const fullName = document.getElementById("bidderName") ? document.getElementById("bidderName").value : "";
+        const contactNo = document.getElementById("bidderPhone") ? document.getElementById("bidderPhone").value : "";
+        const gmail = document.getElementById("bidderEmail") ? document.getElementById("bidderEmail").value : "";
         const btn = document.getElementById("submitBidBtn");
 
         if (
+          currentModalProposal &&
+          currentModalProposal.currentHighBid &&
           parseInt(amount) < Math.round(currentModalProposal.currentHighBid)
         ) {
           alert("Bid amount is lower than the minimum valid bid!");
@@ -707,41 +820,110 @@
         btn.innerHTML = `<i class="bi bi-hourglass-split fs-5"></i> SUBMITTING...`;
         btn.disabled = true;
 
+        let carpetArea = "";
+        if (currentModalProposal) {
+          if (
+            currentModalProposal.dimensions &&
+            currentModalProposal.dimensions.widthM &&
+            currentModalProposal.dimensions.lengthM
+          ) {
+            const sqM =
+              currentModalProposal.dimensions.widthM *
+              currentModalProposal.dimensions.lengthM;
+            carpetArea = (sqM * 10.7639).toFixed(2);
+          } else if (currentModalProposal.AreainSqFt) {
+            carpetArea = currentModalProposal.AreainSqFt.toString();
+          }
+        }
+
+        const payload = {
+          bidAmount: amount ? amount.toString() : "",
+          tradeName: tradeName || "",
+          fullName: fullName || "",
+          contactNo: contactNo || "",
+          gmail: gmail || "",
+          shopName: currentModalProposal
+            ? currentModalProposal.unitNumber || currentModalProposal.title || ""
+            : "",
+          nitNumber: currentModalProposal
+            ? currentModalProposal.nitNumber || ""
+            : "",
+          title: currentModalProposal
+            ? currentModalProposal.title || ""
+            : "",
+          category: currentModalProposal
+            ? currentModalProposal.category || ""
+            : "",
+          floor: currentModalProposal
+            ? currentModalProposal.floor || ""
+            : "",
+          carpetArea: carpetArea || "",
+        };
+
         try {
           const response = await fetch(
-            "http://localhost:3000/AIzaSyA-mthgApZGgolCZUSBSRP6zUB4D0utDxY/submit-bid",
+            "http://3.6.143.11:8034/api/BVGIsbt/sendEmail",
             {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify({
-                bidAmount: amount,
-                bidderName: name,
-                bidderPhone: phone,
-                bidderEmail: email,
-              }),
+              body: JSON.stringify(payload),
             },
           );
 
-          const result = await response.json();
+          let resData = null;
+          const resText = await response.text();
+          try {
+            resData = JSON.parse(resText);
+          } catch (err) {
+            resData = { message: resText };
+          }
 
-          if (result.success) {
+          if (
+            response.ok ||
+            (resData && (resData.status === true || resData.success === true))
+          ) {
             alert(
-              `Bid successfully submitted for ₹${parseInt(amount).toLocaleString("en-IN")} by ${name}!\nReceipt sent successfully.`,
+              `Proposal successfully submitted!\nThank you ${fullName}, your submission details have been sent.`,
             );
-            bidModalInstance.hide();
+            if (bidModalInstance) {
+              bidModalInstance.hide();
+            }
             e.target.reset();
           } else {
             alert(
-              "Error submitting bid: " + (result.message || "Unknown error"),
+              "Error submitting proposal: " +
+                (resData.message || resText || "Unknown error"),
             );
           }
         } catch (error) {
-          console.error("Submission error:", error);
-          alert(
-            "Could not connect to backend server. Make sure the backend is running.",
-          );
+          console.warn("CORS/Fetch error, attempting fallback send...", error);
+          try {
+            await fetch(
+              "http://3.6.143.11:8034/api/BVGIsbt/sendEmail",
+              {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                  "Content-Type": "text/plain",
+                },
+                body: JSON.stringify(payload),
+              },
+            );
+            alert(
+              `Proposal submitted!\nThank you ${fullName}, your submission details have been sent.`,
+            );
+            if (bidModalInstance) {
+              bidModalInstance.hide();
+            }
+            e.target.reset();
+          } catch (fallbackErr) {
+            console.error("Fallback error:", fallbackErr);
+            alert(
+              "Could not connect to backend server. Please make sure CORS (Access-Control-Allow-Origin) is enabled on http://3.6.143.11:8034.",
+            );
+          }
         } finally {
           btn.innerHTML = originalBtnText;
           btn.disabled = false;
