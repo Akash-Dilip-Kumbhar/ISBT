@@ -51,7 +51,7 @@
   const btnContainer = document.createElement("div");
   btnContainer.className = "floating_btn";
   btnContainer.innerHTML = `
-    <a target="_blank" href="https://wa.me/7312430000">
+    <a target="_blank" href="https://wa.me/7387017067">
       <div class="contact_icon">
         <i class="bi bi-whatsapp my-float"></i>
       </div>
