@@ -61,6 +61,73 @@ body {
   background-color: var(--theme-orange-hover);
   color: white;
 }
+/* Top line amination  */
+
+.announcement-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1;
+    position: relative;
+}
+
+.announcement-text {
+    display: inline-block;
+    white-space: nowrap;
+
+    color: #ff6333;
+    font-weight: 600;
+
+    /* Smooth orange → white highlight */
+    background: linear-gradient(
+        90deg,
+        #ff6333 0%,
+        #ff6333 40%,
+        #ffffff 50%,
+        #ff6333 60%,
+        #ff6333 100%
+    );
+
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation:
+        announcementMove 15s linear infinite,
+        shimmerEffect 3s linear infinite;
+}
+
+
+/* Text moves right → left */
+@keyframes announcementMove {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* White highlight passes across orange text */
+@keyframes shimmerEffect {
+    from {
+        background-position: 200% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+
+/* Pause on hover */
+.announcement-wrapper:hover .announcement-text {
+    animation-play-state: paused;
+}
+
+/* end animation*/
 
 /* Navigation Overrides */
 .nav-link {
